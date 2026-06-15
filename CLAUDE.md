@@ -1,15 +1,21 @@
 # Luminary — 全球灯塔 3D 地球探索器
 
 ## 项目愿景
-一个以 3D 地球为中心的 Web 应用：星空背景下，用户旋转/缩放地球，
-全球 1.5 万+ 座灯塔以发光点呈现；放大后浮现灯塔虚影，点击查看
-名字、历史、是否可参观等信息。先 Web，验证后再考虑移动端封装。
+一个以"真实地图"体验为核心的 Web 应用：缩到最远是星空中的 3D 地球，
+全球 1.5 万+ 座灯塔以发光点呈现；放大后无缝过渡为带海岸线/街道的真实地图，
+近处灯塔立成发光 3D 模型，点击查看名字、状态、坐标等信息。
+先 Web，验证后再考虑移动端封装。
 
 ## 技术栈（已锁定，不要替换）
 - 前端: Vite + React 18 + TypeScript
-- 3D 地球: react-globe.gl (基于 three.js / three-globe)
+- 地图/3D 地球: MapLibre GL JS v5（globe projection，地球↔街道无缝过渡）
+  + 自建 Three.js custom layer（程序化灯塔 3D 模型，InstancedMesh 实例化）
+- 底图: OpenFreeMap "dark" 矢量瓦片（免费、无 API key、无限额；数据源同为 OSM）
 - 数据管线: Python 3.11+ (requests)，输出静态 JSON，无后端
 - 部署: Vercel 或 Cloudflare Pages（纯静态站）
+
+> 注：Phase 1 的早期 react-globe.gl 版本已弃用，但完整保留在 git 分支
+> `react-globe-gl`（含其依赖），未删除，可随时 checkout 回看。
 
 ## 目录结构
 ```
@@ -45,8 +51,12 @@ luminary/
 
 ## 阶段路线
 - [x] Phase 0: 数据管线 — Overpass 拉取全球 man_made=lighthouse
-- [x] Phase 1: 地球 MVP — 星空 + 旋转地球 + 光点撒点
-- [ ] Phase 2: 交互 — 缩放层级切换灯塔虚影、点击详情卡片、视锥剔除
+- [x] Phase 1: 地球 MVP — 星空 + 旋转地球 + 光点撒点（react-globe.gl，已被 Phase 2 取代）
+- [x] Phase 2: 地图化交互 — 迁移到 MapLibre globe 产品版（旧版进 `react-globe-gl` 分支）；
+      跟随相机朝向的程序化星空；地球↔3D 街景无缝缩放过渡 + fill-extrusion 楼体；
+      远 zoom 发光点、近 zoom 就近实例化发光 3D 灯塔（同屏上限 80 保 60fps）、
+      点↔3D 无缝淡入淡出（去掉了"近变暗"）；点击灯塔（点或 3D）弹详情卡
+      （名字/运营状态/坐标/Learn more）；按帧剔除背面防止快速移动时穿模。
 - [ ] Phase 3: 精选内容 — Wikidata 拉取 Top 200 灯塔详情，人工校对
 - [ ] Phase 4: 部署 + meetup 演示收集反馈
 
