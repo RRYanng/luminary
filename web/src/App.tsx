@@ -9,6 +9,26 @@ import "./App.css";
 
 const STYLE_URL = "https://tiles.openfreemap.org/styles/dark";
 
+const DEFAULT_VIEW = { center: [-20, 25] as [number, number], zoom: 2.4, bearing: 0, pitch: 0 };
+
+// MapLibre's hash:true does NOT apply an existing URL hash over explicit
+// center/zoom on init (explicit options win, then it overwrites the hash), so
+// deep-links were ignored. Parse the hash ourselves for the initial camera;
+// hash:true still keeps the URL in sync as the user moves.
+function parseInitialView() {
+  const parts = window.location.hash.replace(/^#/, "").split("/").map(Number);
+  if (parts.length >= 3 && parts.slice(0, 3).every((n) => !Number.isNaN(n))) {
+    const [zoom, lat, lng, bearing = 0, pitch = 0] = parts;
+    return { center: [lng, lat] as [number, number], zoom, bearing, pitch };
+  }
+  return DEFAULT_VIEW;
+}
+
+// Captured ONCE at module load — before React 18 StrictMode's double-mount can
+// create-then-remove() a map, which (with hash:true) wipes the URL hash and
+// would otherwise leave the second mount reading an empty hash.
+const INITIAL_VIEW = parseInitialView();
+
 // The one lighthouse rendered as a real 3D model for now. A later task instances
 // this model for every lighthouse in view at street zoom.
 const MODEL = { lng: -9.42097, lat: 38.69039, name: "Farol de Santa Marta (Cascais)" };
@@ -51,13 +71,14 @@ export default function App() {
   useEffect(() => {
     if (!mapContainer.current) return;
 
+    const initial = INITIAL_VIEW;
     const map = new maplibregl.Map({
       container: mapContainer.current,
       style: STYLE_URL,
-      center: [-20, 25],
-      zoom: 2.4,
-      pitch: 0,
-      bearing: 0,
+      center: initial.center,
+      zoom: initial.zoom,
+      pitch: initial.pitch,
+      bearing: initial.bearing,
       maxPitch: 80,
       hash: true, // shareable #zoom/lat/lng/bearing/pitch
       attributionControl: { compact: true },
@@ -94,7 +115,6 @@ export default function App() {
         const m = mapRef.current;
         if (!m || !this.renderer || !this.scene || !this.camera) return;
         if (m.getZoom() < 14) return; // model is the street-level representation only
-        this.model?.tick(performance.now());
         // v5 globe-aware projection matrix
         const input = args as unknown as { defaultProjectionData?: { mainMatrix: number[] }; matrix?: number[] };
         const proj = input.defaultProjectionData?.mainMatrix ?? input.matrix!;
@@ -106,7 +126,9 @@ export default function App() {
         this.camera.projectionMatrix = m4.multiply(l);
         this.renderer.resetState();
         this.renderer.render(this.scene, this.camera);
-        m.triggerRepaint();
+        // No triggerRepaint: a constant-glow model needs no per-frame loop.
+        // MapLibre repaints on camera movement, so the model still tracks the
+        // view during interaction and persists (last frame) when idle.
       },
     };
 

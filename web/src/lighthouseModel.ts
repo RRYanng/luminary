@@ -3,7 +3,6 @@ import { glowCanvas } from "./glow";
 
 export interface LighthouseModel {
   group: THREE.Group;
-  tick: (timeMs: number) => void; // gentle glow pulse
 }
 
 // Procedurally-built lighthouse — no external model. Built Y-up in real meters
@@ -14,8 +13,10 @@ export function buildLighthouse(): LighthouseModel {
   const white = new THREE.MeshStandardMaterial({ color: 0xede8da, roughness: 0.75, metalness: 0.04 });
   const red = new THREE.MeshStandardMaterial({ color: 0xb23a2c, roughness: 0.6 });
   const dark = new THREE.MeshStandardMaterial({ color: 0x26262d, roughness: 0.5, metalness: 0.3 });
+  // Constant glow — no per-frame pulse, so the map needs no continuous repaint
+  // loop (that loop dropped street-zoom rendering to 30fps).
   const lanternMat = new THREE.MeshStandardMaterial({
-    color: 0xffd27a, emissive: 0xffb347, emissiveIntensity: 2.0, roughness: 0.3,
+    color: 0xffd27a, emissive: 0xffb347, emissiveIntensity: 2.3, roughness: 0.3,
   });
 
   const towerH = 18;
@@ -50,7 +51,7 @@ export function buildLighthouse(): LighthouseModel {
 
   const glowSprite = new THREE.Sprite(new THREE.SpriteMaterial({
     map: new THREE.CanvasTexture(glowCanvas()),
-    color: 0xffc46a, transparent: true, opacity: 0.9,
+    color: 0xffc46a, transparent: true, opacity: 0.85,
     blending: THREE.AdditiveBlending, depthWrite: false,
   }));
   glowSprite.scale.set(16, 16, 1);
@@ -66,11 +67,5 @@ export function buildLighthouse(): LighthouseModel {
   halo.position.y = 0.12;
   group.add(halo);
 
-  const tick = (t: number) => {
-    lanternMat.emissiveIntensity = 1.7 + 0.7 * Math.sin(t / 600);
-    glowSprite.material.opacity = 0.7 + 0.25 * Math.sin(t / 600);
-    haloMat.opacity = 0.18 + 0.08 * Math.sin(t / 600);
-  };
-
-  return { group, tick };
+  return { group };
 }
