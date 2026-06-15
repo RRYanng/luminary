@@ -3,6 +3,8 @@ import maplibregl, { type Map as MlMap } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { createLighthouse3DLayer, type LhPoint } from "./lighthouseTier";
 import { makeStarTileDataURL, applyStarTransform } from "./starfield";
+import { DetailCard } from "./DetailCard";
+import type { Lighthouse } from "./types";
 import "./App.css";
 
 const STYLE_URL = "https://tiles.openfreemap.org/styles/dark";
@@ -55,10 +57,12 @@ export default function App() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const starsRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MlMap | null>(null);
+  const selectedIdRef = useRef<string | null>(null);
   const fps = useFps();
   const [zoom, setZoom] = useState(2.4);
   const [mode, setMode] = useState("globe");
   const [count, setCount] = useState("loading…");
+  const [selected, setSelected] = useState<Lighthouse | null>(null);
 
   useEffect(() => {
     if (!mapContainer.current) return;
@@ -120,7 +124,8 @@ export default function App() {
       // globe per-frame in the shader, whereas symbol occlusion is computed in
       // the throttled placement pass and lags during fast motion, letting the
       // far side bleed through. Circles fix that at any speed.
-      type LhFeature = { properties: { id: string }; geometry: { coordinates: [number, number] } };
+      type LhProps = Omit<Lighthouse, "lat" | "lng">;
+      type LhFeature = { properties: LhProps; geometry: { coordinates: [number, number] } };
       fetch("/lighthouses.geojson")
         .then((r) => r.json())
         .then((geojson: { features: LhFeature[] }) => {
@@ -141,12 +146,29 @@ export default function App() {
             },
           });
 
-          // 3D tiering: nearest in-view lighthouses crossfade glow point -> 3D.
-          const data: LhPoint[] = geojson.features.map((f) => ({
-            id: f.properties.id,
+          // Ring marking the selected lighthouse (works for points and 3D models).
+          map.addLayer({
+            id: "lighthouse-selected",
+            type: "circle",
+            source: "lighthouses",
+            paint: {
+              "circle-radius": ["interpolate", ["linear"], ["zoom"], 2, 6, 14, 10, 18, 14],
+              "circle-color": "rgba(0,0,0,0)",
+              "circle-stroke-color": "#ffcf6e",
+              "circle-stroke-width": 2,
+              "circle-stroke-opacity": ["case", ["boolean", ["feature-state", "selected"], false], 0.95, 0],
+            },
+          });
+
+          // Full records (with coords) for click selection -> detail card.
+          lighthouses = geojson.features.map((f) => ({
+            ...f.properties,
             lng: f.geometry.coordinates[0],
             lat: f.geometry.coordinates[1],
           }));
+
+          // 3D tiering: nearest in-view lighthouses crossfade glow point -> 3D.
+          const data: LhPoint[] = lighthouses.map((p) => ({ id: p.id, lng: p.lng, lat: p.lat }));
           map.addLayer(
             createLighthouse3DLayer({
               data,
@@ -159,6 +181,35 @@ export default function App() {
         });
     });
 
+    // Click selection. Works for both glow points and 3D models by finding the
+    // nearest lighthouse to the click in *screen* space (the custom 3D layer
+    // isn't queryable via MapLibre's feature API). The highlight ring is synced
+    // from `selected` in a separate effect.
+    let lighthouses: Lighthouse[] = [];
+    const HIT_PX = 44;
+
+    const onClick = (e: maplibregl.MapMouseEvent) => {
+      if (!lighthouses.length) return;
+      const cl = map.unproject(e.point);
+      const kx = Math.cos((cl.lat * Math.PI) / 180);
+      let best: Lighthouse | null = null;
+      let bestPx = HIT_PX;
+      for (const lh of lighthouses) {
+        // cheap geo pre-filter before the (pricier) projection
+        if (Math.abs(lh.lat - cl.lat) > 1 || Math.abs(lh.lng - cl.lng) * kx > 1) continue;
+        const sp = map.project([lh.lng, lh.lat]);
+        const d = Math.hypot(sp.x - e.point.x, sp.y - e.point.y);
+        if (d < bestPx) { bestPx = d; best = lh; }
+      }
+      setSelected(best);
+    };
+    map.on("click", onClick);
+
+    const onKey = (ev: KeyboardEvent) => {
+      if (ev.key === "Escape") setSelected(null);
+    };
+    window.addEventListener("keydown", onKey);
+
     const onMove = () => {
       const z = map.getZoom(), p = map.getPitch(), b = map.getBearing(), c = map.getCenter();
       if (starsRef.current) applyStarTransform(starsRef.current, { bearing: b, pitch: p, lng: c.lng, lat: c.lat });
@@ -169,10 +220,22 @@ export default function App() {
     map.on("load", onMove);
 
     return () => {
+      window.removeEventListener("keydown", onKey);
       map.remove();
       mapRef.current = null;
     };
   }, []);
+
+  // Sync the highlight ring (feature-state) with the selected lighthouse.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !map.getSource("lighthouses")) return;
+    const id = selected?.id ?? null;
+    const prev = selectedIdRef.current;
+    if (prev && prev !== id) map.setFeatureState({ source: "lighthouses", id: prev }, { selected: false });
+    if (id) map.setFeatureState({ source: "lighthouses", id }, { selected: true });
+    selectedIdRef.current = id;
+  }, [selected]);
 
   return (
     <div className="app">
@@ -186,6 +249,8 @@ export default function App() {
           zoom {zoom.toFixed(2)} · {mode} · {count}
         </p>
       </div>
+
+      {selected && <DetailCard lighthouse={selected} onClose={() => setSelected(null)} />}
 
       <div className="fps" title="frames per second">{fps} fps</div>
     </div>
