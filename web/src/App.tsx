@@ -1,12 +1,17 @@
 import { useEffect, useRef, useState } from "react";
-import maplibregl, { type CustomLayerInterface, type Map as MlMap } from "maplibre-gl";
-import * as THREE from "three";
+import maplibregl, { type Map as MlMap } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { buildLighthouse, type LighthouseModel } from "./lighthouseModel";
+import { createLighthouse3DLayer, type LhPoint } from "./lighthouseTier";
 import { makeStarTileDataURL, applyStarTransform } from "./starfield";
 import "./App.css";
 
 const STYLE_URL = "https://tiles.openfreemap.org/styles/dark";
+
+// Tiering tuning. Cap keeps a stable 60fps even in dense areas; the nearest
+// in-view lighthouses (to screen center) are the ones promoted to 3D.
+const MAX_3D_MODELS = 80;
+const ZOOM_3D_MIN = 14;
+const FADE_MS = 350;
 
 const DEFAULT_VIEW = { center: [-20, 25] as [number, number], zoom: 2.4, bearing: 0, pitch: 0 };
 
@@ -27,18 +32,6 @@ function parseInitialView() {
 // create-then-remove() a map, which (with hash:true) wipes the URL hash and
 // would otherwise leave the second mount reading an empty hash.
 const INITIAL_VIEW = parseInitialView();
-
-// The one lighthouse rendered as a real 3D model for now. A later task instances
-// this model for every lighthouse in view at street zoom.
-const MODEL = { lng: -9.42097, lat: 38.69039, name: "Farol de Santa Marta (Cascais)" };
-
-// Custom layer carrying the Three.js scene; extra fields stored on `this`.
-type ThreeLayer = CustomLayerInterface & {
-  camera?: THREE.Camera;
-  scene?: THREE.Scene;
-  renderer?: THREE.WebGLRenderer;
-  model?: LighthouseModel;
-};
 
 function useFps() {
   const [fps, setFps] = useState(0);
@@ -91,46 +84,6 @@ export default function App() {
       starsRef.current.style.backgroundImage = `url(${makeStarTileDataURL()})`;
     }
 
-    const merc = maplibregl.MercatorCoordinate.fromLngLat([MODEL.lng, MODEL.lat], 0);
-    const meterScale = merc.meterInMercatorCoordinateUnits();
-
-    const lighthouseLayer: ThreeLayer = {
-      id: "lighthouse-3d",
-      type: "custom",
-      renderingMode: "3d",
-      onAdd(m, gl) {
-        this.camera = new THREE.Camera();
-        this.scene = new THREE.Scene();
-        this.scene.add(new THREE.AmbientLight(0xc2c8d4, 1.7));
-        const dir = new THREE.DirectionalLight(0xffffff, 2.3);
-        dir.position.set(30, 60, 40);
-        this.scene.add(dir);
-        this.model = buildLighthouse();
-        this.scene.add(this.model.group);
-        this.renderer = new THREE.WebGLRenderer({ canvas: m.getCanvas(), context: gl, antialias: true });
-        this.renderer.autoClear = false;
-      },
-      render(_gl, args) {
-        const m = mapRef.current;
-        if (!m || !this.renderer || !this.scene || !this.camera) return;
-        if (m.getZoom() < 14) return; // model is the street-level representation only
-        // v5 globe-aware projection matrix
-        const input = args as unknown as { defaultProjectionData?: { mainMatrix: number[] }; matrix?: number[] };
-        const proj = input.defaultProjectionData?.mainMatrix ?? input.matrix!;
-        const m4 = new THREE.Matrix4().fromArray(proj);
-        const l = new THREE.Matrix4()
-          .makeTranslation(merc.x, merc.y, merc.z)
-          .scale(new THREE.Vector3(meterScale, -meterScale, meterScale))
-          .multiply(new THREE.Matrix4().makeRotationX(Math.PI / 2));
-        this.camera.projectionMatrix = m4.multiply(l);
-        this.renderer.resetState();
-        this.renderer.render(this.scene, this.camera);
-        // No triggerRepaint: a constant-glow model needs no per-frame loop.
-        // MapLibre repaints on camera movement, so the model still tracks the
-        // view during interaction and persists (last frame) when idle.
-      },
-    };
-
     map.on("style.load", () => {
       map.setProjection({ type: "globe" });
       map.setSky({ "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 1, 7, 0] });
@@ -167,11 +120,13 @@ export default function App() {
       // globe per-frame in the shader, whereas symbol occlusion is computed in
       // the throttled placement pass and lags during fast motion, letting the
       // far side bleed through. Circles fix that at any speed.
+      type LhFeature = { properties: { id: string }; geometry: { coordinates: [number, number] } };
       fetch("/lighthouses.geojson")
         .then((r) => r.json())
-        .then((geojson) => {
+        .then((geojson: { features: LhFeature[] }) => {
           setCount(`${geojson.features.length.toLocaleString()} lighthouses`);
-          map.addSource("lighthouses", { type: "geojson", data: geojson });
+          // promoteId so each feature's `id` drives feature-state (crossfade).
+          map.addSource("lighthouses", { type: "geojson", data: geojson, promoteId: "id" });
           map.addLayer({
             id: "lighthouse-glow",
             type: "circle",
@@ -179,13 +134,29 @@ export default function App() {
             paint: {
               "circle-color": "#ffc44d",
               "circle-blur": 0.6, // soft glow
-              "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, 1.6, 4, 2.2, 8, 3, 14, 3.6],
-              "circle-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0.9, 16, 0.35, 18, 0.1],
+              "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, 1.6, 4, 2.2, 8, 3, 14, 3.6, 18, 5],
+              // Full brightness at every zoom (no "fade when close"); only fades
+              // out per-lighthouse as its 3D model fades in (feature-state).
+              "circle-opacity": ["*", 0.9, ["-", 1, ["coalesce", ["feature-state", "fade"], 0]]],
             },
           });
-        });
 
-      map.addLayer(lighthouseLayer);
+          // 3D tiering: nearest in-view lighthouses crossfade glow point -> 3D.
+          const data: LhPoint[] = geojson.features.map((f) => ({
+            id: f.properties.id,
+            lng: f.geometry.coordinates[0],
+            lat: f.geometry.coordinates[1],
+          }));
+          map.addLayer(
+            createLighthouse3DLayer({
+              data,
+              sourceId: "lighthouses",
+              maxModels: MAX_3D_MODELS,
+              zoomMin: ZOOM_3D_MIN,
+              fadeMs: FADE_MS,
+            }),
+          );
+        });
     });
 
     const onMove = () => {
