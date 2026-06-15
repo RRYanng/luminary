@@ -3,7 +3,6 @@ import maplibregl, { type CustomLayerInterface, type Map as MlMap } from "maplib
 import * as THREE from "three";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { buildLighthouse, type LighthouseModel } from "./lighthouseModel";
-import { glowIconImageData } from "./glow";
 import { makeStarTileDataURL, applyStarTransform } from "./starfield";
 import "./App.css";
 
@@ -163,8 +162,11 @@ export default function App() {
         firstSymbol,
       );
 
-      // All lighthouses as glow symbols (far-zoom representation), faded at street zoom.
-      map.addImage("glow", glowIconImageData(), { pixelRatio: 2 });
+      // All lighthouses as glowing points (far-zoom representation), faded at
+      // street zoom. A CIRCLE layer (not symbol) — circles are occluded by the
+      // globe per-frame in the shader, whereas symbol occlusion is computed in
+      // the throttled placement pass and lags during fast motion, letting the
+      // far side bleed through. Circles fix that at any speed.
       fetch("/lighthouses.geojson")
         .then((r) => r.json())
         .then((geojson) => {
@@ -172,16 +174,13 @@ export default function App() {
           map.addSource("lighthouses", { type: "geojson", data: geojson });
           map.addLayer({
             id: "lighthouse-glow",
-            type: "symbol",
+            type: "circle",
             source: "lighthouses",
-            layout: {
-              "icon-image": "glow",
-              "icon-allow-overlap": true,
-              "icon-ignore-placement": true,
-              "icon-size": ["interpolate", ["linear"], ["zoom"], 1, 0.18, 4, 0.3, 8, 0.45, 14, 0.5],
-            },
             paint: {
-              "icon-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0.9, 16, 0.35, 18, 0.1],
+              "circle-color": "#ffc44d",
+              "circle-blur": 0.6, // soft glow
+              "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, 1.6, 4, 2.2, 8, 3, 14, 3.6],
+              "circle-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0.9, 16, 0.35, 18, 0.1],
             },
           });
         });
