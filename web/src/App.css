@@ -1,14 +1,37 @@
 .app {
   position: fixed;
   inset: 0;
-  background: #000005;
+  background: #000008;
   overflow: hidden;
+}
+
+/* Oversized so rotation always covers the viewport; repeating tile so panning
+   the background never reveals an edge. Sits behind the transparent map. */
+.stars {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+  background-color: #000008;
+  background-repeat: repeat;
+  will-change: transform, background-position;
+  pointer-events: none;
+}
+
+.map {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: transparent;
 }
 
 .hud {
   position: absolute;
   top: 24px;
   left: 28px;
+  z-index: 2;
   color: #f5e8c8;
   pointer-events: none;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
@@ -45,6 +68,7 @@
   position: absolute;
   bottom: 14px;
   right: 16px;
+  z-index: 2;
   color: #8fbcff;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 12px;
