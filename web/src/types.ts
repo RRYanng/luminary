@@ -28,6 +28,20 @@ export interface LighthouseDetail {
   built: string | null;
   height_m: number | null;
   country: string | null;
+  score: number;
+  top200_rank?: number | null;
+}
+
+// One searchable lighthouse (named only), pre-flattened for instant filtering.
+export interface SearchItem {
+  id: string;
+  name: string;
+  lower: string; // name.toLowerCase() for matching
+  lat: number;
+  lng: number;
+  status: Status;
+  country: string | null;
+  score: number; // Phase 3 notability (famous-first ranking)
 }
 
 // What the detail card renders for a clicked lighthouse (base + details merged).

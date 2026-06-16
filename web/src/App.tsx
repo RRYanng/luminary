@@ -1,11 +1,37 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import maplibregl, { type Map as MlMap } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { createLighthouse3DLayer, type LhPoint } from "./lighthouseTier";
 import { makeStarTileDataURL, applyStarTransform } from "./starfield";
 import { DetailCard } from "./DetailCard";
-import type { Lighthouse, LighthouseDetail, CardModel } from "./types";
+import { SearchBox } from "./SearchBox";
+import type { Lighthouse, LighthouseDetail, CardModel, SearchItem, Status } from "./types";
 import "./App.css";
+
+function statusOf(base: Lighthouse, detail: LighthouseDetail | undefined): Status {
+  if (detail?.category === "lighthouse" && detail.status) return detail.status;
+  return base.operational === true ? "operational" : "existing";
+}
+
+// Flatten named lighthouses into the search index (merging Phase 3 details).
+function buildSearchIndex(lhs: Lighthouse[], details: Map<string, LighthouseDetail>): SearchItem[] {
+  const out: SearchItem[] = [];
+  for (const l of lhs) {
+    if (!l.name) continue;
+    const d = details.get(l.id);
+    out.push({
+      id: l.id,
+      name: l.name,
+      lower: l.name.toLowerCase(),
+      lat: l.lat,
+      lng: l.lng,
+      status: statusOf(l, d),
+      country: d?.category === "lighthouse" ? d.country : null,
+      score: d?.score ?? 0,
+    });
+  }
+  return out;
+}
 
 // "en:Pigeon Point Lighthouse" -> https://en.wikipedia.org/wiki/Pigeon_Point_Lighthouse
 function wikipediaUrl(wp: string | null): string | null {
@@ -20,8 +46,7 @@ function wikipediaUrl(wp: string | null): string | null {
 function buildCardModel(base: Lighthouse, detail: LighthouseDetail | undefined): CardModel {
   const isLh = detail?.category === "lighthouse";
   const usable = isLh && !detail?.bad_link; // clean detail -> show summary/image/link
-  const status: CardModel["status"] =
-    isLh && detail!.status ? detail!.status : base.operational === true ? "operational" : "existing";
+  const status = statusOf(base, detail);
   return {
     id: base.id,
     name: base.name,
@@ -89,11 +114,22 @@ export default function App() {
   const mapRef = useRef<MlMap | null>(null);
   const selectedIdRef = useRef<string | null>(null);
   const detailsRef = useRef<Map<string, LighthouseDetail>>(new Map());
+  const lighthousesRef = useRef<Lighthouse[]>([]);
   const fps = useFps();
   const [zoom, setZoom] = useState(2.4);
   const [mode, setMode] = useState("globe");
   const [count, setCount] = useState("loading…");
   const [selected, setSelected] = useState<CardModel | null>(null);
+  const [searchIndex, setSearchIndex] = useState<SearchItem[]>([]);
+
+  // Search result -> fly to the lighthouse at street level (3D) and open its card.
+  const flyToLighthouse = useCallback((it: SearchItem) => {
+    const map = mapRef.current;
+    if (!map) return;
+    map.flyTo({ center: [it.lng, it.lat], zoom: 16.5, pitch: 60, bearing: 20, duration: 2600, essential: true });
+    const base = lighthousesRef.current.find((l) => l.id === it.id);
+    if (base) setSelected(buildCardModel(base, detailsRef.current.get(it.id)));
+  }, []);
 
   useEffect(() => {
     if (!mapContainer.current) return;
@@ -192,14 +228,16 @@ export default function App() {
           });
 
           // Full records (with coords) for click selection -> detail card.
-          lighthouses = geojson.features.map((f) => ({
+          lighthousesRef.current = geojson.features.map((f) => ({
             ...f.properties,
             lng: f.geometry.coordinates[0],
             lat: f.geometry.coordinates[1],
           }));
+          // search index (names only) — works now; re-enriched once details load.
+          setSearchIndex(buildSearchIndex(lighthousesRef.current, detailsRef.current));
 
           // 3D tiering: nearest in-view lighthouses crossfade glow point -> 3D.
-          const data: LhPoint[] = lighthouses.map((p) => ({ id: p.id, lng: p.lng, lat: p.lat }));
+          const data: LhPoint[] = lighthousesRef.current.map((p) => ({ id: p.id, lng: p.lng, lat: p.lat }));
           map.addLayer(
             createLighthouse3DLayer({
               data,
@@ -216,10 +254,10 @@ export default function App() {
     // nearest lighthouse to the click in *screen* space (the custom 3D layer
     // isn't queryable via MapLibre's feature API). The highlight ring is synced
     // from `selected` in a separate effect.
-    let lighthouses: Lighthouse[] = [];
     const HIT_PX = 44;
 
     const onClick = (e: maplibregl.MapMouseEvent) => {
+      const lighthouses = lighthousesRef.current;
       if (!lighthouses.length) return;
       const cl = map.unproject(e.point);
       const kx = Math.cos((cl.lat * Math.PI) / 180);
@@ -244,6 +282,8 @@ export default function App() {
         const idx = new Map<string, LighthouseDetail>();
         for (const rec of d.details) idx.set(rec.id, rec);
         detailsRef.current = idx;
+        // re-enrich the search index with status/country/score now available
+        if (lighthousesRef.current.length) setSearchIndex(buildSearchIndex(lighthousesRef.current, idx));
       })
       .catch(() => { /* details optional; card falls back to OSM fields */ });
 
@@ -283,6 +323,8 @@ export default function App() {
     <div className="app">
       <div ref={starsRef} className="stars" />
       <div ref={mapContainer} className="map" />
+
+      <SearchBox index={searchIndex} onSelect={flyToLighthouse} />
 
       <div className="hud">
         <h1>Luminary</h1>
