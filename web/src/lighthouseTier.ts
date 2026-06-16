@@ -1,5 +1,6 @@
 import maplibregl, { type CustomLayerInterface, type Map as MlMap } from "maplibre-gl";
 import * as THREE from "three";
+import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { createLighthouseParts } from "./lighthouseParts";
 
 export interface LhPoint {
@@ -63,15 +64,27 @@ export function createLighthouse3DLayer(opts: TierOptions) {
       this.map = m;
       this.camera = new THREE.Camera();
       this.scene = new THREE.Scene();
-      this.scene.add(new THREE.AmbientLight(0xc2c8d4, 1.8));
-      const dir = new THREE.DirectionalLight(0xffffff, 2.3);
-      dir.position.set(30, 60, 40);
-      this.scene.add(dir);
+      this.renderer = new THREE.WebGLRenderer({ canvas: m.getCanvas(), context: gl });
+      this.renderer.autoClear = false;
+
+      // Image-based lighting: a prefiltered environment gives the model real
+      // gradient shading and metal reflections (no more flat "plastic" look),
+      // replacing a flat ambient. Kept dim so it reads as night.
+      const pmrem = new THREE.PMREMGenerator(this.renderer);
+      this.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+      this.scene.environmentIntensity = 0.5;
+      pmrem.dispose();
+      // warm key light (form + specular) + dim cool fill (lift the shadow side)
+      const key = new THREE.DirectionalLight(0xfff0d8, 2.1);
+      key.position.set(40, 70, 28);
+      this.scene.add(key);
+      const fill = new THREE.DirectionalLight(0x9fb4d8, 0.5);
+      fill.position.set(-30, 18, -25);
+      this.scene.add(fill);
+
       const parts = createLighthouseParts(capacity);
       this.meshes = parts.meshes;
       parts.meshes.forEach((mesh) => this.scene!.add(mesh));
-      this.renderer = new THREE.WebGLRenderer({ canvas: m.getCanvas(), context: gl });
-      this.renderer.autoClear = false;
 
       // Pick the nearest in-view lighthouses (up to the cap) whenever the camera
       // moves; entering ones fade in, leaving ones fade out.
