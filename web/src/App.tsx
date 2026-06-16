@@ -4,8 +4,38 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { createLighthouse3DLayer, type LhPoint } from "./lighthouseTier";
 import { makeStarTileDataURL, applyStarTransform } from "./starfield";
 import { DetailCard } from "./DetailCard";
-import type { Lighthouse } from "./types";
+import type { Lighthouse, LighthouseDetail, CardModel } from "./types";
 import "./App.css";
+
+// "en:Pigeon Point Lighthouse" -> https://en.wikipedia.org/wiki/Pigeon_Point_Lighthouse
+function wikipediaUrl(wp: string | null): string | null {
+  if (!wp) return null;
+  const idx = wp.indexOf(":");
+  const lang = idx === -1 ? "en" : wp.slice(0, idx);
+  const title = idx === -1 ? wp : wp.slice(idx + 1);
+  return `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, "_"))}`;
+}
+
+// Merge a clicked lighthouse (OSM base) with its Phase 3 detail into a card model.
+function buildCardModel(base: Lighthouse, detail: LighthouseDetail | undefined): CardModel {
+  const isLh = detail?.category === "lighthouse";
+  const usable = isLh && !detail?.bad_link; // clean detail -> show summary/image/link
+  const status: CardModel["status"] =
+    isLh && detail!.status ? detail!.status : base.operational === true ? "operational" : "existing";
+  return {
+    id: base.id,
+    name: base.name,
+    status,
+    summary: usable ? detail!.summary : null,
+    image: usable ? detail!.image : null,
+    // facts from Wikidata are about the lighthouse itself even when the article
+    // link is wrong (bad_link), so keep them; not_lighthouse falls back to OSM.
+    built: isLh ? detail!.built ?? base.start_date : base.start_date,
+    height: isLh && detail!.height_m != null ? detail!.height_m : base.height,
+    country: isLh ? detail!.country : null,
+    learnMore: usable ? detail!.summary_source : detail ? null : wikipediaUrl(base.wikipedia),
+  };
+}
 
 const STYLE_URL = "https://tiles.openfreemap.org/styles/dark";
 
@@ -58,11 +88,12 @@ export default function App() {
   const starsRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MlMap | null>(null);
   const selectedIdRef = useRef<string | null>(null);
+  const detailsRef = useRef<Map<string, LighthouseDetail>>(new Map());
   const fps = useFps();
   const [zoom, setZoom] = useState(2.4);
   const [mode, setMode] = useState("globe");
   const [count, setCount] = useState("loading…");
-  const [selected, setSelected] = useState<Lighthouse | null>(null);
+  const [selected, setSelected] = useState<CardModel | null>(null);
 
   useEffect(() => {
     if (!mapContainer.current) return;
@@ -201,9 +232,20 @@ export default function App() {
         const d = Math.hypot(sp.x - e.point.x, sp.y - e.point.y);
         if (d < bestPx) { bestPx = d; best = lh; }
       }
-      setSelected(best);
+      setSelected(best ? buildCardModel(best, detailsRef.current.get(best.id)) : null);
     };
     map.on("click", onClick);
+
+    // Phase 3 details (summary / photo / status / facts), loaded once in the
+    // background and indexed by id for card lookups.
+    fetch("/lighthouse_details.json")
+      .then((r) => r.json())
+      .then((d: { details: LighthouseDetail[] }) => {
+        const idx = new Map<string, LighthouseDetail>();
+        for (const rec of d.details) idx.set(rec.id, rec);
+        detailsRef.current = idx;
+      })
+      .catch(() => { /* details optional; card falls back to OSM fields */ });
 
     const onKey = (ev: KeyboardEvent) => {
       if (ev.key === "Escape") setSelected(null);
@@ -250,7 +292,7 @@ export default function App() {
         </p>
       </div>
 
-      {selected && <DetailCard lighthouse={selected} onClose={() => setSelected(null)} />}
+      {selected && <DetailCard model={selected} onClose={() => setSelected(null)} />}
 
       <div className="fps" title="frames per second">{fps} fps</div>
     </div>

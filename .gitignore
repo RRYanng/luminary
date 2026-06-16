@@ -17,3 +17,4 @@ web/public/lighthouses.geojson
 # Phase 3 sample/test output (regenerate with --sample)
 data/lighthouse_details.sample.json
 data/_class_cache.json
+web/public/lighthouse_details.json

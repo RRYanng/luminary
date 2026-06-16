@@ -78,13 +78,15 @@
 
 .card {
   position: absolute;
+  z-index: 3; /* above .map (z-index 1) and the HUD (2) */
   top: 50%;
   right: 32px;
   transform: translateY(-50%);
-  width: 300px;
-  padding: 22px 24px;
+  width: 320px;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
   border-radius: 14px;
-  background: rgba(18, 17, 24, 0.82);
+  background: rgba(18, 17, 24, 0.86);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 207, 110, 0.22);
@@ -101,24 +103,40 @@
   }
 }
 
+.card-img {
+  display: block;
+  width: 100%;
+  height: 168px;
+  object-fit: cover;
+  background: #0c0b10;
+  border-radius: 14px 14px 0 0;
+}
+
+.card-body {
+  padding: 18px 22px 22px;
+}
+
 .card-close {
   position: absolute;
   top: 10px;
   right: 12px;
-  background: none;
+  width: 26px;
+  height: 26px;
   border: none;
-  color: #f3ecdd;
-  font-size: 22px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
   line-height: 1;
-  opacity: 0.5;
   cursor: pointer;
+  opacity: 0.75;
 }
 .card-close:hover {
   opacity: 1;
 }
 
 .card-name {
-  margin: 0 24px 12px 0;
+  margin: 0 18px 10px 0;
   font-size: 19px;
   font-weight: 600;
   color: #ffd27a;
@@ -131,23 +149,25 @@
   gap: 7px;
   font-size: 12px;
   letter-spacing: 0.04em;
-  margin-bottom: 16px;
-  opacity: 0.9;
+  margin-bottom: 14px;
 }
 .card-status .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
 }
-.card-status.op-on .dot {
-  background: #6ee787;
-  box-shadow: 0 0 8px #6ee787;
-}
-.card-status.op-off .dot {
-  background: #ff7b72;
-}
-.card-status.op-unknown .dot {
-  background: #8b8b95;
+.card-status.st-operational { color: #8cf0a3; }
+.card-status.st-operational .dot { background: #6ee787; box-shadow: 0 0 8px #6ee787; }
+.card-status.st-existing { color: #8fc0ff; }
+.card-status.st-existing .dot { background: #6fb3ff; box-shadow: 0 0 8px rgba(111, 179, 255, 0.7); }
+.card-status.st-gone { color: #c7a8ff; }
+.card-status.st-gone .dot { background: #b388ff; box-shadow: 0 0 8px rgba(179, 136, 255, 0.7); }
+
+.card-summary {
+  margin: 0 0 16px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  opacity: 0.9;
 }
 
 .card-fields {
