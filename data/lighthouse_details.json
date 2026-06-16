@@ -8114,7 +8114,7 @@
       "score": 5,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "existing",
+      "status": "operational",
       "top200_rank": null
     },
     {
@@ -77007,8 +77007,8 @@
   "category_counts": {
     "gone": 21,
     "not_lighthouse": 15,
-    "existing": 1222,
-    "operational": 2591
+    "existing": 1221,
+    "operational": 2592
   },
   "not_lighthouse": 15,
   "bad_link": 28

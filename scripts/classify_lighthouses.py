@@ -60,6 +60,8 @@ NONLH_KW = ("cape", "headland", "promontor", "peninsula", "island", "islet", "ba
 BADLINK_PLACE_KW = ("town", "city", "village", "parish", "hamlet", "municipality",
                     "settlement", "borough", "commune", "unparished", "cape",
                     "headland", "promontor", "suburb", "locality")
+# Wikidata P5817 (state of use) values that mean the lighthouse is active.
+P5817_INUSE_KW = ("in use", "in operation", "in service", "operational", "active")
 
 session = requests.Session()
 session.headers["User-Agent"] = USER_AGENT
@@ -87,9 +89,19 @@ def chunks(seq, n):
         yield seq[i:i + n]
 
 
+def _entity_qids(claims, prop):
+    out = []
+    for c in claims.get(prop, []):
+        try:
+            out.append(c["mainsnak"]["datavalue"]["value"]["id"])
+        except (KeyError, TypeError):
+            pass
+    return out
+
+
 def _entities_claims(qids, want_p576):
-    """batch wbgetentities -> {qid: {p31:[...], demolished:bool}} + set of P31 ids."""
-    out, p31_ids = {}, set()
+    """batch wbgetentities -> {qid: {p31, p5817, demolished}} + set of label ids."""
+    out, label_ids = {}, set()
     batches = list(chunks(qids, BATCH))
     for bi, batch in enumerate(batches):
         print(f"  批 {bi + 1}/{len(batches)}")
@@ -99,19 +111,16 @@ def _entities_claims(qids, want_p576):
             if "missing" in ent:
                 continue
             claims = ent.get("claims", {})
-            p31 = []
-            for c in claims.get("P31", []):
-                try:
-                    p31.append(c["mainsnak"]["datavalue"]["value"]["id"])
-                except (KeyError, TypeError):
-                    pass
-            rec = {"p31": p31}
+            p31 = _entity_qids(claims, "P31")
+            p5817 = _entity_qids(claims, "P5817")  # state of use
+            rec = {"p31": p31, "p5817": p5817}
             if want_p576:
                 rec["demolished"] = "P576" in claims
             out[qid] = rec
-            p31_ids.update(p31)
+            label_ids.update(p31)
+            label_ids.update(p5817)
         time.sleep(GAP)
-    return out, p31_ids
+    return out, label_ids
 
 
 def do_fetch():
@@ -165,7 +174,7 @@ def classify(write: bool):
         return False
 
     cnt = Counter()
-    gone_list, notlh_list, badlink_list = [], [], []
+    gone_list, notlh_list, badlink_list, p5817_upgrades = [], [], [], []
     examples = {"operational": [], "existing": [], "gone": []}
 
     for d in details:
@@ -216,6 +225,11 @@ def classify(write: bool):
             d["status"] = "operational"
         else:
             d["status"] = "existing"
+        # Upgrade existing -> operational only when Wikidata P5817 explicitly says
+        # "in use" (never downgrade; ambiguous/missing P5817 -> leave as is).
+        if d["status"] == "existing" and ent and has_kw(ent.get("p5817", []), P5817_INUSE_KW):
+            d["status"] = "operational"
+            p5817_upgrades.append(d)
         cnt[d["status"]] += 1
         if not d["bad_link"] and len(examples[d["status"]]) < 6:
             examples[d["status"]].append(d)
@@ -261,9 +275,14 @@ def classify(write: bool):
     print(f"  在役 operational : {cnt['operational']}")
     print(f"  现存 existing    : {cnt['existing']}  (停用或状态未知)")
     print(f"  已不存在 gone    : {cnt['gone']}  (保留并标记，历史价值)")
+    print(f"  └ 其中 P5817 升级 existing→operational: {len(p5817_upgrades)} 座")
     print(f"非灯塔错挂 not_lighthouse: {cnt['not_lighthouse']}  (P31 是海岬/城镇/岛等)")
     print(f"维基链接错挂 bad_link    : {len(badlink_list)}  (P31 是灯塔，但摘要文章是别的主题→已丢弃摘要)")
     print(f"无 wikidata 无法按 P31 分类: {len(no_wd)} 座")
+
+    print(f"\n--- P5817 升级为在役 operational（{len(p5817_upgrades)} 座）---")
+    for d in p5817_upgrades:
+        print(f"  · {d['name'] or '(无名)'}  [{d['wikidata']}] — {d['country'] or '?'}")
 
     print(f"\n--- 已不存在 gone 全表（{len(gone_list)} 座，请核对准确性）---")
     for d in sorted(gone_list, key=lambda x: -(x.get('lang_count') or 0)):
