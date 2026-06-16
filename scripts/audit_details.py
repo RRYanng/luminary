@@ -35,6 +35,10 @@ from pathlib import Path
 
 import requests
 
+# 与 fix_details 共用同一套抽取逻辑，避免两边规则漂移
+from fix_details import (build_years_in_summary, clean_summary, is_english,
+                         structural_heights)
+
 ROOT = Path(__file__).resolve().parent.parent
 DETAILS = ROOT / "data" / "lighthouse_details.json"
 OUT_JSON = ROOT / "data" / "audit_report.json"
@@ -43,33 +47,12 @@ OUT_MD = ROOT / "data" / "audit_report.md"
 UA = "Luminary/0.1 (lighthouse explorer; data audit; ruiyiyanng@gmail.com)"
 LH_WORDS = ("lighthouse", "light ", "light.", "light,", "beacon", "faro", "phare",
             "leuchtturm", "fyr", "vuurtoren", "majakka", "tuletorn", "lantern", "light station")
-# presence of these marks a summary as (probably) English
-EN_STOPWORDS = (" the ", " is ", " a ", " of ", " and ", " in ", " on ", " was ",
-                " with ", " to ", " by ", " at ", " its ", " are ", " an ")
 
 session = requests.Session()
 session.headers["User-Agent"] = UA
 
 
 # ---------------------------------------------------------------- 解析 helpers
-def heights_in_summary(text: str):
-    """从摘要里抽出"高度类"数值(米)。距离的 km/miles 不会被误抓。"""
-    out = []
-    for m in re.finditer(r"(\d{1,4}(?:\.\d+)?)\s*(?:m\b|met(?:er|re)s?\b|[-\s]met(?:er|re))", text):
-        out.append(("m", float(m.group(1))))
-    for m in re.finditer(r"(\d{1,4}(?:\.\d+)?)\s*(?:ft\b|feet\b|foot\b)", text):
-        out.append(("ft", round(float(m.group(1)) * 0.3048, 1)))
-    return out  # list of (unit, value_in_metres)
-
-
-def build_years_in_summary(text: str):
-    kw = r"(?:built|constructed|completed|erected|establish\w*|first lit|inaugurat\w*|dates from|opened|rebuilt)"
-    yrs = []
-    for m in re.finditer(kw + r"[^.]{0,40}?\b(1\d{3}|20\d{2})\b", text, re.I):
-        yrs.append(int(m.group(1)))
-    return yrs
-
-
 def non_latin_ratio(text: str):
     letters = [c for c in text if c.isalpha()]
     if not letters:
@@ -144,8 +127,8 @@ def main() -> int:
         h = d.get("height_m")
         built = d.get("built")
 
-        # 高度异常
-        if h is not None and (h > 150 or h < 2):
+        # 高度异常（已标 height_suspect 的视为已处理，不再计为问题）
+        if h is not None and (h > 150 or h < 2) and not d.get("height_suspect"):
             add(d, "height_outlier", f"height_m={h} 异常(可能错挂/单位错)")
 
         # 建成年份异常(未来年；古代小年份不算错，跳过)
@@ -158,6 +141,7 @@ def main() -> int:
             if not d.get("bad_link"):  # bad_link 的摘要是故意丢弃的，已知
                 add(d, "missing_summary", "无摘要")
         else:
+            s = clean_summary(s)  # 去零宽残渣后再判定，避免假「截断」
             # 过短/截断(非正常结尾，且不是有意的 … 截断)
             if len(s) < 45:
                 add(d, "short_summary", f"摘要过短({len(s)}字符): {s!r}")
@@ -167,34 +151,36 @@ def main() -> int:
             # 语言 & 跑题
             low = s.lower()
             ratio, scripts = non_latin_ratio(s)
-            en_hits = sum(1 for w in EN_STOPWORDS if w in " " + low + " ")
             name_tokens = [t for t in re.split(r"\W+", (d.get("name") or "").lower()) if len(t) > 3]
             has_lh_word = any(w in low for w in LH_WORDS)
             has_name = any(t in low for t in name_tokens)
-            if ratio > 0.15:
-                add(d, "non_english", f"摘要是非拉丁文字({ratio:.0%}, {sorted(scripts)}) → 非英文")
-            elif en_hits < 2:
-                add(d, "non_english", f"摘要疑似非英文(无英文常用词标志): {s[:70]!r}")
+            # 与 fix_details 共用同一判定（≥2 个英文常用词 → 视为英文，哪怕含母语名括注）
+            english = is_english(s)
+            if not english:
+                if ratio > 0.15:
+                    add(d, "non_english", f"摘要是非拉丁文字({ratio:.0%}, {sorted(scripts)}) → 非英文")
+                else:
+                    add(d, "non_english", f"摘要疑似非英文(无英文常用词标志): {s[:70]!r}")
             elif not has_lh_word and not has_name:
                 # 英文但既不含灯塔词也不含名字 → 可能真的讲错对象
                 add(d, "off_topic", f"英文摘要但不含灯塔词/名字 → 可能讲的不是这座: {s[:80]!r}")
 
-            # 高度内部矛盾：摘要里的高度都对不上字段
-            if h is not None:
-                hs = heights_in_summary(s)
-                if hs:
-                    tol = max(3.0, h * 0.1)
-                    if not any(abs(v - h) <= tol for _, v in hs):
-                        vals = ", ".join(f"{v}m" for _, v in hs)
-                        add(d, "height_conflict",
-                            f"摘要提到高度[{vals}]，但 height_m 字段={h}m — 两者不一致(可能焦距高 vs 结构高，请你判断)")
+            # 高度内部矛盾：仅英文摘要、且高度未被标为可疑时才比对
+            # (上下文感知抽取：距离/海拔/焦距不会被误当塔高)
+            if english and h is not None and not d.get("height_suspect"):
+                hs = structural_heights(s)
+                tol = max(3.0, h * 0.1)
+                if hs and not any(abs(v - h) <= tol for v in hs):
+                    vals = ", ".join(f"{v}m" for v in sorted(set(hs)))
+                    add(d, "height_conflict",
+                        f"摘要提到高度[{vals}]，但 height_m 字段={h}m — 两者不一致(已两值并存交给用户判断)")
 
-            # 年份内部矛盾
-            if yi is not None:
+            # 年份内部矛盾（仅英文摘要）
+            if english and yi is not None:
                 bys = build_years_in_summary(s)
                 if bys and yi not in bys:
                     add(d, "year_conflict",
-                        f"摘要提到建于{bys}，但 built 字段={built} — 不一致，请你判断")
+                        f"摘要提到建于{sorted(set(bys))}，但 built 字段={built} — 不一致(已两值并存交给用户判断)")
 
         # 关键字段缺失(仅作信息记一条，避免噪声)
         miss = [k for k in ("built", "height_m", "country") if d.get(k) in (None, "")]

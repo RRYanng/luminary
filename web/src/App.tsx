@@ -49,6 +49,14 @@ function buildCardModel(base: Lighthouse, detail: LighthouseDetail | undefined):
   const isLh = detail?.category === "lighthouse";
   const usable = isLh && !detail?.bad_link; // clean detail -> show summary/image/link
   const status = statusOf(base, detail);
+  // suppress the height fact entirely when the source value is flagged implausible
+  // (elevation/focal height stored as tower height, or a bad value) — the OSM base
+  // height often holds the very same bad number, so don't fall back to it.
+  const height = isLh && detail!.height_suspect
+    ? null
+    : isLh && detail!.height_m != null
+      ? detail!.height_m
+      : base.height;
   return {
     id: base.id,
     name: base.name,
@@ -58,9 +66,11 @@ function buildCardModel(base: Lighthouse, detail: LighthouseDetail | undefined):
     // facts from Wikidata are about the lighthouse itself even when the article
     // link is wrong (bad_link), so keep them; not_lighthouse falls back to OSM.
     built: isLh ? detail!.built ?? base.start_date : base.start_date,
-    height: isLh && detail!.height_m != null ? detail!.height_m : base.height,
+    height,
     country: isLh ? detail!.country : null,
     learnMore: usable ? detail!.summary_source : detail ? null : wikipediaUrl(base.wikipedia),
+    heightConflict: usable && detail!.height_conflict ? detail!.height_conflict.summary : null,
+    yearConflict: usable && detail!.year_conflict ? detail!.year_conflict.summary : null,
   };
 }
 

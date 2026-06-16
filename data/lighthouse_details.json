@@ -25,7 +25,13 @@
       "top200_rank": 1,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "gone"
+      "status": "gone",
+      "height_conflict": {
+        "field": 137.0,
+        "summary": [
+          100.0
+        ]
+      }
     },
     {
       "id": "node/1199794453",
@@ -236,8 +242,8 @@
       "wikidata": "Q1151131",
       "wikipedia": "en:Jeddah Light",
       "built": "1990",
-      "height_m": null,
-      "country": null,
+      "height_m": 131.4,
+      "country": "Saudi Arabia",
       "summary": "Jeddah Light is an observation tower, port control tower and active lighthouse in Jeddah, Saudi Arabia. With a height of 431 ft (131.4 m), it \"has a credible claim to be the world's tallest light tower\".",
       "summary_source": "https://en.wikipedia.org/wiki/Jeddah_Light",
       "summary_wikidata": "Q1151131",
@@ -389,7 +395,13 @@
       "top200_rank": 15,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "year_conflict": {
+        "field": "1907",
+        "summary": [
+          1908
+        ]
+      }
     },
     {
       "id": "way/1119816491",
@@ -449,7 +461,13 @@
       "top200_rank": 18,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "year_conflict": {
+        "field": "1810",
+        "summary": [
+          1807
+        ]
+      }
     },
     {
       "id": "way/737263555",
@@ -509,7 +527,13 @@
       "top200_rank": 21,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "year_conflict": {
+        "field": "1857",
+        "summary": [
+          1856
+        ]
+      }
     },
     {
       "id": "way/153047246",
@@ -790,7 +814,13 @@
       "top200_rank": 34,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "height_conflict": {
+        "field": 11.0,
+        "summary": [
+          27.1
+        ]
+      }
     },
     {
       "id": "way/1297215911",
@@ -820,7 +850,7 @@
       "built": "1891",
       "height_m": 11.0,
       "country": "Germany",
-      "summary": "Pilsum Lighthouse (German: Pilsumer Leuchtturm) was built in 1891 as a sector light for the Ems‌hörn channel on Germany's North Sea coast. It is located on a dyke near the village of Pilsum in the municipality of Krummhörn.",
+      "summary": "Pilsum Lighthouse (German: Pilsumer Leuchtturm) was built in 1891 as a sector light for the Emshörn channel on Germany's North Sea coast. It is located on a dyke near the village of Pilsum in the municipality of Krummhörn.",
       "summary_source": "https://en.wikipedia.org/wiki/Pilsum_Lighthouse",
       "summary_wikidata": "Q539709",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Pilsumer_Leuchtturm_2010-10_CN-I.jpg",
@@ -850,7 +880,13 @@
       "top200_rank": 37,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "year_conflict": {
+        "field": "1870",
+        "summary": [
+          1802
+        ]
+      }
     },
     {
       "id": "way/350070453",
@@ -1511,7 +1547,13 @@
       "top200_rank": 69,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "year_conflict": {
+        "field": "1859",
+        "summary": [
+          1858
+        ]
+      }
     },
     {
       "id": "way/853245460",
@@ -1742,7 +1784,7 @@
       "built": "1894",
       "height_m": 12.0,
       "country": "Spain",
-      "summary": "El Faro de Melilla es el faro de la ciudad española de Melilla, está situado en la calle Miguel Acosta de Melilla la Vieja y forma parte del conjunto histórico artístico de la ciudad de Melilla, un bien de interés cultural.​​​​​",
+      "summary": "El Faro de Melilla es el faro de la ciudad española de Melilla, está situado en la calle Miguel Acosta de Melilla la Vieja y forma parte del conjunto histórico artístico de la ciudad de Melilla, un bien de interés cultural.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Melilla",
       "summary_wikidata": "Q28771409",
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Melilla_faro.jpg",
@@ -2512,7 +2554,13 @@
       "top200_rank": 117,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "height_conflict": {
+        "field": 35.0,
+        "summary": [
+          11.9
+        ]
+      }
     },
     {
       "id": "node/10047022223",
@@ -2552,7 +2600,13 @@
       "top200_rank": 119,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "existing"
+      "status": "existing",
+      "year_conflict": {
+        "field": "1816",
+        "summary": [
+          1817
+        ]
+      }
     },
     {
       "id": "node/1115684949",
@@ -2952,7 +3006,13 @@
       "top200_rank": 139,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "year_conflict": {
+        "field": "1835",
+        "summary": [
+          1766
+        ]
+      }
     },
     {
       "id": "node/585339006",
@@ -2992,7 +3052,13 @@
       "top200_rank": 141,
       "bad_link": false,
       "category": "lighthouse",
-      "status": "operational"
+      "status": "operational",
+      "height_conflict": {
+        "field": 36.0,
+        "summary": [
+          28.0
+        ]
+      }
     },
     {
       "id": "node/677529097",
@@ -3332,7 +3398,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": 158
+      "top200_rank": 158,
+      "height_conflict": {
+        "field": 44.0,
+        "summary": [
+          7.0
+        ]
+      }
     },
     {
       "id": "way/270707952",
@@ -3672,7 +3744,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": 175
+      "top200_rank": 175,
+      "year_conflict": {
+        "field": "1962",
+        "summary": [
+          1960
+        ]
+      }
     },
     {
       "id": "way/538515296",
@@ -4432,7 +4510,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1874",
+        "summary": [
+          1832
+        ]
+      }
     },
     {
       "id": "node/451977164",
@@ -6254,7 +6338,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1858",
+        "summary": [
+          1922
+        ]
+      }
     },
     {
       "id": "node/1413091427",
@@ -6665,7 +6755,7 @@
       "built": "1884",
       "height_m": 6.0,
       "country": "Argentina",
-      "summary": "El Faro de San Juan de Salvamento (conocido también como el Faro del Fin del Mundo) se encuentra al noreste de la isla de los Estados, provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur, en Patagonia, al sur de Argentina.​ Es el faro más antiguo de la República…",
+      "summary": "El Faro de San Juan de Salvamento (conocido también como el Faro del Fin del Mundo) se encuentra al noreste de la isla de los Estados, provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur, en Patagonia, al sur de Argentina. Es el faro más antiguo de la República…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_San_Juan_de_Salvamento",
       "summary_wikidata": "Q3378548",
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Farodelfindelmundo-2022-lethalcrysis.jpg",
@@ -6715,7 +6805,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1839",
+        "summary": [
+          1883
+        ]
+      }
     },
     {
       "id": "node/268968708",
@@ -6955,7 +7051,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1881",
+        "summary": [
+          1880
+        ]
+      }
     },
     {
       "id": "node/3978768955",
@@ -7215,7 +7317,19 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 38.7,
+        "summary": [
+          20.1
+        ]
+      },
+      "year_conflict": {
+        "field": "1896",
+        "summary": [
+          1849
+        ]
+      }
     },
     {
       "id": "node/5910991444",
@@ -7935,7 +8049,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1882",
+        "summary": [
+          1903
+        ]
+      }
     },
     {
       "id": "way/182854850",
@@ -8115,7 +8235,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 30.0,
+        "summary": [
+          36.0
+        ]
+      }
     },
     {
       "id": "way/232453083",
@@ -8175,7 +8301,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1764",
+        "summary": [
+          1845
+        ]
+      }
     },
     {
       "id": "way/248116909",
@@ -8675,7 +8807,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 11.0,
+        "summary": [
+          62.0
+        ]
+      }
     },
     {
       "id": "way/411281537",
@@ -8715,7 +8853,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1838",
+        "summary": [
+          1923
+        ]
+      }
     },
     {
       "id": "way/441025198",
@@ -8775,7 +8919,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1964",
+        "summary": [
+          1961
+        ]
+      }
     },
     {
       "id": "way/49962730",
@@ -8935,7 +9085,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 8.0,
+        "summary": [
+          4.9
+        ]
+      }
     },
     {
       "id": "way/576710199",
@@ -8955,7 +9111,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1859",
+        "summary": [
+          1909
+        ]
+      }
     },
     {
       "id": "way/619855162",
@@ -10257,7 +10419,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1896",
+        "summary": [
+          1895
+        ]
+      }
     },
     {
       "id": "node/1295700135",
@@ -10937,7 +11105,9 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_suspect": true,
+      "height_suspect_note": "源高度数值过小、明显存疑，已隐藏"
     },
     {
       "id": "node/1834890148",
@@ -11487,7 +11657,7 @@
       "built": "1999",
       "height_m": null,
       "country": "Sri Lanka",
-      "summary": "Oluvil Lighthouse (Sinhala: ඔලුවිල් ප්‍රදීපාගාරය) is a lighthouse situated on the southern east coast of Sri Lanka at Oluvil, which is located approximately 12 km (7.5 mi) south of Kalmunai. The lighthouse is operated and maintained by the Sri Lanka Ports Authority.",
+      "summary": "Oluvil Lighthouse (Sinhala: ඔලුවිල් ප්රදීපාගාරය) is a lighthouse situated on the southern east coast of Sri Lanka at Oluvil, which is located approximately 12 km (7.5 mi) south of Kalmunai. The lighthouse is operated and maintained by the Sri Lanka Ports Authority.",
       "summary_source": "https://en.wikipedia.org/wiki/Oluvil_Lighthouse",
       "summary_wikidata": "Q19252675",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Oluvil_Lighthouse_2.jpg",
@@ -11757,7 +11927,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1875",
+        "summary": [
+          1874
+        ]
+      }
     },
     {
       "id": "node/442399290",
@@ -12117,7 +12293,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1858",
+        "summary": [
+          1857
+        ]
+      }
     },
     {
       "id": "node/659768997",
@@ -12637,7 +12819,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1851",
+        "summary": [
+          1859
+        ]
+      }
     },
     {
       "id": "node/973766056",
@@ -12957,7 +13145,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1839",
+        "summary": [
+          1864
+        ]
+      }
     },
     {
       "id": "way/109864278",
@@ -13057,7 +13251,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1875",
+        "summary": [
+          1874
+        ]
+      }
     },
     {
       "id": "way/1185754230",
@@ -13487,7 +13687,7 @@
       "built": "1855",
       "height_m": 13.0,
       "country": "Spain",
-      "summary": "El faro del monte Igueldo es un faro​ que está situado en el barrio de Igueldo, en San Sebastián (Guipúzcoa, España).​",
+      "summary": "El faro del monte Igueldo es un faro que está situado en el barrio de Igueldo, en San Sebastián (Guipúzcoa, España).",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_del_monte_Igueldo",
       "summary_wikidata": "Q973815",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Igueldo_lighthouse_at_San_Sebastian.jpg",
@@ -13627,7 +13827,7 @@
       "built": "1992",
       "height_m": 30.0,
       "country": "Spain",
-      "summary": "El faro de Punta Frouxeira, a veces llamado faro de Meirás,​ es un faro situado en la Punta Frouxeira, en Meirás, Valdoviño, provincia de La Coruña, Galicia, España.",
+      "summary": "El faro de Punta Frouxeira, a veces llamado faro de Meirás, es un faro situado en la Punta Frouxeira, en Meirás, Valdoviño, provincia de La Coruña, Galicia, España.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Punta_Frouxeira",
       "summary_wikidata": "Q20544592",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Valdovi%C3%B1o_-_Faro_de_Frouxeira_-BT-_01.jpg",
@@ -14457,7 +14657,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1846",
+        "summary": [
+          1844
+        ]
+      }
     },
     {
       "id": "way/311803407",
@@ -14557,7 +14763,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1954",
+        "summary": [
+          1929
+        ]
+      }
     },
     {
       "id": "way/33970568",
@@ -14597,7 +14809,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1872",
+        "summary": [
+          1871
+        ]
+      }
     },
     {
       "id": "way/34185231",
@@ -14717,7 +14935,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1788",
+        "summary": [
+          1548
+        ]
+      }
     },
     {
       "id": "way/365180668",
@@ -14917,7 +15141,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1835",
+        "summary": [
+          1817
+        ]
+      }
     },
     {
       "id": "way/427136840",
@@ -14947,7 +15177,7 @@
       "built": "1854",
       "height_m": 14.0,
       "country": "Spain",
-      "summary": "El faro de Tabarca está situado en la isla de Tabarca (Alicante, España) para avisar de la situación de la propia isla en los numerosos islotes rocosos y escollos que la rodean.​​",
+      "summary": "El faro de Tabarca está situado en la isla de Tabarca (Alicante, España) para avisar de la situación de la propia isla en los numerosos islotes rocosos y escollos que la rodean.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Tabarca",
       "summary_wikidata": "Q8960914",
       "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Tabarca_Lighthouse.JPG",
@@ -15057,7 +15287,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1892",
+        "summary": [
+          1839
+        ]
+      }
     },
     {
       "id": "way/465136070",
@@ -15377,7 +15613,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1899",
+        "summary": [
+          1986
+        ]
+      }
     },
     {
       "id": "way/631916985",
@@ -15537,7 +15779,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1901",
+        "summary": [
+          1746
+        ]
+      }
     },
     {
       "id": "way/713423319",
@@ -15897,7 +16145,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1923",
+        "summary": [
+          1864
+        ]
+      }
     },
     {
       "id": "way/964213919",
@@ -15947,7 +16201,7 @@
       "built": "1839",
       "height_m": 30.0,
       "country": "Spain",
-      "summary": "El faro de Cabo Mayor o faro de Bellavista​ está situado en el municipio cántabro de Santander (España), ubicado sobre cabo Mayor a 91 metros sobre el nivel del mar, señalizando la entrada al puerto de Santander.",
+      "summary": "El faro de Cabo Mayor o faro de Bellavista está situado en el municipio cántabro de Santander (España), ubicado sobre cabo Mayor a 91 metros sobre el nivel del mar, señalizando la entrada al puerto de Santander.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Cabo_Mayor",
       "summary_wikidata": "Q5856365",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Faro_de_Cabo_Mayor_en_Santander.jpg",
@@ -16437,7 +16691,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 44.4,
+        "summary": [
+          14.0
+        ]
+      }
     },
     {
       "id": "node/1033251175",
@@ -16898,7 +17158,9 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_suspect": true,
+      "height_suspect_note": "源高度疑为海拔/焦距(灯火距海平面)而非塔身高度，已隐藏"
     },
     {
       "id": "node/1199791895",
@@ -16908,7 +17170,7 @@
       "built": "1924",
       "height_m": 9.5,
       "country": "Chile",
-      "summary": "El Faro Punta Panul es un faro perteneciente a la red de faros de Chile. Se ubica al norte de la ciudad puerto de San Antonio, en la Región de Valparaíso.​ Faro habitado.",
+      "summary": "El Faro Punta Panul es un faro perteneciente a la red de faros de Chile. Se ubica al norte de la ciudad puerto de San Antonio, en la Región de Valparaíso. Faro habitado.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Panul",
       "summary_wikidata": "Q6434882",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Faro_Punta_Panul_2.jpg",
@@ -17458,7 +17720,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1980",
+        "summary": [
+          1924
+        ]
+      }
     },
     {
       "id": "node/1511519712",
@@ -17988,7 +18256,7 @@
       "built": "1855",
       "height_m": 13.0,
       "country": "Spain",
-      "summary": "El faro de la Plata se encuentra en el Cabo de la Plata, San Sebastián, (País Vasco), España.​",
+      "summary": "El faro de la Plata se encuentra en el Cabo de la Plata, San Sebastián, (País Vasco), España.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_La_Plata",
       "summary_wikidata": "Q5856436",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Faro_de_la_Plata-1.jpg",
@@ -18118,7 +18386,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1897",
+        "summary": [
+          1899
+        ]
+      }
     },
     {
       "id": "node/1580380113",
@@ -18288,7 +18562,7 @@
       "built": "1914",
       "height_m": 14.0,
       "country": "Chile",
-      "summary": "El Faro Cabo Raper está ubicado en el extremo oeste de la península de Taitao, Región de Aysén, una zona caracterizada por su compleja geografía y abruptos acantilados.​ La torre pertenece a la red de faros de Chile, su construcción se inició en 1900 como obra encargada del…",
+      "summary": "El Faro Cabo Raper está ubicado en el extremo oeste de la península de Taitao, Región de Aysén, una zona caracterizada por su compleja geografía y abruptos acantilados. La torre pertenece a la red de faros de Chile, su construcción se inició en 1900 como obra encargada del…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cabo_Raper",
       "summary_wikidata": "Q5856137",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Faro_cabo_raper.jpg",
@@ -18338,7 +18612,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1874",
+        "summary": [
+          1635
+        ]
+      }
     },
     {
       "id": "node/1811962678",
@@ -18638,7 +18918,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1994-07-25",
+        "summary": [
+          1896
+        ]
+      }
     },
     {
       "id": "node/2419113104",
@@ -19018,7 +19304,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1883",
+        "summary": [
+          1884
+        ]
+      }
     },
     {
       "id": "node/269343948",
@@ -19788,7 +20080,7 @@
       "built": "1859",
       "height_m": 18.0,
       "country": "France",
-      "summary": "El faro de Walde es un faro sobre pilotes de rosca​ ubicado en Marck, comuna francesa cercana a Calais, en el departamento de Paso de Calais, precisamente el sitio que separa el Mar del Norte con el Canal de la Mancha. Su innovadora estructura metálica redujo los costes de…",
+      "summary": "El faro de Walde es un faro sobre pilotes de rosca ubicado en Marck, comuna francesa cercana a Calais, en el departamento de Paso de Calais, precisamente el sitio que separa el Mar del Norte con el Canal de la Mancha. Su innovadora estructura metálica redujo los costes de…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Walde",
       "summary_wikidata": "Q3378432",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Phare_de_Walde.jpg",
@@ -20098,7 +20390,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1888",
+        "summary": [
+          1902
+        ]
+      }
     },
     {
       "id": "node/423220120",
@@ -20758,7 +21056,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1938",
+        "summary": [
+          1940
+        ]
+      }
     },
     {
       "id": "node/5526308198",
@@ -20968,7 +21272,7 @@
       "built": null,
       "height_m": null,
       "country": "Angola",
-      "summary": "El Faro de Lobito​ (en portugués: Farol do Lobito) es un faro situado en la parte superior de los acantilados en el lado este de la entrada del puerto y la bahía de Lobito, frente a la punta del banco de arena al norte de la ciudad del mismo nombre, en la provincia de Benguela…",
+      "summary": "El Faro de Lobito (en portugués: Farol do Lobito) es un faro situado en la parte superior de los acantilados en el lado este de la entrada del puerto y la bahía de Lobito, frente a la punta del banco de arena al norte de la ciudad del mismo nombre, en la provincia de Benguela…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Lobito",
       "summary_wikidata": "Q10280192",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Lobito_Lighthouse.jpg",
@@ -21088,7 +21392,7 @@
       "built": null,
       "height_m": 15.0,
       "country": "Spain",
-      "summary": "El faro de Cabo Llebeig (en catalán: Far de Cap Llebeig) es un faro que se encuentra en la isla Dragonera, a una distancia de 700 metros aproximadamente de la isla de Mallorca, España.​",
+      "summary": "El faro de Cabo Llebeig (en catalán: Far de Cap Llebeig) es un faro que se encuentra en la isla Dragonera, a una distancia de 700 metros aproximadamente de la isla de Mallorca, España.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Cabo_Llebeig",
       "summary_wikidata": "Q5856363",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Far_de_Llebeig_2018_1.jpg",
@@ -21108,7 +21412,7 @@
       "built": null,
       "height_m": 15.0,
       "country": "Spain",
-      "summary": "El faro de Cap de Tramuntana es un faro que se encuentra en el norte de la isla Dragonera,​ a 700 metros de la isla de Mallorca, España.​",
+      "summary": "El faro de Cap de Tramuntana es un faro que se encuentra en el norte de la isla Dragonera, a 700 metros de la isla de Mallorca, España.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Cap_de_Tramuntana",
       "summary_wikidata": "Q5856392",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Far_de_Tramuntana_2018_3.jpg",
@@ -21448,7 +21752,7 @@
       "built": "1864",
       "height_m": 13.0,
       "country": "Spain",
-      "summary": "El faro de Punta de Sa Creu es un faro situado sobre un promontorio en la entrada este del puerto de Sóller, en la isla de Mallorca, Islas Baleares, España.​",
+      "summary": "El faro de Punta de Sa Creu es un faro situado sobre un promontorio en la entrada este del puerto de Sóller, en la isla de Mallorca, Islas Baleares, España.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Punta_de_Sa_Creu",
       "summary_wikidata": "Q5856488",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Faro_de_Punta_de_Sa_Creu_en_el_Port_de_S%C3%B3ller_km.jpg",
@@ -21578,7 +21882,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1868",
+        "summary": [
+          1829
+        ]
+      }
     },
     {
       "id": "node/6977011908",
@@ -21758,7 +22068,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1886",
+        "summary": [
+          1885
+        ]
+      }
     },
     {
       "id": "node/753902145",
@@ -22288,7 +22604,7 @@
       "built": "1842",
       "height_m": 22.0,
       "country": "Spain",
-      "summary": "El faro de Cabo Gros (en catalán: Far de Cap Gros) es un faro situado sobre un promontorio en la entrada oeste del puerto de Sóller, en la isla de Mallorca, Islas Baleares, España.​",
+      "summary": "El faro de Cabo Gros (en catalán: Far de Cap Gros) es un faro situado sobre un promontorio en la entrada oeste del puerto de Sóller, en la isla de Mallorca, Islas Baleares, España.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Cabo_Gros",
       "summary_wikidata": "Q5856361",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Far_Cap_Gros_in_Port_de_S%C3%B3ller.jpg",
@@ -22418,7 +22734,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 14.0,
+        "summary": [
+          7.6
+        ]
+      }
     },
     {
       "id": "way/1064840043",
@@ -22438,7 +22760,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1823",
+        "summary": [
+          1842
+        ]
+      }
     },
     {
       "id": "way/1066224981",
@@ -22698,7 +23026,14 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1822",
+        "summary": [
+          1817,
+          1823
+        ]
+      }
     },
     {
       "id": "way/1107422176",
@@ -22858,7 +23193,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1886",
+        "summary": [
+          1885
+        ]
+      }
     },
     {
       "id": "way/121506450",
@@ -23038,7 +23379,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1842",
+        "summary": [
+          1830
+        ]
+      }
     },
     {
       "id": "way/1312710274",
@@ -23298,7 +23645,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1868",
+        "summary": [
+          1840
+        ]
+      }
     },
     {
       "id": "way/138224112",
@@ -23438,7 +23791,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1862",
+        "summary": [
+          1950
+        ]
+      }
     },
     {
       "id": "way/152253771",
@@ -23758,7 +24117,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1964",
+        "summary": [
+          1804
+        ]
+      }
     },
     {
       "id": "way/182580214",
@@ -24038,7 +24403,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1769",
+        "summary": [
+          1784
+        ]
+      }
     },
     {
       "id": "way/221137760",
@@ -24658,7 +25029,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 31.0,
+        "summary": [
+          36.9
+        ]
+      }
     },
     {
       "id": "way/347556590",
@@ -25158,7 +25535,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1944",
+        "summary": [
+          1897
+        ]
+      }
     },
     {
       "id": "way/42960770",
@@ -25598,7 +25981,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1905",
+        "summary": [
+          1902
+        ]
+      }
     },
     {
       "id": "way/536464959",
@@ -25988,7 +26377,7 @@
       "built": "1901",
       "height_m": 24.0,
       "country": "Spain",
-      "summary": "El faro de La Higuera, también denominado faro de Matalascañas, es un faro situado en el municipio español en Almonte, en la provincia de Huelva, comunidad autónoma de Andalucía.​ Se encuentra ubicado en la playa de Matalascañas, dentro del parque nacional de Doñana.",
+      "summary": "El faro de La Higuera, también denominado faro de Matalascañas, es un faro situado en el municipio español en Almonte, en la provincia de Huelva, comunidad autónoma de Andalucía. Se encuentra ubicado en la playa de Matalascañas, dentro del parque nacional de Doñana.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_La_Higuera",
       "summary_wikidata": "Q28375214",
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Faro_de_Matalasca%C3%B1as.jpg",
@@ -26188,7 +26577,7 @@
       "built": "1907",
       "height_m": 18.0,
       "country": "United Kingdom",
-      "summary": "El faro Cabo San Felipe (del inglés: Pembroke Lighthouse) se encuentra sobre el cabo homónimo, en el extremo este de la isla Soledad.​​",
+      "summary": "El faro Cabo San Felipe (del inglés: Pembroke Lighthouse) se encuentra sobre el cabo homónimo, en el extremo este de la isla Soledad.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cabo_San_Felipe",
       "summary_wikidata": "Q3378557",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Pembroke-5.jpg",
@@ -26638,7 +27027,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1895",
+        "summary": [
+          1891
+        ]
+      }
     },
     {
       "id": "way/716910426",
@@ -26918,7 +27313,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1862",
+        "summary": [
+          1820
+        ]
+      }
     },
     {
       "id": "way/865469982",
@@ -27008,7 +27409,7 @@
       "built": "1904",
       "height_m": 26.0,
       "country": "Argentina",
-      "summary": "El faro Cabo Vírgenes es un faro que se encuentra ubicado en Cabo Vírgenes, a 133 km de Río Gallegos, capital de la provincia de Santa Cruz, República Argentina.​​ Desde lo alto del faro se divisa el faro de Punta Dungeness, perteneciente a la República de Chile.​ El camino que…",
+      "summary": "El faro Cabo Vírgenes es un faro que se encuentra ubicado en Cabo Vírgenes, a 133 km de Río Gallegos, capital de la provincia de Santa Cruz, República Argentina. Desde lo alto del faro se divisa el faro de Punta Dungeness, perteneciente a la República de Chile. El camino que…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cabo_V%C3%ADrgenes",
       "summary_wikidata": "Q3378567",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Cabo_Virgenes%2C_Provincia_de_Santa_Cruz%2C_Argentina._-_panoramio_%281%29.jpg",
@@ -27098,7 +27499,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1823",
+        "summary": [
+          1840
+        ]
+      }
     },
     {
       "id": "way/95528695",
@@ -27138,7 +27545,19 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 14.0,
+        "summary": [
+          20.0
+        ]
+      },
+      "year_conflict": {
+        "field": "1749",
+        "summary": [
+          1856
+        ]
+      }
     },
     {
       "id": "way/963467236",
@@ -28038,7 +28457,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 17.0,
+        "summary": [
+          4.3
+        ]
+      }
     },
     {
       "id": "node/1018941849",
@@ -28348,7 +28773,7 @@
       "built": "1860",
       "height_m": 24.0,
       "country": "Spain",
-      "summary": "El faro de Cala Figuera es un faro situado en la punta occidental de la Bahía de Palma, cerca de la localidad de Son Ferrer, municipio de Calviá, en la isla de Mallorca (Islas Baleares, España).​",
+      "summary": "El faro de Cala Figuera es un faro situado en la punta occidental de la Bahía de Palma, cerca de la localidad de Son Ferrer, municipio de Calviá, en la isla de Mallorca (Islas Baleares, España).",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Cala_Figuera",
       "summary_wikidata": "Q5856390",
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Far_de_Cala_Figuera.jpg",
@@ -28448,7 +28873,7 @@
       "built": "1864",
       "height_m": 18.0,
       "country": "Venezuela",
-      "summary": "El Faro Holandés​ es el nombre que recibe un antiguo faro ubicado en una montaña de la isla venezolana de Gran Roque, en el Archipiélago Los Roques,​ una de las Dependencias Federales de Venezuela. El Faro Holandés fue construido por el gobierno venezolano en 1874, siendo…",
+      "summary": "El Faro Holandés es el nombre que recibe un antiguo faro ubicado en una montaña de la isla venezolana de Gran Roque, en el Archipiélago Los Roques, una de las Dependencias Federales de Venezuela. El Faro Holandés fue construido por el gobierno venezolano en 1874, siendo…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Holand%C3%A9s_%28Los_Roques%29",
       "summary_wikidata": "Q5856169",
       "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Faro_Los_Roques.jpg",
@@ -28748,7 +29173,7 @@
       "built": "1855",
       "height_m": 26.0,
       "country": "Brazil",
-      "summary": "Faro Morro de San Pablo, está ubicado sobre el Océano Atlántico, en Isla de Itaparica, Salvador de Bahía, San Pablo, Brasil. Fue construido e iluminado en 1855.​ Para visitar el Faro Morro de San Pablo, hay que subir 120 escalones.​ Tiene 89 metros de altura y es blanco y rojo.​…",
+      "summary": "Faro Morro de San Pablo, está ubicado sobre el Océano Atlántico, en Isla de Itaparica, Salvador de Bahía, San Pablo, Brasil. Fue construido e iluminado en 1855. Para visitar el Faro Morro de San Pablo, hay que subir 120 escalones. Tiene 89 metros de altura y es blanco y rojo.…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Morro_de_San_Pablo",
       "summary_wikidata": "Q16566342",
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/FaroMorroSanPablo.jpg",
@@ -29018,7 +29443,9 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_suspect": true,
+      "height_suspect_note": "源高度数值过小、明显存疑，已隐藏"
     },
     {
       "id": "node/11939611566",
@@ -29108,7 +29535,7 @@
       "built": null,
       "height_m": 12.0,
       "country": "Chile",
-      "summary": "El Faro Molo de Abrigo Arica o Faro Extremo Molo de Abrigo es un faro perteneciente a la red de faros de Chile. Es de color rojo completo y tiene forma cilíndrica.​ Está deshabitado.",
+      "summary": "El Faro Molo de Abrigo Arica o Faro Extremo Molo de Abrigo es un faro perteneciente a la red de faros de Chile. Es de color rojo completo y tiene forma cilíndrica. Está deshabitado.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Molo_de_Abrigo_de_Arica",
       "summary_wikidata": "Q2840362",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Arica_y_Parinacota_location_map.svg",
@@ -29628,7 +30055,7 @@
       "built": "1859",
       "height_m": 40.0,
       "country": "Cuba",
-      "summary": "El faro Cayo Paredón Grande (también llamado Faro Diego Velázquez) es un faro situado en la isla caribeña de Cuba.​",
+      "summary": "El faro Cayo Paredón Grande (también llamado Faro Diego Velázquez) es un faro situado en la isla caribeña de Cuba.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cayo_Pared%C3%B3n_Grande",
       "summary_wikidata": "Q61104965",
       "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Cuba_physical_map_%28no_legend%29.svg",
@@ -30748,7 +31175,7 @@
       "built": "1917",
       "height_m": 16.5,
       "country": "Argentina",
-      "summary": "El Faro Punta Norte es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 42°05′00″S 63°46′00″O en la punta Norte de la península Valdés, Departamento Biedma, en la Provincia del Chubut, Patagonia Argentina.​ El faro fue librado al servicio el 1 de marzo…",
+      "summary": "El Faro Punta Norte es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 42°05′00″S 63°46′00″O en la punta Norte de la península Valdés, Departamento Biedma, en la Provincia del Chubut, Patagonia Argentina. El faro fue librado al servicio el 1 de marzo…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Norte",
       "summary_wikidata": "Q5856284",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Argentina_Chubut_location_map.svg",
@@ -31368,7 +31795,7 @@
       "built": "1887",
       "height_m": 16.5,
       "country": "Argentina",
-      "summary": "El Faro Río Negro o faro de la Barra del río Negro,​ es un faro ubicado en la villa marítima El Cóndor, de la provincia de Río Negro, Argentina, muy próximo a la desembocadura del Río Negro, al cual le debe su nombre.​Es el faro más antiguo de la Patagonia continental, y también…",
+      "summary": "El Faro Río Negro o faro de la Barra del río Negro, es un faro ubicado en la villa marítima El Cóndor, de la provincia de Río Negro, Argentina, muy próximo a la desembocadura del Río Negro, al cual le debe su nombre.Es el faro más antiguo de la Patagonia continental, y también…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_R%C3%ADo_Negro",
       "summary_wikidata": "Q5856309",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Faroargentinobalnearioelcondor.JPG",
@@ -31788,7 +32215,7 @@
       "built": "1916",
       "height_m": 12.0,
       "country": "Argentina",
-      "summary": "El Faro Punta Ninfas es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 42°58′00″S 64°19′00″O en la punta Ninfas, extremo sur del golfo Nuevo, en el Departamento Rawson, en la Provincia del Chubut, Patagonia Argentina.​ El faro fue librado al servicio…",
+      "summary": "El Faro Punta Ninfas es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 42°58′00″S 64°19′00″O en la punta Ninfas, extremo sur del golfo Nuevo, en el Departamento Rawson, en la Provincia del Chubut, Patagonia Argentina. El faro fue librado al servicio…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Ninfas",
       "summary_wikidata": "Q5856282",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Faro_Punta_Ninfas.jpg",
@@ -31848,7 +32275,7 @@
       "built": null,
       "height_m": 8.0,
       "country": "Chile",
-      "summary": "El Faro Bahía Porvenir pertenece a la red de faros de Chile y se encuentra en la comuna de Porvenir, en la Región de Magallanes.​",
+      "summary": "El Faro Bahía Porvenir pertenece a la red de faros de Chile y se encuentra en la comuna de Porvenir, en la Región de Magallanes.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Bah%C3%ADa_Porvenir",
       "summary_wikidata": "Q17174530",
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Lighthouse_Bah%C3%ADa_Porvenir.JPG",
@@ -31958,7 +32385,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 11.0,
+        "summary": [
+          27.0
+        ]
+      }
     },
     {
       "id": "node/1729001655",
@@ -32118,7 +32551,14 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1854",
+        "summary": [
+          1856,
+          1899
+        ]
+      }
     },
     {
       "id": "node/1834842008",
@@ -32298,7 +32738,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1881",
+        "summary": [
+          1839
+        ]
+      }
     },
     {
       "id": "node/1900876208",
@@ -32669,7 +33115,7 @@
       "built": "1925",
       "height_m": 27.0,
       "country": "Argentina",
-      "summary": "El Faro San Jorge es un faro automatizado operado por la Armada Argentina. Se encuentra localizado en las coordenadas 47°12′00″S 66°44′00″O cercano al cabo San Jorge,​ en el centro del golfo homónimo.",
+      "summary": "El Faro San Jorge es un faro automatizado operado por la Armada Argentina. Se encuentra localizado en las coordenadas 47°12′00″S 66°44′00″O cercano al cabo San Jorge, en el centro del golfo homónimo.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_San_Jorge",
       "summary_wikidata": "Q5856320",
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Faro_comodoro.JPG",
@@ -32699,7 +33145,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1859",
+        "summary": [
+          1855
+        ]
+      }
     },
     {
       "id": "node/2186488364",
@@ -32849,7 +33301,7 @@
       "built": null,
       "height_m": 8.0,
       "country": "Chile",
-      "summary": "El Faro Península Alacrán es un faro perteneciente a la red de faros de Chile. Se ubica en la Península del Alacrán en la ciudad de Arica.​ Faro no habitado.",
+      "summary": "El Faro Península Alacrán es un faro perteneciente a la red de faros de Chile. Se ubica en la Península del Alacrán en la ciudad de Arica. Faro no habitado.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Pen%C3%ADnsula_Alacr%C3%A1n",
       "summary_wikidata": "Q5856231",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Arica_y_Parinacota_location_map.svg",
@@ -32909,7 +33361,7 @@
       "built": "1894",
       "height_m": 13.5,
       "country": "Chile",
-      "summary": "El Faro Punta Lutrín, también conocido como Faro Lutrín o Faro del Parque es un faro perteneciente a la red de faros de Chile. Se ubica en el sector Punta Lutrín en uno de los extremos del Parque Lota, en la Región del Biobío.​ Entró en servicio el 31 de diciembre de 1894.​ Está…",
+      "summary": "El Faro Punta Lutrín, también conocido como Faro Lutrín o Faro del Parque es un faro perteneciente a la red de faros de Chile. Se ubica en el sector Punta Lutrín en uno de los extremos del Parque Lota, en la Región del Biobío. Entró en servicio el 31 de diciembre de 1894. Está…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Lutrin",
       "summary_wikidata": "Q5856274",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Faro_Punta_Lutr%C3%ADn.JPG",
@@ -32999,7 +33451,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 10.0,
+        "summary": [
+          16.0
+        ]
+      }
     },
     {
       "id": "node/257496038",
@@ -34069,7 +34527,7 @@
       "built": "1886",
       "height_m": 3.9,
       "country": "Chile",
-      "summary": "Faro Punta Tortuga es un faro chileno ubicado en Coquimbo. Fue inaugurado el 1 de junio de 1886 y debe su nombre a la forma desde el mar cuando se hace ingreso a la bahía de Coquimbo.​ Faro habitado.",
+      "summary": "Faro Punta Tortuga es un faro chileno ubicado en Coquimbo. Fue inaugurado el 1 de junio de 1886 y debe su nombre a la forma desde el mar cuando se hace ingreso a la bahía de Coquimbo. Faro habitado.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Tortuga",
       "summary_wikidata": "Q5856294",
       "image": null,
@@ -34209,7 +34667,7 @@
       "built": "1968",
       "height_m": 9.0,
       "country": "Chile",
-      "summary": "El Faro Cabo Espíritu Santo es un faro perteneciente a la red de faros de Chile. Administrado por la Armada de Chile, y se ubica en el Cabo Espíritu Santo accidente geográfico, localizado en la costa nororiental de Isla de Tierra del Fuego en la Región de Magallanes.​ en la…",
+      "summary": "El Faro Cabo Espíritu Santo es un faro perteneciente a la red de faros de Chile. Administrado por la Armada de Chile, y se ubica en el Cabo Espíritu Santo accidente geográfico, localizado en la costa nororiental de Isla de Tierra del Fuego en la Región de Magallanes. en la…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cabo_Esp%C3%ADritu_Santo",
       "summary_wikidata": "Q5849449",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Magallanes_y_Ant%C3%A1rtica_Chilena_location_map_%28South_American_part%29.svg",
@@ -34249,7 +34707,7 @@
       "built": "1902",
       "height_m": 10.0,
       "country": "Chile",
-      "summary": "El Faro Isla Magdalena es un faro perteneciente a la red de faros de Chile y se ubica en la Isla Magdalena, en el Estrecho de Magallanes, Región de Magallanes y Antártica Chilena.​",
+      "summary": "El Faro Isla Magdalena es un faro perteneciente a la red de faros de Chile y se ubica en la Isla Magdalena, en el Estrecho de Magallanes, Región de Magallanes y Antártica Chilena.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Isla_Magdalena",
       "summary_wikidata": "Q3378131",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Magellanic_Penguins%2C_Isla_Magdalena.jpg",
@@ -34289,7 +34747,7 @@
       "built": "1921",
       "height_m": 16.0,
       "country": "Chile",
-      "summary": "El Faro Punta Duprat es un faro perteneciente a la red de faros de Chile.​ Lleva su nombre en recuerdo de Juan Duprat, quien instaló en 1845 un astillero en la puntilla en que se encuentra el acceso al molo que conduce al faro. Se ubica en el Molo de Abrigo de Valparaíso.",
+      "summary": "El Faro Punta Duprat es un faro perteneciente a la red de faros de Chile. Lleva su nombre en recuerdo de Juan Duprat, quien instaló en 1845 un astillero en la puntilla en que se encuentra el acceso al molo que conduce al faro. Se ubica en el Molo de Abrigo de Valparaíso.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Duprat",
       "summary_wikidata": "Q5856264",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Valparaiso_-_panoramio_%2815%29.jpg",
@@ -34379,7 +34837,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1855",
+        "summary": [
+          1832
+        ]
+      }
     },
     {
       "id": "node/353978514",
@@ -34429,7 +34893,7 @@
       "built": "1909",
       "height_m": 8.0,
       "country": "Argentina",
-      "summary": "El faro Cabo San Pio se encuentra en la ubicación 55°03′00″S 66°31′00″O frente a la isla Nueva, en la costa de la margen norte del Canal Beagle, en el departamento Ushuaia de la provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur (Argentina).​ Se encuentra sobre…",
+      "summary": "El faro Cabo San Pio se encuentra en la ubicación 55°03′00″S 66°31′00″O frente a la isla Nueva, en la costa de la margen norte del Canal Beagle, en el departamento Ushuaia de la provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur (Argentina). Se encuentra sobre…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cabo_San_P%C3%ADo",
       "summary_wikidata": "Q5856144",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/En_el_fin_del_mundo.JPG",
@@ -35399,7 +35863,14 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1857",
+        "summary": [
+          1856,
+          1929
+        ]
+      }
     },
     {
       "id": "node/475913964",
@@ -36109,7 +36580,7 @@
       "built": "1921",
       "height_m": 34.0,
       "country": "Argentina",
-      "summary": "Faro Quequén, es un faro de Argentina que se encuentra ubicado en la localidad de Quequén, al sur de la Provincia de Buenos Aires, a 7 km de la ciudad balnearia de Necochea.​ El faro funciona con energía eléctrica y tiene un equipo de emergencia que funciona a gas (mantiene las…",
+      "summary": "Faro Quequén, es un faro de Argentina que se encuentra ubicado en la localidad de Quequén, al sur de la Provincia de Buenos Aires, a 7 km de la ciudad balnearia de Necochea. El faro funciona con energía eléctrica y tiene un equipo de emergencia que funciona a gas (mantiene las…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Quequ%C3%A9n",
       "summary_wikidata": "Q5494526",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Faro-neco-quequen.JPG",
@@ -36139,7 +36610,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1828",
+        "summary": [
+          1856
+        ]
+      }
     },
     {
       "id": "node/5618528899",
@@ -36319,7 +36796,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1908",
+        "summary": [
+          1893
+        ]
+      }
     },
     {
       "id": "node/582704597",
@@ -36399,7 +36882,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1905",
+        "summary": [
+          1936
+        ]
+      }
     },
     {
       "id": "node/582715733",
@@ -36979,7 +37468,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1886",
+        "summary": [
+          1901
+        ]
+      }
     },
     {
       "id": "node/6183087012",
@@ -37199,7 +37694,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1817",
+        "summary": [
+          1853
+        ]
+      }
     },
     {
       "id": "node/6520690221",
@@ -37349,7 +37850,7 @@
       "built": "1922",
       "height_m": 23.0,
       "country": "Argentina",
-      "summary": "El Faro Cabo Curioso es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 49°11′00″S 67°37′00″O sobre el cabo del mismo nombre en la margen norte de la boca de entrada a la Bahía de San Julián.​ Se halla a 14 kilómetros al noreste de la ciudad de Puerto…",
+      "summary": "El Faro Cabo Curioso es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 49°11′00″S 67°37′00″O sobre el cabo del mismo nombre en la margen norte de la boca de entrada a la Bahía de San Julián. Se halla a 14 kilómetros al noreste de la ciudad de Puerto…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cabo_Curioso",
       "summary_wikidata": "Q5856128",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Argentina_Santa_Cruz_location_map.svg",
@@ -37449,7 +37950,7 @@
       "built": "1925",
       "height_m": 23.0,
       "country": "Argentina",
-      "summary": "El Faro Cabo Raso es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 44°20′42″S 65°14′09″O en la caleta Rasa (cuyo nombre proviene de la escasa pendiente respecto al terreno), al sur de bahía Vera,​ aproximadamente a 160 km al sur de la ciudad de…",
+      "summary": "El Faro Cabo Raso es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 44°20′42″S 65°14′09″O en la caleta Rasa (cuyo nombre proviene de la escasa pendiente respecto al terreno), al sur de bahía Vera, aproximadamente a 160 km al sur de la ciudad de…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cabo_Raso",
       "summary_wikidata": "Q5856140",
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Leuchtturm_Cabo_Raso_Parque_Natural_de_Sintra-Cascais_Estoril_Portugal_Foto_2010_Wolfgang_Pehlemann_IMG_8590.jpg",
@@ -37529,7 +38030,7 @@
       "built": "1928",
       "height_m": 17.0,
       "country": "Argentina",
-      "summary": "El Faro Guzmán es un faro no habitado de la Marina Argentina que se encuentra en la ubicación 47°20′53.3″S 65°43′17″O, sobre la Punta Guzmán, que representa el extremo este de la provincia de Santa Cruz.​ Este faro se encuentra a 17 km al sur de Cabo Blanco y a aproximadamente…",
+      "summary": "El Faro Guzmán es un faro no habitado de la Marina Argentina que se encuentra en la ubicación 47°20′53.3″S 65°43′17″O, sobre la Punta Guzmán, que representa el extremo este de la provincia de Santa Cruz. Este faro se encuentra a 17 km al sur de Cabo Blanco y a aproximadamente…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Guzm%C3%A1n",
       "summary_wikidata": "Q5856167",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Argentina_Santa_Cruz_topographic_location_map.png",
@@ -37569,7 +38070,7 @@
       "built": "1917",
       "height_m": 6.0,
       "country": "Argentina",
-      "summary": "El Faro Isla Rasa es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 45°06′00″S 65°24′00″O en el extremo norte del golfo San Jorge, Departamento Florentino Ameghino, en la Provincia del Chubut, Patagonia Argentina.​ La función del faro es señalizar la…",
+      "summary": "El Faro Isla Rasa es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 45°06′00″S 65°24′00″O en el extremo norte del golfo San Jorge, Departamento Florentino Ameghino, en la Provincia del Chubut, Patagonia Argentina. La función del faro es señalizar la…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Isla_Rasa",
       "summary_wikidata": "Q5856192",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Argentina_Chubut_location_map.svg",
@@ -37629,7 +38130,7 @@
       "built": "1948",
       "height_m": 11.0,
       "country": "Argentina",
-      "summary": "El Faro Punta Lobos es un faro no habitado de la Armada Argentina que se encuentra en la ubicación, Departamento Florentino Ameghino, en la Provincia del Chubut, Patagonia Argentina.​ El faro fue librado al servicio el día 20 de diciembre de 1948. Fue construido en el marco del…",
+      "summary": "El Faro Punta Lobos es un faro no habitado de la Armada Argentina que se encuentra en la ubicación, Departamento Florentino Ameghino, en la Provincia del Chubut, Patagonia Argentina. El faro fue librado al servicio el día 20 de diciembre de 1948. Fue construido en el marco del…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Lobos",
       "summary_wikidata": "Q5856269",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Argentina_Chubut_location_map.svg",
@@ -37649,7 +38150,7 @@
       "built": "2001",
       "height_m": null,
       "country": "Argentina",
-      "summary": "El Faro Punta Bajos es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 42°23′00″S 63°37′00″O sobre la punta Bajos (de la caleta Valdés) en la península Valdés, Departamento Biedma, en la Provincia del Chubut, Patagonia Argentina.​​ El faro fue librado…",
+      "summary": "El Faro Punta Bajos es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 42°23′00″S 63°37′00″O sobre la punta Bajos (de la caleta Valdés) en la península Valdés, Departamento Biedma, en la Provincia del Chubut, Patagonia Argentina. El faro fue librado…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Bajos",
       "summary_wikidata": "Q5856239",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Argentina_Chubut_location_map.svg",
@@ -37729,7 +38230,7 @@
       "built": "1949",
       "height_m": 12.0,
       "country": "Argentina",
-      "summary": "El Faro Punta Tehuelches es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 42°24′00″S 64°18′00″O en el golfo San José, península Valdés, Departamento Biedma, en la Provincia del Chubut, Patagonia Argentina.​ El faro fue librado al servicio el día 17…",
+      "summary": "El Faro Punta Tehuelches es un faro no habitado de la Armada Argentina que se encuentra en la ubicación 42°24′00″S 64°18′00″O en el golfo San José, península Valdés, Departamento Biedma, en la Provincia del Chubut, Patagonia Argentina. El faro fue librado al servicio el día 17…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Tehuelche",
       "summary_wikidata": "Q5856291",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Argentina_Chubut_location_map.svg",
@@ -37809,7 +38310,7 @@
       "built": "1907",
       "height_m": 14.0,
       "country": "Chile",
-      "summary": "El Faro Bahía Félix es un faro perteneciente a la red de faros de Chile. Se encuentra en el sector Bahía Félix de la Isla Tamar en la Región de Magallanes.​ Este faro habitado es Monumento Histórico de la Región de Magallanes.",
+      "summary": "El Faro Bahía Félix es un faro perteneciente a la red de faros de Chile. Se encuentra en el sector Bahía Félix de la Isla Tamar en la Región de Magallanes. Este faro habitado es Monumento Histórico de la Región de Magallanes.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Bah%C3%ADa_F%C3%A9lix",
       "summary_wikidata": "Q5856110",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Chile.Faro.Felix-Mag.1.png",
@@ -37829,7 +38330,7 @@
       "built": "1920",
       "height_m": 5.5,
       "country": "Chile",
-      "summary": "El Faro Islote Fairway es uno de los faros ubicados en el sector de Islotes Fairway en el Estrecho de Magallanes. Pertenece a la red de faros de Chile, entrando en servicio en 1920.​ Faro habitado.",
+      "summary": "El Faro Islote Fairway es uno de los faros ubicados en el sector de Islotes Fairway en el Estrecho de Magallanes. Pertenece a la red de faros de Chile, entrando en servicio en 1920. Faro habitado.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Islote_Fairway",
       "summary_wikidata": "Q5682273",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Magallanes_y_Ant%C3%A1rtica_Chilena_location_map_%28South_American_part%29.svg",
@@ -37849,7 +38350,7 @@
       "built": "1900",
       "height_m": 11.0,
       "country": "Chile",
-      "summary": "El Faro Cabo Posesión es un faro perteneciente a la red de faros de Chile. Entró en servicio en el año 1900 y se ubica en el Estrecho de Magallanes en la Región de Magallanes y Antártica Chilena.​ Importancia Patrimonial: Fue declarado Monumento Histórico Nacional en 1976 por su…",
+      "summary": "El Faro Cabo Posesión es un faro perteneciente a la red de faros de Chile. Entró en servicio en el año 1900 y se ubica en el Estrecho de Magallanes en la Región de Magallanes y Antártica Chilena. Importancia Patrimonial: Fue declarado Monumento Histórico Nacional en 1976 por su…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Cabo_Posesi%C3%B3n",
       "summary_wikidata": "Q5856135",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/FARO_POSESI%C3%93N_ESTRECHO_DE_MAGALLANES.jpg",
@@ -37869,7 +38370,7 @@
       "built": null,
       "height_m": 5.0,
       "country": "Chile",
-      "summary": "El Faro Punta Concón se ubica en la costa de Concón y forma parte de la red de faros de Chile.​ Está situado en Marina Higuerillas, un puerto recreativo de 15 kilómetros.​",
+      "summary": "El Faro Punta Concón se ubica en la costa de Concón y forma parte de la red de faros de Chile. Está situado en Marina Higuerillas, un puerto recreativo de 15 kilómetros.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Conc%C3%B3n",
       "summary_wikidata": "Q5856246",
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Faro_Punta_Conc%C3%B3n%2C_Conc%C3%B3n_20200104_05.jpg",
@@ -37889,7 +38390,7 @@
       "built": "1859",
       "height_m": 9.0,
       "country": "Chile",
-      "summary": "El Faro Punta Corona es un faro perteneciente a la Armada de Chile. Se ubica a 37 km de la localidad de Ancud en la Región de Los Lagos.​ Faro habitado.",
+      "summary": "El Faro Punta Corona es un faro perteneciente a la Armada de Chile. Se ubica a 37 km de la localidad de Ancud en la Región de Los Lagos. Faro habitado.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Punta_Corona",
       "summary_wikidata": "Q5856252",
       "image": null,
@@ -38309,7 +38810,7 @@
       "built": null,
       "height_m": null,
       "country": "Spain",
-      "summary": "La baliza de cabo Home es una baliza situada en cabo Home, al sur de Cangas de Morrazo, en la provincia de Pontevedra, Galicia, España. Está gestionada por la Autoridad Portuaria de Vigo.​ Su linterna situada a 38 metros de altura sobre el mar, está formada de tres linternas, la…",
+      "summary": "La baliza de cabo Home es una baliza situada en cabo Home, al sur de Cangas de Morrazo, en la provincia de Pontevedra, Galicia, España. Está gestionada por la Autoridad Portuaria de Vigo. Su linterna situada a 38 metros de altura sobre el mar, está formada de tres linternas, la…",
       "summary_source": "https://es.wikipedia.org/wiki/Baliza_de_Cabo_Home",
       "summary_wikidata": "Q34032103",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Candas_del_Morrazo_faro_de_cabo_Home.JPG",
@@ -38469,7 +38970,7 @@
       "built": "1861",
       "height_m": 15.0,
       "country": "Spain",
-      "summary": "El faro de Alcanada es un faro situado en el islote de Alcanada, en el lado norte de la bahía de Alcudia, a 5 km del puerto de Alcudia, en la isla de Mallorca, Islas Baleares, España.​",
+      "summary": "El faro de Alcanada es un faro situado en el islote de Alcanada, en el lado norte de la bahía de Alcudia, a 5 km del puerto de Alcudia, en la isla de Mallorca, Islas Baleares, España.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Alcanada",
       "summary_wikidata": "Q5856347",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Lighthouse_Alcanada2.jpg",
@@ -38879,7 +39380,9 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_suspect": true,
+      "height_suspect_note": "源高度数值过小、明显存疑，已隐藏"
     },
     {
       "id": "node/8340303984",
@@ -38969,7 +39472,7 @@
       "built": "1860",
       "height_m": 8.0,
       "country": "Chile",
-      "summary": "El Faro Morro Niebla, también conocido como Faro Niebla y Faro Fuerte Niebla es un faro perteneciente a la red de faros de Chile.​ Se ubica en dependencias del Castillo de Niebla, en la Región de Los Ríos.",
+      "summary": "El Faro Morro Niebla, también conocido como Faro Niebla y Faro Fuerte Niebla es un faro perteneciente a la red de faros de Chile. Se ubica en dependencias del Castillo de Niebla, en la Región de Los Ríos.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Morro_Niebla",
       "summary_wikidata": "Q5856226",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Faro_Niebla%2C_los_rios.jpg",
@@ -39539,7 +40042,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1931",
+        "summary": [
+          1806
+        ]
+      }
     },
     {
       "id": "way/1016510991",
@@ -40059,7 +40568,14 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 36.0,
+        "summary": [
+          15.0,
+          61.0
+        ]
+      }
     },
     {
       "id": "way/1075745802",
@@ -41079,7 +41595,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1848",
+        "summary": [
+          1856
+        ]
+      }
     },
     {
       "id": "way/1434607115",
@@ -41870,7 +42392,7 @@
       "built": null,
       "height_m": 33.0,
       "country": "Spain",
-      "summary": "El faro de Punta de Tarifa es un faro de primer orden ubicado en Tarifa (Cádiz, España) y situado en el extremo sur de la Isla de Las Palomas.​",
+      "summary": "El faro de Punta de Tarifa es un faro de primer orden ubicado en Tarifa (Cádiz, España) y situado en el extremo sur de la Isla de Las Palomas.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_Punta_de_Tarifa",
       "summary_wikidata": "Q5856492",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Faro%2C_Isla_de_las_Palomas%2C_Tarifa%2C_Espa%C3%B1a%2C_2015.JPG",
@@ -42200,7 +42722,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1825",
+        "summary": [
+          1870
+        ]
+      }
     },
     {
       "id": "way/245114103",
@@ -42400,7 +42928,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 15.0,
+        "summary": [
+          110.0
+        ]
+      }
     },
     {
       "id": "way/256427167",
@@ -43250,7 +43784,7 @@
       "built": null,
       "height_m": null,
       "country": "Spain",
-      "summary": "La baliza de Na Foradada es una baliza que se encuentra en la isla Na Foradada,​​ que forma parte del archipiélago de Cabrera, frente a la costa sur de Mallorca, España.​",
+      "summary": "La baliza de Na Foradada es una baliza que se encuentra en la isla Na Foradada, que forma parte del archipiélago de Cabrera, frente a la costa sur de Mallorca, España.",
       "summary_source": "https://es.wikipedia.org/wiki/Baliza_de_Na_Foradada",
       "summary_wikidata": "Q5575110",
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Lighthouse_foradada_cabrera.JPG",
@@ -43340,7 +43874,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1876",
+        "summary": [
+          1867
+        ]
+      }
     },
     {
       "id": "way/362427077",
@@ -43640,7 +44180,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1861",
+        "summary": [
+          1867
+        ]
+      }
     },
     {
       "id": "way/392184640",
@@ -43660,7 +44206,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 34.0,
+        "summary": [
+          4.0
+        ]
+      }
     },
     {
       "id": "way/394526203",
@@ -44060,7 +44612,14 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 19.0,
+        "summary": [
+          22.6,
+          24.4
+        ]
+      }
     },
     {
       "id": "way/454970181",
@@ -44440,7 +44999,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1859",
+        "summary": [
+          1855
+        ]
+      }
     },
     {
       "id": "way/490750089",
@@ -44530,7 +45095,7 @@
       "built": "1897",
       "height_m": 13.0,
       "country": "Argentina",
-      "summary": "El Faro Martín García era un faro habitado de la Armada Argentina que se encontraba en la ubicación 34°11′22″S 58°15′12″O en la parte sur de la isla Martín García ubicada ésta en el río de La Plata,​ y que se trata de un exclave argentino rodeado de aguas uruguayas.​ Pertenece…",
+      "summary": "El Faro Martín García era un faro habitado de la Armada Argentina que se encontraba en la ubicación 34°11′22″S 58°15′12″O en la parte sur de la isla Martín García ubicada ésta en el río de La Plata, y que se trata de un exclave argentino rodeado de aguas uruguayas. Pertenece…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Mart%C3%ADn_Garc%C3%ADa",
       "summary_wikidata": "Q5856211",
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Isla_Mart%C3%ADn_Garc%C3%ADa%2C_Parque_de_las_Luces_01.jpg",
@@ -44570,7 +45135,7 @@
       "built": "1922",
       "height_m": 54.0,
       "country": "Argentina",
-      "summary": "El Faro Querandí es un faro habitado de la Armada Argentina que se encuentra a 30 km de la ciudad de Villa Gesell, en el Partido de Villa Gesell en la Provincia de Buenos Aires, Argentina.​ El faro toma el nombre de la punta homónima, que a su vez recuerda a los aborígenes…",
+      "summary": "El Faro Querandí es un faro habitado de la Armada Argentina que se encuentra a 30 km de la ciudad de Villa Gesell, en el Partido de Villa Gesell en la Provincia de Buenos Aires, Argentina. El faro toma el nombre de la punta homónima, que a su vez recuerda a los aborígenes…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_Querand%C3%AD",
       "summary_wikidata": "Q5411835",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Faro_Querand%C3%AD_01.jpg",
@@ -44690,7 +45255,7 @@
       "built": "1861",
       "height_m": 29.0,
       "country": "Spain",
-      "summary": "El faro de El Rompido es un faro situado a 8 kilómetros de la ciudad de Cartaya, en la provincia de Huelva, en Andalucía (España). Este faro data de 1975, reemplazando al que había desde 1861.​ Está gestionado por la Autoridad Portuaria de Huelva.",
+      "summary": "El faro de El Rompido es un faro situado a 8 kilómetros de la ciudad de Cartaya, en la provincia de Huelva, en Andalucía (España). Este faro data de 1975, reemplazando al que había desde 1861. Está gestionado por la Autoridad Portuaria de Huelva.",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_El_Rompido",
       "summary_wikidata": "Q30125526",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/El_Rompido_lighthouse.jpg",
@@ -45240,7 +45805,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1869",
+        "summary": [
+          1870
+        ]
+      }
     },
     {
       "id": "way/556703754",
@@ -45450,7 +46021,7 @@
       "built": null,
       "height_m": 20.0,
       "country": "France",
-      "summary": "El Faro de la Punta Doublé​ (en francés: Phare de la Pointe Doublé) está situada en el extremo noreste de la isla de La Désirade, un territorio administrado por Guadalupe​ que es a su vez un departamento de ultramar de Francia en el mar Caribe. El faro es una torre blanca, con…",
+      "summary": "El Faro de la Punta Doublé (en francés: Phare de la Pointe Doublé) está situada en el extremo noreste de la isla de La Désirade, un territorio administrado por Guadalupe que es a su vez un departamento de ultramar de Francia en el mar Caribe. El faro es una torre blanca, con…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_de_la_Punta_Doubl%C3%A9",
       "summary_wikidata": "Q3378486",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Phare_de_la_Pointe-Doubl%C3%A9.jpg",
@@ -45640,7 +46211,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1848",
+        "summary": [
+          1858
+        ]
+      }
     },
     {
       "id": "way/610216495",
@@ -45800,7 +46377,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1848",
+        "summary": [
+          1849
+        ]
+      }
     },
     {
       "id": "way/628919990",
@@ -46780,7 +47363,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1765",
+        "summary": [
+          1831
+        ]
+      }
     },
     {
       "id": "way/718624721",
@@ -47110,7 +47699,7 @@
       "built": null,
       "height_m": null,
       "country": "France",
-      "summary": "El Faro del Puerto de Les Saintes​ (en francés: Phare du Port des Saintes) es una estructura que se localiza en la isla de Terre-de-Haut en Guadalupe, que forma con la isla de Terre-de-Bas y otros islotes las islas de Les Saintes, al sur de Basse-Terre y al oeste de…",
+      "summary": "El Faro del Puerto de Les Saintes (en francés: Phare du Port des Saintes) es una estructura que se localiza en la isla de Terre-de-Haut en Guadalupe, que forma con la isla de Terre-de-Bas y otros islotes las islas de Les Saintes, al sur de Basse-Terre y al oeste de…",
       "summary_source": "https://es.wikipedia.org/wiki/Faro_del_Puerto_de_Les_Saintes",
       "summary_wikidata": "Q3378529",
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Phare_Saintes.jpg",
@@ -47200,7 +47789,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1871",
+        "summary": [
+          1870
+        ]
+      }
     },
     {
       "id": "way/780239507",
@@ -47880,7 +48475,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1882",
+        "summary": [
+          1881
+        ]
+      }
     },
     {
       "id": "way/995816102",
@@ -52020,7 +52621,9 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_suspect": true,
+      "height_suspect_note": "源高度疑为海拔/焦距(灯火距海平面)而非塔身高度，已隐藏"
     },
     {
       "id": "node/1576242365",
@@ -53390,7 +53993,7 @@
       "built": null,
       "height_m": null,
       "country": null,
-      "summary": "A Banjo Pier is a pier in the shape of a banjo. The most notable example is probably the Banjo Pier in Looe, Cornwall, England (50.3510°N 4.4512°W﻿ / 50.3510; -4.4512﻿ (Banjo Pier, Looe, Cornwall)), as it was the first and thus the prototype for many others around the world.",
+      "summary": "A Banjo Pier is a pier in the shape of a banjo. The most notable example is probably the Banjo Pier in Looe, Cornwall, England (50.3510°N 4.4512°W / 50.3510; -4.4512 (Banjo Pier, Looe, Cornwall)), as it was the first and thus the prototype for many others around the world.",
       "summary_source": "https://en.wikipedia.org/wiki/Banjo_Pier",
       "summary_wikidata": "Q4855855",
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Looe_Banjo_Pier_-_geograph.org.uk_-_759550.jpg",
@@ -55160,7 +55763,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "2003",
+        "summary": [
+          1934
+        ]
+      }
     },
     {
       "id": "node/4291664940",
@@ -56820,7 +57429,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1859",
+        "summary": [
+          1855
+        ]
+      }
     },
     {
       "id": "node/6549771759",
@@ -57880,7 +58495,9 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_suspect": true,
+      "height_suspect_note": "源高度疑为海拔/焦距(灯火距海平面)而非塔身高度，已隐藏"
     },
     {
       "id": "node/930008912",
@@ -58700,7 +59317,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1817",
+        "summary": [
+          1860
+        ]
+      }
     },
     {
       "id": "way/118445466",
@@ -59820,7 +60443,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "existing",
-      "top200_rank": null
+      "top200_rank": null,
+      "year_conflict": {
+        "field": "1871",
+        "summary": [
+          1892
+        ]
+      }
     },
     {
       "id": "way/224125857",
@@ -61160,7 +61789,13 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_conflict": {
+        "field": 46.0,
+        "summary": [
+          21.0
+        ]
+      }
     },
     {
       "id": "way/564088163",
@@ -64980,7 +65615,9 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_suspect": true,
+      "height_suspect_note": "源高度疑为海拔/焦距(灯火距海平面)而非塔身高度，已隐藏"
     },
     {
       "id": "node/1052816956",
@@ -65060,7 +65697,9 @@
       "bad_link": false,
       "category": "lighthouse",
       "status": "operational",
-      "top200_rank": null
+      "top200_rank": null,
+      "height_suspect": true,
+      "height_suspect_note": "源高度疑为海拔/焦距(灯火距海平面)而非塔身高度，已隐藏"
     },
     {
       "id": "node/10607696018",

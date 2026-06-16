@@ -1,105 +1,71 @@
 # Luminary 详情核查报告
 
 - 核查灯塔(category=lighthouse): **3834**
-- 有问题: **2369** 座 · 干净: 1465 座
+- 有问题: **2332** 座 · 干净: 1502 座
 - 图片检查范围: top200
 - 已知 bad_link(摘要已丢弃, 不计为新问题): 28
 
 ## 问题类型计数
-- 摘要非英文: **1368**
+- 摘要非英文: **1365**
 - 缺摘要: **775**
-- 关键字段缺失(≥2): **440**
-- 高度矛盾(摘要 vs 字段): **86**
+- 关键字段缺失(≥2): **439**
 - 年份矛盾(摘要 vs 字段): **82**
-- 摘要过短/截断: **43**
-- 高度异常值: **8**
+- 摘要过短/截断: **26**
+- 高度矛盾(摘要 vs 字段): **21**
 - 摘要疑似跑题: **7**
 
 ## 问题清单（按 Top200 排名）
 
 ### #1 Lighthouse of Alexandria  (node/26544677, Q43244)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[100.0m, 100.6m]，但 height_m 字段=137.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
-### #9 Jeddah Light  (way/265419490, Q1151131)
-- **关键字段缺失(≥2)**: 关键字段缺失: ['height_m', 'country']
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[100.0m, 100.6m]，但 height_m 字段=137.0m — 两者不一致(已两值并存交给用户判断)
 
 ### #15 Leuchtturm Westerheversand  (way/87534169, Q454681)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1908]，但 built 字段=1907 — 不一致，请你判断
-
-### #16 Bengtskär Lighthouse  (way/1119816491, Q3737012)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[52.0m]，但 height_m 字段=45.8m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1908]，但 built 字段=1907 — 不一致(已两值并存交给用户判断)
 
 ### #18 Bell Rock Lighthouse  (way/710617370, Q2305375)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1807]，但 built 字段=1810 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1807]，但 built 字段=1810 — 不一致(已两值并存交给用户判断)
 
 ### #21 Lighthouse Nos Shabla  (node/9031362149, Q21014964)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856]，但 built 字段=1857 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856]，但 built 字段=1857 — 不一致(已两值并存交给用户判断)
 
 ### #34 Воронцовський маяк  (node/703128124, Q1976702)
-- **摘要非英文**: 摘要是非拉丁文字(15%, ['CYRILLIC']) → 非英文
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[27.2m, 27.1m]，但 height_m 字段=11.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[27.1m]，但 height_m 字段=11.0m — 两者不一致(已两值并存交给用户判断)
 
 ### #37 Cape Hatteras Light Station  (way/295324032, Q2508238)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1802]，但 built 字段=1870 — 不一致，请你判断
-
-### #38 Klaipėdos švyturys  (way/350070453, Q5764622)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[500.0m]，但 height_m 字段=40.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
-### #50 Lighthouse La Jument  (node/117081598, Q1809044)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[300.0m]，但 height_m 字段=47.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
-### #61 Cabo da Roca Lighthouse  (way/184073572, Q5015743)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[165.0m, 164.9m]，但 height_m 字段=22.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
-### #67 Juodkrantės švyturys  (way/350062613, Q4534721)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[900.0m]，但 height_m 字段=20.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1802]，但 built 字段=1870 — 不一致(已两值并存交给用户判断)
 
 ### #69 Godrevy Lighthouse  (way/845047907, Q15221791)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[300.0m, 298.7m]，但 height_m 字段=26.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1858]，但 built 字段=1859 — 不一致，请你判断
-
-### #76 Yenikalsky Lighthouse  (node/1279094700, Q4175622)
-- **摘要非英文**: 摘要是非拉丁文字(17%, ['CYRILLIC']) → 非英文
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1858]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)
 
 ### #79 Faro de Melilla  (node/1581729093, Q28771409)
-- **摘要过短/截断**: 摘要结尾像被截断: …'lilla, un bien de interés cultural.\u200b\u200b\u200b\u200b\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro de Melilla es el faro de la ciudad española de Melilla, está s'
-
-### #81 Far de Formentor  (node/274070169, Q5856409)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[210.0m, 210.3m]，但 height_m 字段=22.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### #83 Vormsi (Saxby) tuletorn  (node/3369752554, Q3360311)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Vormsi také Maják Saxby (estonsky Vormsi tuletorn) stojí v sever'
 
-### #95 Yenikalsky Lighthouse  (way/264623501, Q4175622)
-- **摘要非英文**: 摘要是非拉丁文字(17%, ['CYRILLIC']) → 非英文
-
 ### #117 Longships  (way/887686627, Q3739790)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[12.0m, 11.9m]，但 height_m 字段=35.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[11.9m, 12.0m]，但 height_m 字段=35.0m — 两者不一致(已两值并存交给用户判断)
 
 ### #119 Corsewall Lighthouse  (node/11110362622, Q5173151)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1817]，但 built 字段=1816 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1817]，但 built 字段=1816 — 不一致(已两值并存交给用户判断)
 
 ### #121 Ryvingen fyr  (node/1115684981, Q1780632)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### #139 Point Lynas Lighthouse  (node/552361746, Q7208082)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1766]，但 built 字段=1835 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1766]，但 built 字段=1835 — 不一致(已两值并存交给用户判断)
 
 ### #141 Abruka tuletorn  (node/677528838, Q3376538)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[28.0m, 28.0m]，但 height_m 字段=36.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[28.0m]，但 height_m 字段=36.0m — 两者不一致(已两值并存交给用户判断)
 
 ### #144 Ventės rago švyturys  (node/976164581, Q11317352)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Ventės rago švyturys stovi Ventės rage. Aukštis – 11 m, atstumas iki m'
 
-### #151 Farol do Cabo Branco  (way/191653569, Q5015722)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[800.0m, 182.9m]，但 height_m 字段=18.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### #158 Grip fyr  (way/258896731, Q923101)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[7.0m, 7.0m]，但 height_m 字段=44.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[7.0m]，但 height_m 字段=44.0m — 两者不一致(已两值并存交给用户判断)
 
 ### #175 Dueodde Fyr  (way/528547308, Q1263928)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1960]，但 built 字段=1962 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1960]，但 built 字段=1962 — 不一致(已两值并存交给用户判断)
 
 ### #181 Φάρος Τουρλίτης  (way/793777334, Q16964753)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare Tourlítis est situé sur un rocher dans le port de Chóra, sur '
@@ -123,23 +89,16 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Horní maják Norrby (estonsky: Norrby ülemine tuletorn) stojí na ostrov'
 
 ### Odderøya Fyr  (node/3955711037, Q1639756)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1832]，但 built 字段=1874 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1832]，但 built 字段=1874 — 不一致(已两值并存交给用户判断)
 
 ### Rukkirahu tuletorn  (node/677529345, Q11291693)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Rukkirahu (estonsky: Rukkirahu tuletorn) stojí na ostrově Rukkir'
-
-### Beachy Head Lighthouse  (way/1049367506, Q15197902)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[33.0m, 32.9m]，但 height_m 字段=43.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
-### Užavas bāka  (way/177816445, Q16354987)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[28.0m]，但 height_m 字段=19.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Malarrífsviti  (way/184505007, Q3378310)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Malarrif (islandsky Malarrifsviti) je maják v Malarrifu na západ'
 
 ### Suurupi tuletorn  (way/251914768, Q3376488)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Horní maják Suurupi (estonsky: Suurupi ülemine tuletorn) je pobřežní m'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[2245.0m]，但 height_m 字段=17.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Tallinn rear lighthouse  (way/26877654, Q12005125)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Horní maják Tallinn (estonsky: Tallinna sihi ülemine tuletorn) stojí v'
@@ -170,16 +129,10 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m', 'country']
 
 ### Farol do Cabo Mondego  (node/1409177299, Q11784)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1922]，但 built 字段=1858 — 不一致，请你判断
-
-### Farol da Ponta do Pargo  (node/1413091427, Q10280133)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[312.0m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1922]，但 built 字段=1858 — 不一致(已两值并存交给用户判断)
 
 ### Het Lage Licht  (node/1438575685, Q1423636)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Westkapelle Laag (niederländisch; auch Noorderhoofd genannt) ist de'
-
-### Farol de São Jorge  (node/1493432111, Q5436123)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[271.0m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Phare des Triagoz  (node/1543887084, Q195087)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare des Triagoz se dresse sur la roche de Guen-Bras, au centre du'
@@ -189,14 +142,11 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Die Leuchttürme Lesnoi sind drei Richtfeuer auf der Lesnoi-Insel (etwa'
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m', 'country']
 
-### (无名)  (node/1577265016, Q5436129)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[23.0m]，但 height_m 字段=2.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Faro de San Juan de Salvamento  (node/2133325245, Q3378548)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro de San Juan de Salvamento (conocido también como el Faro del F'
 
 ### Robbins Reef Light  (node/2576304655, Q425986)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1883]，但 built 字段=1839 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1883]，但 built 字段=1839 — 不一致(已两值并存交给用户判断)
 
 ### Sõmeri tuletorn  (node/3379225162, Q11234333)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Sõmeri (estonsky: Sõmeri tuletorn) stojí na poloostrově Sõmeri v'
@@ -211,11 +161,11 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Horní maják Paralepa (estonsky: Paralepa alumine tuletorn) stojí na zá'
 
 ### Hellevik Lighthouse (Range Rear)  (node/3708911175, Q911787)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1880]，但 built 字段=1881 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1880]，但 built 字段=1881 — 不一致(已两值并存交给用户判断)
 
 ### Wadjemup Lighthouse  (node/571415472, Q7959291)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[20.0m, 20.1m]，但 height_m 字段=38.7m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1849]，但 built 字段=1896 — 不一致，请你判断
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[20.1m]，但 height_m 字段=38.7m — 两者不一致(已两值并存交给用户判断)
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1849]，但 built 字段=1896 — 不一致(已两值并存交给用户判断)
 
 ### Gustavsvärn Lighthouse  (node/5933573703, Q10511202)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Gustavsvärn (ent. Eldskär) on kalliosaari Hangon Tulliniemen kaakkoisp'
@@ -229,59 +179,53 @@
 ### Norrby sihi alumine tuletorn  (node/677529197, Q3741881)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Norrby sihi alumine tuletorn on tuletorn Lääne maakonnas Vormsi vallas'
 
-### Ribeira Brava  (node/9215674440, Q5436125)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[34.0m]，但 height_m 字段=6.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Толбухин маяк  (way/110978195, Q16273185)
 - **摘要非英文**: 摘要是非拉丁文字(98%, ['CYRILLIC']) → 非英文
 
 ### Ke Ga Lighthouse  (way/1272874768, Q1496675)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Hải đăng Kê Gà (hoặc Khe Gà) ở mũi Kê Gà, thuộc xã Tân Thành, tỉnh Lâm'
 
-### (无名)  (way/127727836, Q10280133)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[312.0m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Lundy South Lighthouse  (way/179991275, Q15618804)
 - **缺摘要**: 无摘要
 
 ### Nuevo Faro de Fuencaliente  (way/182729034, Q5404378)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1903]，但 built 字段=1882 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1903]，但 built 字段=1882 — 不一致(已两值并存交给用户判断)
 
 ### Svjetionik Veli rat  (way/229112139, Q12643130)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[36.0m]，但 height_m 字段=30.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[36.0m]，但 height_m 字段=30.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Suurupi sihi alumine tuletorn  (way/232453083, Q11286991)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Dolní maják Suurupi (estonsky: Suurupi alumine tuletorn) je pobřežní m'
 
 ### Faro Castillo del Morro  (way/242669481, Q5436069)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1845]，但 built 字段=1764 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1845]，但 built 字段=1764 — 不一致(已两值并存交给用户判断)
 
 ### Tallinn ldg.l. front lighthouse  (way/26887425, Q14956087)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Dolní maják Tallinn (estonsky: Tallinna sihi alumine tuletorn) je majá'
 
-### St. Bees Lighthouse  (way/335159009, Q2753066)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[102.0m, 102.1m]，但 height_m 字段=17.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Heceta Head Light  (way/405049972, Q5696191)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[62.0m]，但 height_m 字段=11.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[62.0m]，但 height_m 字段=11.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Lundy North Lighthouse  (way/411281537, Q15618802)
 - **缺摘要**: 无摘要
 
 ### Nauset Light  (way/421853944, Q6981401)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1923]，但 built 字段=1838 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1923]，但 built 字段=1838 — 不一致(已两值并存交给用户判断)
 
 ### Hanstholm Fyr  (way/456191103, Q723232)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Hanstholm Fyr (med fyrmesterbolig) blev bygget på Hanstholmknuden i 18'
 
 ### Leuchtturm Alte Weser  (way/494506273, Q436392)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1961]，但 built 字段=1964 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1961]，但 built 字段=1964 — 不一致(已两值并存交给用户判断)
 
 ### Leuchtturm Flügge  (way/51075505, Q1821427)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Flügge steht im Südwesten der Insel Fehmarn, wenige '
 
+### Svjetionik Rt Stražica  (way/554357736, Q15633187)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[4.9m]，但 height_m 字段=8.0m — 两者不一致(已两值并存交给用户判断)
+
 ### Phare de Pointe-au-Père  (way/576710199, Q39858)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1909]，但 built 字段=1859 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1909]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)
 
 ### Маяк Соммерс  (way/629413510, Q21212001)
 - **缺摘要**: 无摘要
@@ -313,9 +257,6 @@
 ### Faro de Vidio  (node/100170985, Q3757265)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Vidio (en asturiano, Faru de Vidíu), se encuentra en e'
 
-### Castlepoint Lighthouse  (node/1052815291, Q1049465)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[52.0m]，但 height_m 字段=23.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Crown Point Light House  (node/1113653902, Q1141781)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
@@ -338,7 +279,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Sultan Shoal Lighthouse  (node/1293083864, Q7636742)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1895]，但 built 字段=1896 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1895]，但 built 字段=1896 — 不一致(已两值并存交给用户判断)
 
 ### Маяк Бирючий  (node/1341954335, Q26257039)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CYRILLIC']) → 非英文
@@ -351,7 +292,6 @@
 
 ### Het Hoge Licht  (node/1375241326, Q1821477)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm (niederländisch vuurtoren) von Westkapelle auf der Halb'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[6.0m]，但 height_m 字段=52.3m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Peenemünde  (node/1400874321, Q18410748)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm vor Peenemünde steht auf einer künstlichen Kleininsel a'
@@ -381,7 +321,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Stevns Fyr, også kaldet Højerup Fyr, ligger nord for Stevnsfortet. Der'
 
 ### Farol da Selvagem Pequena  (node/1787636294, Q10280138)
-- **高度异常值**: height_m=1.0 异常(可能错挂/单位错)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O farol da Selvagem Pequena é um farol português que se localiza na Se'
 
 ### Møkkalasset  (node/2280537373, Q11605469)
@@ -407,13 +346,10 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Gata, situado en Cabo de Gata, fue construido en 1863, de 1'
 
 ### Chicken Rock  (node/441984183, Q18431326)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1874]，但 built 字段=1875 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1874]，但 built 字段=1875 — 不一致(已两值并存交给用户判断)
 
 ### Cap de ses Salines  (node/461833100, Q5856386)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Far des Cap de ses Salines ist ein Leuchtturm am südlichsten Punkt'
-
-### Tarbat Ness Lighthouse  (node/471044640, Q2394002)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[53.0m, 53.0m]，但 height_m 字段=41.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Cape Borda Lighthouse  (node/477227578, Q15207361)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
@@ -421,11 +357,8 @@
 ### Far del Cap de la Nau  (node/539380857, Q8960923)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "El Far del cap de la Nau està situat al Cap de la Nau, a l'extrem sud "
 
-### Lighthouse of Ponta dos Rosais  (node/615075810, Q6546366)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[200.0m]，但 height_m 字段=27.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Phare de Point-Amour  (node/6548305562, Q3378335)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1857]，但 built 字段=1858 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1857]，但 built 字段=1858 — 不一致(已两值并存交给用户判断)
 
 ### Ninaküla tuletorn  (node/677529130, Q11234172)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Ninaküla (estonsky Ninaküla tuletorn) je jezerní maják, který st'
@@ -460,11 +393,10 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol de Alfanzina é um farol português. Foi construído num promontó'
 
 ### Great Isaac Lighthouse  (node/9413763014, Q28376329)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1859]，但 built 字段=1851 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1859]，但 built 字段=1851 — 不一致(已两值并存交给用户判断)
 
 ### Swakopmund Lighthouse  (node/973766056, Q13036145)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm Swakopmund ist ein Leuchtturm in der namibischen Küsten'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[5.0m]，但 height_m 字段=28.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Mersin Deniz Feneri  (node/9805980233, Q6820605)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
@@ -473,7 +405,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm Ģipka (lettisch Ģipkas bāka) befindet sich beim lettisc'
 
 ### Venetian Lighthouse  (way/1091027873, Q16964744)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1864]，但 built 字段=1839 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1864]，但 built 字段=1839 — 不一致(已两值并存交给用户判断)
 
 ### Faro Voltiano  (way/111415210, Q28375375)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Latarnia Volty (wł. Faro Voltiano) – wieża znajdująca się w miejscowoś'
@@ -482,7 +414,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'country']
 
 ### Chicken Rock Lighthouse  (way/1153061708, Q18431326)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1874]，但 built 字段=1875 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1874]，但 built 字段=1875 — 不一致(已两值并存交给用户判断)
 
 ### Ram Island Light  (way/1197735521, Q7288481)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
@@ -516,20 +448,16 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Lodbjerg Fyr er et fyr ved Vesterhavet i Lodbjerg Sogn i Thisted Kommu'
 
 ### Igeldoko itsasargia  (way/152623295, Q973815)
-- **摘要过短/截断**: 摘要结尾像被截断: …', en San Sebastián (Guipúzcoa, España).\u200b'
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro del monte Igueldo es un faro\u200b que está situado en el barrio de'
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro del monte Igueldo es un faro que está situado en el barrio de '
 
 ### Stevns Fyr  (way/161602850, Q10679581)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Stevns Fyr, også kaldet Højerup Fyr, ligger nord for Stevnsfortet. Der'
 
 ### Faro de Punta Frouxeira  (way/168658178, Q20544592)
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Punta Frouxeira, a veces llamado faro de Meirás,\u200b es un far'
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Punta Frouxeira, a veces llamado faro de Meirás, es un faro'
 
 ### Helnæs Fyr  (way/183690014, Q10520451)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Helnæs Fyr er et 28 meter højt, firkantet fyr opført i 1901 på Helnæs,'
-
-### Mulantou Lighthouse  (way/183695632, Q3378320)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[88.0m, 88.1m]，但 height_m 字段=72.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Farol de Gonçalo Velho  (way/195005094, Q10280155)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol de Gonçalo Velho localiza-se na ponta do Castelo, na freguesia'
@@ -553,13 +481,13 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják na mysu Gris-Nez osvětluje Pas-de-Calais. Současný maják byl uve'
 
 ### Gibbs Hill Lighthouse  (way/302925083, Q5558969)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1844]，但 built 字段=1846 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1844]，但 built 字段=1846 — 不一致(已两值并存交给用户判断)
 
 ### Punta Candieira  (way/33910532, Q6546369)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1929]，但 built 字段=1954 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1929]，但 built 字段=1954 — 不一致(已两值并存交给用户判断)
 
 ### Kapelluddens fyr  (way/340824632, Q1235762)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1871]，但 built 字段=1872 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1871]，但 built 字段=1872 — 不一致(已两值并存交给用户判断)
 
 ### Old Light  (way/34185231, Q17536768)
 - **缺摘要**: 无摘要
@@ -568,7 +496,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Käsmu (estonsky Käsmu tuletorn) stojí na severním pobřeží Estons'
 
 ### Portoferraio Lighthouse  (way/363273000, Q16555281)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1548]，但 built 字段=1788 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1548]，但 built 字段=1788 — 不一致(已两值并存交给用户判断)
 
 ### Landsorts fyr  (way/383557266, Q1821451)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Landsort (švédsky: Landsorts fyr) je pobřežní maják, který stojí'
@@ -577,29 +505,28 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Lyngvig Fyr eller Nr. Lyngvig Fyr er et fyrtårn på Holmsland Klit mell'
 
 ### Roches Point Lighthouse  (way/420033793, Q7353828)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1817]，但 built 字段=1835 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1817]，但 built 字段=1835 — 不一致(已两值并存交给用户判断)
 
 ### Far de Tabarca  (way/43376799, Q8960914)
-- **摘要过短/截断**: 摘要结尾像被截断: …'otes rocosos y escollos que la rodean.\u200b\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Tabarca está situado en la isla de Tabarca (Alicante, Españ'
 
 ### (无名)  (way/446265458, Q10688060)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm Sälskär (Sälskärin majakka finnisch, Sälskärens fyr sch'
 
 ### Fornæs Fyr  (way/449828771, Q12312013)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1839]，但 built 字段=1892 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1839]，但 built 字段=1892 — 不一致(已两值并存交给用户判断)
 
 ### Jones Point Lighthouse  (way/496345065, Q6275284)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Faro de Adra  (way/631317692, Q5856340)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1986]，但 built 字段=1899 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1986]，但 built 字段=1899 — 不一致(已两值并存交给用户判断)
 
 ### Marienleuchte  (way/658625167, Q1821438)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Marienleuchte dient als Quermarken- und Orientierung'
 
 ### Brant Point Light  (way/713398764, Q4957614)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1746]，但 built 字段=1901 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1746]，但 built 字段=1901 — 不一致(已两值并存交给用户判断)
 
 ### Tour du Leughenaer  (way/72575067, Q2224112)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Die Tour du Leughenaer (eine alte Schreibweise für das niederländische'
@@ -617,13 +544,10 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Latarnia Morska Gdańsk Nowy Port – zabytkowa, nieczynna latarnia morsk'
 
 ### Faro de Marbella  (way/962296785, Q3183741)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1864]，但 built 字段=1923 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1864]，但 built 字段=1923 — 不一致(已两值并存交给用户判断)
 
 ### Faro de Cabo Mayor  (way/969477705, Q5856365)
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Mayor o faro de Bellavista\u200b está situado en el municip'
-
-### Stephens Island Light  (way/989227844, Q2345214)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[183.0m, 182.9m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Mayor o faro de Bellavista está situado en el municipi'
 
 ### Faro de Cabo Silleiro  (way/152405827, Q29954477)
 - **缺摘要**: 无摘要
@@ -674,10 +598,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Zonguldak Feneri, Zonguldak'ın Merkez ilçesine bağlı Yayla Mahallesind"
 
 ### Almagrundet  (node/1033230851, Q10406517)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[14.0m]，但 height_m 字段=44.4m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
-### (无名)  (node/1052816802, Q1034422)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[70.0m, 70.1m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[14.0m]，但 height_m 字段=44.4m — 两者不一致(已两值并存交给用户判断)
 
 ### Desert Lighthouse  (node/10606646325, Q64665961)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
@@ -690,9 +611,6 @@
 
 ### Ilha de Santana  (node/1181462395, Q33124492)
 - **摘要过短/截断**: 摘要结尾像被截断: …'the Baía de São Marcos, Maranhão, Brazil'
-
-### Tasman Island Lighthouse  (node/1191080441, Q1798857)
-- **高度异常值**: height_m=276.0 异常(可能错挂/单位错)
 
 ### Faro Punta Panul  (node/1199791895, Q6434882)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Punta Panul es un faro perteneciente a la red de faros de Chil'
@@ -722,7 +640,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Faro da illa de Tambo é un faro situado na illa de Tambo, no concello '
 
 ### Waternish Point  (node/1501241780, Q16902558)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1924]，但 built 字段=1980 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1924]，但 built 字段=1980 — 不一致(已两值并存交给用户判断)
 
 ### (无名)  (node/1531154969, Q10532070)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare d'Hållö (en suédois : Hållö fyr) est un phare situé sur l'île"
@@ -773,7 +691,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Gorliz es un faro situado en el cabo Billano, entre Gorliz '
 
 ### La Plata  (node/1572817711, Q5856436)
-- **摘要过短/截断**: 摘要结尾像被截断: …'a, San Sebastián, (País Vasco), España.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de la Plata se encuentra en el Cabo de la Plata, San Sebastián'
 
 ### Farol das Lajes das Flores  (node/1577206552, Q10280142)
@@ -783,7 +700,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol da Ponta do Cintrão localiza-se na Ponta do Cintrão, promontór'
 
 ### Plum Beach Lighthouse  (node/1580008275, Q7205303)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1899]，但 built 字段=1897 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1899]，但 built 字段=1897 — 不一致(已两值并存交给用户判断)
 
 ### Ölüce Deniz Feneri  (node/1581236865, Q103028922)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Ölüce Feneri, Zonguldak'ın Ereğli ilçesine bağlı Bali Mahallesinde yer"
@@ -804,7 +721,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Omaezaki Lighthouse  (node/1804881162, Q7089383)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1635]，但 built 字段=1874 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1635]，但 built 字段=1874 — 不一致(已两值并存交给用户判断)
 
 ### Sektorenleitfeuer Nieblum (Kedewin)  (node/1828099831, Q1439052)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Nieblum ist ein kleiner Leuchtturm auf der deutschen'
@@ -823,16 +740,12 @@
 
 ### Faro de Luarca  (node/2049098392, Q8960899)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faru de Ḷḷuarca ta allugáu na punta Focicón, que zarra pel oriente '
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[300.0m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro de Ribadesella  (node/2089423703, Q8960907)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Ribadesella está situado en la aldea de Tereñes, concejo de'
 
-### Pomham Rocks Light  (node/2201046881, Q7227306)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[180.0m]，但 height_m 字段=12.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Malabrigo Lighthouse  (node/2279145540, Q24849233)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1896]，但 built 字段=1994-07-25 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1896]，但 built 字段=1994-07-25 — 不一致(已两值并存交给用户判断)
 
 ### Wittenbergen Unterfeuer  (node/2419113104, Q1318152)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm Wittenbergen bildet seit 1900 zusammen mit dem Leuchttu'
@@ -843,17 +756,11 @@
 ### Phare de Pen-Men  (node/255359392, Q1262928)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare de Pen-Men est une maison-phare situé sur l'île de Groix, Mor"
 
-### (无名)  (node/259439071, Q55086538)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[250.0m, 249.9m]，但 height_m 字段=22.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Waipapa Point Lighthouse  (node/268897689, Q7960265)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1884]，但 built 字段=1883 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1884]，但 built 字段=1883 — 不一致(已两值并存交给用户判断)
 
 ### Guanica Lighthouse  (node/2748017581, Q5623121)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
-
-### Faro di Ancona  (node/277060613, Q3739748)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[119.5m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Leuchtfeuer Dahmeshöved  (node/283073859, Q1767868)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Dahmeshöved ist ein Leuchtfeuer in der Gemeinde Dahm'
@@ -889,7 +796,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Blockhusudden (švédsky Blockhusuddens fyr) je maják nacházející '
 
 ### Phare de Walde  (node/3627204490, Q3378432)
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Walde es un faro sobre pilotes de rosca\u200b ubicado en Marck, '
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Walde es un faro sobre pilotes de rosca ubicado en Marck, c'
 
 ### Far de Botafoc  (node/3644398307, Q5856356)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm von Botafoc (spanisch Faro de Botafoc) ist ein aktiv'
@@ -916,7 +823,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "El faru de Llanes s'asitia na punta de San Antón, na vera derecha de l"
 
 ### Rockland Breakwater Lighthouse  (node/4216573916, Q7355447)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1902]，但 built 字段=1888 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1902]，但 built 字段=1888 — 不一致(已两值并存交给用户判断)
 
 ### Geeste Nordmole Behelfsfeuer  (node/423220120, Q1567574)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Die Leuchtfeuer Geestemündung befinden sich auf beiden Seiten der Münd'
@@ -955,7 +862,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare de Klein Curaçao est un phare actif situé à sur l'île inhabit"
 
 ### Japanese Lighthouse  (node/5526253460, Q15229364)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1940]，但 built 字段=1938 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1940]，但 built 字段=1938 — 不一致(已两值并存交给用户判断)
 
 ### Faro Punta San Emeterio  (node/558564109, Q8960910)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de San Emeterio (en asturiano, Faru de Santumedé) está situado'
@@ -970,7 +877,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol do Arnel localiza-se na ponta nordeste da ilha de São Miguel, '
 
 ### Lobito Lighthouse  (node/6148579245, Q10280192)
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro de Lobito\u200b (en portugués: Farol do Lobito) es un faro situado '
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro de Lobito (en portugués: Farol do Lobito) es un faro situado e'
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Farol Ponta da Ilha  (node/614987101, Q10280123)
@@ -980,11 +887,9 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol da Ponta do Topo localiza-se na Ponta do Topo, extremo sueste '
 
 ### Llebeig  (node/631872796, Q5856363)
-- **摘要过短/截断**: 摘要结尾像被截断: …'damente de la isla de Mallorca, España.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Llebeig (en catalán: Far de Cap Llebeig) es un faro qu'
 
 ### Tramuntana  (node/631872798, Q5856392)
-- **摘要过短/截断**: 摘要结尾像被截断: …' metros de la isla de Mallorca, España.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Cap de Tramuntana es un faro que se encuentra en el norte d'
 
 ### Faru de Lluces  (node/650052676, Q616196)
@@ -994,14 +899,13 @@
 - **缺摘要**: 无摘要
 
 ### Far de sa Creu  (node/659850571, Q5856488)
-- **摘要过短/截断**: 摘要结尾像被截断: …'la de Mallorca, Islas Baleares, España.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Punta de Sa Creu es un faro situado sobre un promontorio en'
 
 ### Rannapungerja tuletorn  (node/677529025, Q11320324)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Rannapungerja tuletorn (ka Rannapungerja tulepaak) on tuletorn Ida-Vir'
 
 ### Great Captain Island Light  (node/6908705062, Q3378237)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1829]，但 built 字段=1868 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1829]，但 built 字段=1868 — 不一致(已两值并存交给用户判断)
 
 ### Kaap St. Marie Lighthouse  (node/7472066439, Q6351223)
 - **摘要过短/截断**: 摘要过短(41字符): 'This is a list of lighthouses in Curaçao.'
@@ -1011,7 +915,7 @@
 - **摘要过短/截断**: 摘要过短(41字符): 'This is a list of lighthouses in Curaçao.'
 
 ### Fourteen Foot Bank Light  (node/7483283259, Q5475898)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1885]，但 built 字段=1886 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1885]，但 built 字段=1886 — 不一致(已两值并存交给用户判断)
 
 ### Lighthouse Francesco Crispi  (node/8274305708, Q28952442)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Il faro Francesco Crispi è un faro situato nel capo Guardafui, in Soma'
@@ -1020,12 +924,8 @@
 ### Cape Soya Lighthouse  (node/9009885852, Q10948251)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA']) → 非英文
 
-### Farol do Cabo de Sines  (relation/10647908, Q1024908)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[22.0m]，但 height_m 字段=28.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Cape Zanpa Lighthouse  (relation/13488024, Q11125269)
 - **摘要非英文**: 摘要是非拉丁文字(95%, ['CJK', 'HIRAGANA']) → 非英文
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[30.0m]，但 height_m 字段=40.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro de Tapia de Casariego  (relation/13931906, Q8960917)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Tapia o faro Isla de Tapia está situado en la localidad de '
@@ -1046,26 +946,25 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Ragaciema bāka ir bāka, kas atrodas Lapmežciema pagasta Ragaciema ragā'
 
 ### Far des Cap Gros  (way/1034891337, Q5856361)
-- **摘要过短/截断**: 摘要结尾像被截断: …'la de Mallorca, Islas Baleares, España.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Gros (en catalán: Far de Cap Gros) es un faro situado '
 
 ### Faro San Isidro  (way/103998150, Q5856513)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Cabo San Isidro o Faro de San Isidro se encuentra ubicado en e'
 
 ### West Chop Light  (way/1062312141, Q7984740)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[7.6m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[7.6m]，但 height_m 字段=14.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Newport Harbor Light  (way/1064840043, Q15262179)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1842]，但 built 字段=1823 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1842]，但 built 字段=1823 — 不一致(已两值并存交给用户判断)
 
 ### Phare de Ouistreham  (way/107457075, Q1821483)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare de Ouistreham (ou encore d'Ouistreham) est un phare à terre, "
 
 ### Libby Island Light  (way/1100742934, Q6540433)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1817, 1823]，但 built 字段=1822 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1817, 1823]，但 built 字段=1822 — 不一致(已两值并存交给用户判断)
 
 ### Fourteen Foot Bank Lighthouse  (way/1211354440, Q5475898)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1885]，但 built 字段=1886 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1885]，但 built 字段=1886 — 不一致(已两值并存交给用户判断)
 
 ### Анапский маяк  (way/125813145, Q26257034)
 - **摘要非英文**: 摘要是非拉丁文字(15%, ['CYRILLIC']) → 非英文
@@ -1074,28 +973,25 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Faro da Punta da Barca é un faro situado no promontorio da Punta de '
 
 ### Burry Port Lighthouse  (way/1311367500, Q5000542)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1830]，但 built 字段=1842 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1830]，但 built 字段=1842 — 不一致(已两值并存交给用户判断)
 
 ### Far des Cap de Barbaria  (way/1333301063, Q5856374)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "El far de Barbaria és un far situat a l'illa de Formentera, construït "
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[78.0m]，但 height_m 字段=19.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### (无名)  (way/1348527261, Q533960)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le feu du Tréport est un phare situé en Seine-Maritime. Il est cylindr'
 
 ### Phare du Cap Fréhel  (way/135722236, Q2085036)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare du cap Fréhel est un phare maritime des Côtes-d'Armor (France"
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[70.0m]，但 height_m 字段=32.9m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### (无名)  (way/1358201504, Q2460201)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Tunø Fyr er et fyrtårn på øen Tunø mellem Jylland og Samsø, indrettet '
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[6.0m]，但 height_m 字段=18.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Kiel Holtenau  (way/136056440, Q1680064)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Holtenau befindet sich am Nordufer der Zufahrt zum N'
 
 ### (无名)  (way/1375082132, Q29904529)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1840]，但 built 字段=1868 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1840]，但 built 字段=1868 — 不一致(已两值并存交给用户判断)
 
 ### Faro da Guía  (way/1408868382, Q34307602)
 - **摘要过短/截断**: 摘要过短(41字符): 'O Faro da Guía é un faro situado en Vigo.'
@@ -1105,7 +1001,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Ajo está situado en el cabo de Ajo, en la localidad del mis'
 
 ### Phare des Corbeaux  (way/152021456, Q3378494)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1950]，但 built 字段=1862 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1950]，但 built 字段=1862 — 不一致(已两值并存交给用户判断)
 
 ### Faro do Cabo de Cee  (way/152253771, Q33515564)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O faro do cabo Cee, tamén coñecido como faro de Cabo C ou faro do cabo'
@@ -1135,7 +1031,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El far de Sant Sebastià es troba a la població de Palafrugell. Inaugur'
 
 ### Prim Point Lighthouse  (way/179875355, Q7208142)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1804]，但 built 字段=1964 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1804]，但 built 字段=1964 — 不一致(已两值并存交给用户判断)
 
 ### Trinity Buoy Lighthouse  (way/186312184, Q3998890)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
@@ -1156,7 +1052,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Contis est un phare maritime de 1er ordre du littoral néo-'
 
 ### Great Point Light  (way/213821136, Q5599792)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1784]，但 built 字段=1769 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1784]，但 built 字段=1769 — 不一致(已两值并存交给用户判断)
 
 ### Faro Isla de Flores  (way/221137760, Q5856422)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
@@ -1198,7 +1094,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Grótta steht auf der Insel Grótta an der Spitze der '
 
 ### Leuchtturm Warnemünde  (way/34329207, Q1697562)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[36.9m, 36.9m]，但 height_m 字段=31.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[36.9m]，但 height_m 字段=31.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Cape Point Old Lighthouse  (way/350143420, Q10966914)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Cape Point Lighthouse ist ein Leuchtturm (englisch Lighthouse) auf '
@@ -1225,7 +1121,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro del Monte del Faro (o faro de las islas Cies) es un faro situa'
 
 ### Garðskagaviti  (way/427577024, Q3378225)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1897]，但 built 字段=1944 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1897]，但 built 字段=1944 — 不一致(已两值并存交给用户判断)
 
 ### Phare de Trézien  (way/42960770, Q59124)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Trézien(ou phare Trézien)est implanté dans les terres à 50'
@@ -1255,7 +1151,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Punta Galea es un faro situado en la Punta Galea, en Guecho'
 
 ### Eldred Rock Light  (way/512989088, Q2753859)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1902]，但 built 字段=1905 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1902]，但 built 字段=1905 — 不一致(已两值并存交给用户判断)
 
 ### Phare de Pontusval  (way/54001309, Q3378338)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Pontusval est érigé sur la pointe de Beg-Pol, commune de B'
@@ -1293,18 +1189,16 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Markøy fyr er en tidligere fyrstasjon på øya Markøy, 2,19 nautisk mil '
 
 ### Cape Pembroke Lighthouse  (way/681861911, Q3378557)
-- **摘要过短/截断**: 摘要结尾像被截断: …'en el extremo este de la isla Soledad.\u200b\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Cabo San Felipe (del inglés: Pembroke Lighthouse) se encuentra'
 
 ### Farol do Mucuripe  (way/709260459, Q28374807)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol do Mucuripe é um farol localizado no município brasileiro de F'
 
 ### Tongue Point Light  (way/716898544, Q7821157)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1891]，但 built 字段=1895 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1891]，但 built 字段=1895 — 不一致(已两值并存交给用户判断)
 
 ### Phare du cap Fréhel  (way/717175344, Q2085036)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare du cap Fréhel est un phare maritime des Côtes-d'Armor (France"
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[70.0m]，但 height_m 字段=32.9m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Far de Cavalleria  (way/74317241, Q8960888)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Far del Cap de Cavalleria és un far al Cap de Cavalleria situat a l'
@@ -1317,7 +1211,6 @@
 
 ### Far de Tossa  (way/80909785, Q18696197)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El far del municipi de Tossa de Mar a la comarca de la Selva es va aix'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[60.0m]，但 height_m 字段=11.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro do Roncudo  (way/842032876, Q28375974)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O faro de Punta Roncudo ou faro Roncudo é un faro para a axuda da nave'
@@ -1326,7 +1219,7 @@
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CYRILLIC']) → 非英文
 
 ### St. Abbs Lighthouse  (way/849455425, Q5856384)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1820]，但 built 字段=1862 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1820]，但 built 字段=1862 — 不一致(已两值并存交给用户判断)
 
 ### Phare du Grand Léjon  (way/865469982, Q195065)
 - **摘要疑似跑题**: 英文摘要但不含灯塔词/名字 → 可能讲的不是这座: 'Tour-tan an Ejon Bras zo un tour-tan savet 9 milmor e lark da Sant-Ke-Porzh-Olue'
@@ -1344,14 +1237,14 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Cabo Vírgenes es un faro que se encuentra ubicado en Cabo Vírg'
 
 ### (无名)  (way/948795068, Q7619461)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1840]，但 built 字段=1823 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1840]，但 built 字段=1823 — 不一致(已两值并存交给用户判断)
 
 ### Busto  (way/95528695, Q3378550)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "El faru de Bustu ta allugáu nel cabu homónimu, que s'asitia nel concey"
 
 ### Beavertail Light  (way/963061481, Q4878261)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[20.0m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856]，但 built 字段=1749 — 不一致，请你判断
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[20.0m]，但 height_m 字段=14.0m — 两者不一致(已两值并存交给用户判断)
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856]，但 built 字段=1749 — 不一致(已两值并存交给用户判断)
 
 ### Salacgrīvas bāka  (way/976761523, Q28375483)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm Salacgrīva (lettisch Salacgrīvas bāka) ist ein nicht me'
@@ -1390,7 +1283,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Farol de Vilamoura ou farolim de Vilamoura é um farol português que se'
 
 ### Fourteen Foot Shoal Lighthouse  (node/1012228482, Q5475901)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[4.3m, 4.3m]，但 height_m 字段=17.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[4.3m]，但 height_m 字段=17.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Lighthouse Euxinograde  (node/1018941849, Q108886235)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CYRILLIC']) → 非英文
@@ -1435,7 +1328,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Das Kahurangi Point Lighthouse ist ein Leuchtturm auf Südinsel Neuseel'
 
 ### Faro de Cala Figueira  (node/1065401698, Q5856390)
-- **摘要过短/截断**: 摘要结尾像被截断: …'a de Mallorca (Islas Baleares, España).\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Cala Figuera es un faro situado en la punta occidental de l'
 
 ### Faro Cabo Blanco  (node/1079954655, Q5395993)
@@ -1445,7 +1337,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de San Carlos-Mahón es un faro situado en el Castillo de San F'
 
 ### Gran Roque Lighthouse  (node/1124747028, Q5856169)
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Holandés\u200b es el nombre que recibe un antiguo faro ubicado en u'
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Holandés es el nombre que recibe un antiguo faro ubicado en un'
 
 ### Plane Island Lighthouse  (node/1132429241, Q39020582)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['ARABIC']) → 非英文
@@ -1456,9 +1348,6 @@
 
 ### Fukura Lighthouse  (node/11515327539, Q11593985)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA']) → 非英文
-
-### (无名)  (node/1152562328, Q55155449)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[302.0m, 206.0m, 302.1m, 206.0m]，但 height_m 字段=20.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Farol dos Três Bicos  (node/11577987715, Q10280206)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farolim das Sobreiras, também conhecido por Farol Medieval ou Farol '
@@ -1508,9 +1397,6 @@
 ### Farol da Pedra Seca  (node/1181499609, Q3378331)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol da Pedra Seca é um farol do estado brasileiro da Paraíba. É a '
 
-### Cape Naturaliste Lighthouse  (node/1191177652, Q15207402)
-- **高度异常值**: height_m=1.0 异常(可能错挂/单位错)
-
 ### Phare de Makemo  (node/1195389121, Q3378307)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Makemo est bâti sur l’atoll de Makemo, dans les îles Tuamo'
 
@@ -1528,7 +1414,6 @@
 
 ### Faro Isla Guafo  (node/1199792169, Q5856175)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Isla Guafo es un faro chileno ubicado en un acantilado a 114 m'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[114.0m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Akraberg Lighthouse  (node/1208591183, Q16482633)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm von Akraberg wurde 1909 auf einer 80 m hohen Klippe erb'
@@ -1579,7 +1464,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Senetosa est bâti sur le cap de Senetosa, au sud du golfe '
 
 ### Faro Cayo Paredón Grande  (node/12801662138, Q61104965)
-- **摘要过短/截断**: 摘要结尾像被截断: …'ro situado en la isla caribeña de Cuba.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Cayo Paredón Grande (también llamado Faro Diego Velázquez) es '
 
 ### Tang Lung Chau Lighthouse  (node/1293079326, Q15936439)
@@ -1595,12 +1479,6 @@
 ### Cape Carthage Lighthouse  (node/13167998377, Q39129543)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Sidi Bou Saïd est un phare situé à Sidi Bou Saïd, sur le g'
 
-### Faro dell'Isola delle Bisce  (node/1327347118, Q55082742)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[590.0m, 286.5m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
-### Faro di Barrettinelli  (node/1327347620, Q23823863)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[103.0m, 62.0m, 103.0m, 61.9m]，但 height_m 字段=12.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Phare de La Revellata  (node/1327347761, Q3378495)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de la Revellata, aussi appelé phare du golfe de Calvi, balise'
 
@@ -1609,9 +1487,6 @@
 
 ### منارة جزيرة أرزيو  (node/1332327492, Q22683452)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['ARABIC']) → 非英文
-
-### Faro di Capo Cefalù  (node/1340857556, Q32848801)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[280.0m, 280.4m]，但 height_m 字段=26.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro di Lividonia  (node/1340858006, Q16555261)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Il faro di Lividonia è un faro marittimo del mar Tirreno, noto anche c'
@@ -1675,7 +1550,6 @@
 
 ### Fischerbalje  (node/1460048844, Q14852435)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Das Leuchtfeuer Fischerbalje steht am Kopf des Borkumer Leitdamms auf '
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[20.0m]，但 height_m 字段=16.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro de Couso  (node/1495106138, Q33980961)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Faro de Punta Couso é un faro situado no Hío, Cangas de Morrazo.'
@@ -1746,11 +1620,10 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'country']
 
 ### Faro Río Negro  (node/1559928399, Q5856309)
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Río Negro o faro de la Barra del río Negro,\u200b es un faro ubicad'
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Río Negro o faro de la Barra del río Negro, es un faro ubicado'
 
 ### Westmole  (node/1564281458, Q1310598)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Emden Westmole steht auf der 1899 angelegten Westmol'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[3.0m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### la Farola  (node/1566281058, Q24540144)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Cullera es uno de los faros que forman parte del golfo de V'
@@ -1813,14 +1686,13 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol da Nazaré é um farol português que se localiza no Forte de São'
 
 ### Faro Bahía Porvenir  (node/1659769893, Q17174530)
-- **摘要过短/截断**: 摘要结尾像被截断: …'e Porvenir, en la Región de Magallanes.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Bahía Porvenir pertenece a la red de faros de Chile y se encue'
 
 ### Hubertsberg-Warnfeuer  (node/1660420040, Q1428567)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Ballenas Islands Light  (node/1689457904, Q4851585)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[27.0m, 27.1m]，但 height_m 字段=11.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[27.0m, 27.1m]，但 height_m 字段=11.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Faro Monumental de Chañaral  (node/1732845280, Q5856221)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Monumental Chañaral o Faro del Milenio es un faro ubicado en C'
@@ -1836,7 +1708,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro del Pescador es un faro español situado en la villa de Santoña'
 
 ### (无名)  (node/1806785941, Q5048273)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856, 1899]，但 built 字段=1854 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856, 1899]，但 built 字段=1854 — 不一致(已两值并存交给用户判断)
 
 ### Selvogsviti  (node/1834842008, Q3378380)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Selvogur (en islandais : Selvogsviti) est un phare situé à'
@@ -1857,7 +1729,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### South Pierhead Inner Light  (node/1885500399, Q16840779)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1839]，但 built 字段=1881 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1839]，但 built 字段=1881 — 不一致(已两值并存交给用户判断)
 
 ### Cap Falcon Lighthouse  (node/1900876208, Q23013087)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['ARABIC']) → 非英文
@@ -1899,14 +1771,13 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro San Jorge es un faro automatizado operado por la Armada Argent'
 
 ### Point Clark Lighthouse  (node/2147066597, Q14875388)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1855]，但 built 字段=1859 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1855]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)
 
 ### Feu métallique du môle  (node/2194806029, Q15948802)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le feu métallique du môle est un phare du XIXe siècle situé à Port-Ven'
 
 ### (无名)  (node/2375548180, Q17636578)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Akra Konchi (griechisch Φάρος Κόγχη Σαλαμίνας; auch '
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[50.0m]，但 height_m 字段=12.6m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro Península Alacrán  (node/2401335472, Q5856231)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Península Alacrán es un faro perteneciente a la red de faros d'
@@ -1922,7 +1793,7 @@
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CYRILLIC']) → 非英文
 
 ### Deer Island Light  (node/257496036, Q5250767)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[16.0m, 16.2m]，但 height_m 字段=10.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[16.0m, 16.2m]，但 height_m 字段=10.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Phare de la Pietra  (node/271322766, Q3378484)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare de la Pietra, aussi appelé phare de L'Île-Rousse, est bâti su"
@@ -1940,7 +1811,6 @@
 
 ### Faro di Fano  (node/277063575, Q3739776)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Il faro di Fano sorge circa a 350 m. a Sud dell'entrata del porto cana"
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[350.0m]，但 height_m 字段=20.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Podersdorf lighthouse  (node/279937798, Q1282998)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm Podersdorf am Ostufer des Neusiedler Sees in Podersdorf'
@@ -2010,7 +1880,6 @@
 
 ### Faro di Monte San Bartolo  (node/3453475219, Q3739800)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Il faro del Monte San Bartolo sorge circa a 175 m.s.l. sul monte omoni'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[175.0m]，但 height_m 字段=25.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro Cabo Espíritu Santo  (node/345518542, Q5849449)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Cabo Espíritu Santo es un faro perteneciente a la red de faros'
@@ -2019,7 +1888,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Punta Delgada se ubica en la XII Región de Magallanes y de la '
 
 ### Faro Isla Magdalena  (node/345519969, Q3378131)
-- **摘要过短/截断**: 摘要结尾像被截断: …'gión de Magallanes y Antártica Chilena.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Isla Magdalena es un faro perteneciente a la red de faros de C'
 
 ### Farol de Salinópolis  (node/345841515, Q10280167)
@@ -2035,7 +1903,7 @@
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['ARABIC']) → 非英文
 
 ### Fort Point Lighthouse  (node/3536766417, Q28232897)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1832]，但 built 字段=1855 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1832]，但 built 字段=1855 — 不一致(已两值并存交给用户判断)
 
 ### Cabo San Pio  (node/3569465793, Q5856144)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Cabo San Pio se encuentra en la ubicación 55°03′00″S 66°31′00″'
@@ -2110,7 +1978,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Il faro del Fenaio è un faro marittimo del mar Tirreno che si trova ne'
 
 ### Michigan Island Lighthouse  (node/475902605, Q6837577)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856, 1929]，但 built 字段=1857 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856, 1929]，但 built 字段=1857 — 不一致(已两值并存交给用户判断)
 
 ### Marmara Ereğlisi Deniz Feneri  (node/4810741052, Q131389319)
 - **缺摘要**: 无摘要
@@ -2160,7 +2028,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Faro Quequén, es un faro de Argentina que se encuentra ubicado en la l'
 
 ### Nayatt Point Light  (node/5544375792, Q6983120)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856]，但 built 字段=1828 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856]，但 built 字段=1828 — 不一致(已两值并存交给用户判断)
 
 ### (无名)  (node/5640045604, Q106419773)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Die Leuchttürme Peterhof sind zwei Richtfeuerlinien mit drei Feuerträg'
@@ -2173,10 +2041,10 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O farol de Itapuã ou farol da Ponta de Itapuã é um farol em Salvador, '
 
 ### Algoma Lighthouse  (node/582446301, Q4724302)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1893]，但 built 字段=1908 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1893]，但 built 字段=1908 — 不一致(已两值并存交给用户判断)
 
 ### Peshtigo Reef Lighthouse  (node/582712062, Q7171398)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1936]，但 built 字段=1905 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1936]，但 built 字段=1905 — 不一致(已两值并存交给用户判断)
 
 ### 淡水燈塔  (node/6025041585, Q86671946)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK']) → 非英文
@@ -2188,8 +2056,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Claromecó es un faro habitado de la Armada Argentina que se en'
 
 ### Hog Island Shoal Light  (node/6183087007, Q5876983)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[180.0m, 182.9m]，但 height_m 字段=18.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1901]，但 built 字段=1886 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1901]，但 built 字段=1886 — 不一致(已两值并存交给用户判断)
 
 ### Faro "Aristizabal"  (node/6277714842, Q5856122)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Cabo Aristizábal es un faro no habitado del Servicio de Hidrog'
@@ -2202,9 +2069,6 @@
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA']) → 非英文
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
-### Faru de s'ìsula de is càvurus/Faro dell'Isola dei Cavoli  (node/6405894238, Q55095796)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[690.0m, 79.2m]，但 height_m 字段=37.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Faro Península Páramo  (node/6474221864, Q5856303)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Cabo Páramo es un faro no habitado de la Armada Argentina que '
 
@@ -2215,7 +2079,7 @@
 - **缺摘要**: 无摘要
 
 ### Amlwch Lighthouse  (node/6520673104, Q4747079)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1853]，但 built 字段=1817 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1853]，但 built 字段=1817 — 不一致(已两值并存交给用户判断)
 
 ### Windward Point Light  (node/6525299419, Q3739737)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Windward Point (en espagnol : Faro de Punta Barlovento) es'
@@ -2228,7 +2092,6 @@
 
 ### Faro Cabo Guardián  (node/6527930848, Q5404246)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Cabo Guardián es un faro no habitado de la Marina Argentina qu'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[48.0m]，但 height_m 字段=36.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro Campana  (node/6527937884, Q5680482)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Campana es un faro no habitado de la Armada Argentina que se e'
@@ -2303,7 +2166,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Cabo Posesión es un faro perteneciente a la red de faros de Ch'
 
 ### Faro Punta Concón  (node/6528510734, Q5856246)
-- **摘要过短/截断**: 摘要结尾像被截断: …' un puerto recreativo de 15 kilómetros.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Punta Concón se ubica en la costa de Concón y forma parte de l'
 
 ### Faro Punta Corona  (node/6528514102, Q5856252)
@@ -2355,7 +2217,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Punta Curaumilla es un faro perteneciente a la red de faros de'
 
 ### Far d'Alcanada  (node/697883608, Q5856347)
-- **摘要过短/截断**: 摘要结尾像被截断: …'la de Mallorca, Islas Baleares, España.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Alcanada es un faro situado en el islote de Alcanada, en el'
 
 ### Faro Isla Quiriquina  (node/7009938319, Q5856190)
@@ -2381,7 +2242,6 @@
 
 ### Phare d'Alistro  (node/8066123486, Q3378146)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare d'Alistro est bâti sur la commune de San-Giuliano (Haute-Cors"
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[50.0m]，但 height_m 字段=93.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Långhällsudde  (node/8155461314, Q32286811)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Punta ang Långhällsudde sa Sweden. Nahimutang ni sa lalawigan sa Stock'
@@ -2390,7 +2250,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Die Leuchttürme Peterhof sind zwei Richtfeuerlinien mit drei Feuerträg'
 
 ### Faro Miramar  (node/8304551009, Q5856212)
-- **高度异常值**: height_m=1.4 异常(可能错挂/单位错)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro Miramar es un faro antiguamente ubicado en la intersección de '
 
 ### Ghazaouet Lighthouse  (node/8340303984, Q23013091)
@@ -2417,9 +2276,6 @@
 ### Phare de la pointe Colombi  (node/896706519, Q23013090)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['ARABIC']) → 非英文
 
-### Faro Scoglio Palumbo  (node/9080968009, Q28375941)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[102.0m, 67.0m, 102.1m, 67.1m]，但 height_m 字段=12.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Gäveskär  (node/930188070, Q10512437)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Gäveskär ist eine kleine zu Schweden gehörende Insel im Kattegat. Sie '
 
@@ -2439,7 +2295,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Trstenik (en croate : Svjetionik Otočić Trstenik) est un p'
 
 ### Scarborough Lighthouse  (way/1012212342, Q26550904)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1806]，但 built 字段=1931 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1806]，但 built 字段=1931 — 不一致(已两值并存交给用户判断)
 
 ### Vuurtoren Nieuwpoort  (way/1016510991, Q2699295)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'De Vuurtoren van Nieuwpoort bevindt zich in de Belgische stad Nieuwpoo'
@@ -2482,7 +2338,7 @@
 - **摘要过短/截断**: 摘要结尾像被截断: …'a Channel, in Ventura County, California'
 
 ### Rock of Ages Lighthouse  (way/1075689285, Q7354843)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[15.0m, 61.0m, 61.0m]，但 height_m 字段=36.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[15.0m, 61.0m]，但 height_m 字段=36.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Leuchtturm List Ost  (way/1088240902, Q1821436)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der rot-weiß gestreifte Leuchtturm List Ost steht auf der Ellenboge'
@@ -2506,9 +2362,6 @@
 ### Svjetionik Oštri Rat  (way/1303569168, Q55465073)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Svjetionik Oštri rat je svjetionik sjeverno od ulaza u luku Zadar.'
 
-### Faro della Maddalenetta  (way/1307113354, Q55020983)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[84.0m, 800.0m, 84.1m, 182.9m]，但 height_m 字段=6.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
-
 ### Svjetionik Otočić Grujica  (way/131017892, Q55452261)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Grujica (en croate : Svjetionik Otočić Grujica) est un feu'
 
@@ -2529,14 +2382,13 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Southwest Reef Light  (way/1426470703, Q7571347)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856]，但 built 字段=1848 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1856]，但 built 字段=1848 — 不一致(已两值并存交给用户判断)
 
 ### Isle Ornsay Lighthouse  (way/1453090789, Q17829400)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare d'Ornsay est un phare qui se situe sur la petite île d'Ornsay"
 
 ### Φάρος Κόγχη  (way/145960441, Q17636578)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Akra Konchi (griechisch Φάρος Κόγχη Σαλαμίνας; auch '
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[50.0m]，但 height_m 字段=12.6m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Faro de Punta Doncella  (way/1463241728, Q5856461)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Punta Doncella es un faro de tráfico aéreo marítimo. Está s'
@@ -2609,7 +2461,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Svjetionik Rt Verudica je svjetionik na rtu Verudica, preko puta otoka'
 
 ### Lighthouse Tarifa  (way/206724556, Q5856492)
-- **摘要过短/截断**: 摘要结尾像被截断: …' extremo sur de la Isla de Las Palomas.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Punta de Tarifa es un faro de primer orden ubicado en Tarif'
 
 ### Vesborg Fyr  (way/213218121, Q16902633)
@@ -2642,7 +2493,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Torrox es un faro situado en la costa del término municipal'
 
 ### Big Sodus Light  (way/243891295, Q7553443)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1870]，但 built 字段=1825 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1870]，但 built 字段=1825 — 不一致(已两值并存交给用户判断)
 
 ### Farol de Pinda  (way/245371517, Q10280163)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'O Farol de Pinda, é um farol moçambicano localizado nas terras altas d'
@@ -2660,7 +2511,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Point Sur Lighthouse  (way/255390082, Q7208173)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[110.0m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[110.0m]，但 height_m 字段=15.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Svjetionik Sestrica Vela  (way/256427167, Q55580958)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Svjetionik Otočić Sestrica Vela – Korčula je svjetionik na otočiću Vel'
@@ -2729,7 +2580,6 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Baliça de na Foradat  (way/354604448, Q5575110)
-- **摘要过短/截断**: 摘要结尾像被截断: …'nte a la costa sur de Mallorca, España.\u200b'
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'La baliza de Na Foradada es una baliza que se encuentra en la isla Na '
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
@@ -2740,7 +2590,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Svjetionik Otočić Prišnjak je svjetionik na jugoistočnoj strani otočić'
 
 ### East Point Lighthouse  (way/361588779, Q30575032)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1867]，但 built 字段=1876 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1867]，但 built 字段=1876 — 不一致(已两值并存交给用户判断)
 
 ### Isle of Sein Lighthouse  (way/364993683, Q1542909)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le grand phare de l'île de Sein a été construit entre 1950 et 1951. Il"
@@ -2756,10 +2606,10 @@
 - **摘要过短/截断**: 摘要结尾像被截断: …'the Delaware River, Wilmington, Delaware'
 
 ### (无名)  (way/386241760, Q7054358)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1867]，但 built 字段=1861 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1867]，但 built 字段=1861 — 不一致(已两值并存交给用户判断)
 
 ### Leuchtturm Oberfeuer Eversand  (way/392184640, Q1821448)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[4.0m]，但 height_m 字段=34.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[4.0m]，但 height_m 字段=34.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Svjetionik sveti Petar  (way/39575805, Q45023977)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Svjetionik Poluotok Sv. Petar je svjetionik na poluotoku Sv.'
@@ -2780,7 +2630,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de Roquetas de Mar es un faro situado en la costa de Roquetas '
 
 ### Kincardine Lighthouse  (way/451964896, Q5670249)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[24.4m, 22.6m]，但 height_m 字段=19.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[22.6m, 24.4m]，但 height_m 字段=19.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Izumo Hinomisaki Lighthouse  (way/454970181, Q10896678)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA']) → 非英文
@@ -2802,7 +2652,6 @@
 
 ### Spodsbjerg Fyr  (way/480767178, Q28375534)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Spodsbjerg Fyr er et fyrtårn, som ligger på Spodsbjerg Klint to kilome'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[40.0m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Hoburg fyr  (way/481313993, Q10524998)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Hoburg fyr är en fyr vid Hoburgen på södra Gotland. Fyren tändes den 1'
@@ -2814,10 +2663,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Molja fyr er et fyr i Ålesund kommune på Sunnmøre. Fyret står ytterst '
 
 ### Point Clark Lighthouse  (way/486982481, Q14875388)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1855]，但 built 字段=1859 — 不一致，请你判断
-
-### Chacachacare Lighthouse  (way/490750089, Q55606893)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[236.0m, 235.9m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1855]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)
 
 ### Knock Lighthouse  (way/491897726, Q1821430)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Knock steht im äußersten Westen Emdens an der Knock,'
@@ -2851,7 +2697,6 @@
 
 ### Faro Punta Médanos  (way/526862227, Q5856280)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro Punta Médanos es un faro habitado de la Armada Argentina que s'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[500.0m]，但 height_m 字段=59.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Baltimore Lighthouse  (way/529586079, Q4852868)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
@@ -2882,7 +2727,6 @@
 
 ### Svjetionik Rt Marlera  (way/554274877, Q55423836)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Svjetionik Rt Marlera je svjetionik na jugoistočnom vrh poluotoka Istr'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[25.0m]，但 height_m 字段=9.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Svjetionik Mlaka  (way/554276407, Q55430632)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Svjetionik Mlaka je svjetionik u gradu Rijeci.'
@@ -2906,7 +2750,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Daksa (en croate : Svjetionik Otočić Daksa) est un feu act'
 
 ### Cana Island Lighthouse  (way/555333113, Q5029153)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1870]，但 built 字段=1869 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1870]，但 built 字段=1869 — 不一致(已两值并存交给用户判断)
 
 ### Little Qingdao Lighthouse  (way/556703754, Q183107)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK']) → 非英文
@@ -2918,7 +2762,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Phare de la Pointe-Doublé  (way/57746366, Q3378486)
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro de la Punta Doublé\u200b (en francés: Phare de la Pointe Doublé) es'
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro de la Punta Doublé (en francés: Phare de la Pointe Doublé) est'
 
 ### Канинский маяк  (way/580196423, Q33231897)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Kanin nos (rusky: Канинский маяк) stojí na pobřeží poloostrova K'
@@ -2930,7 +2774,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Langness est un phare situé sur le côté est de Dreswick Po'
 
 ### Egmont Key Light  (way/609692805, Q5348120)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1858]，但 built 字段=1848 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1858]，但 built 字段=1848 — 不一致(已两值并存交给用户判断)
 
 ### Knudshoved Fyr  (way/616407697, Q17482401)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Knudshoved Fyr er et fyrtårn på østsiden af halvøen Knudshoved, der sy'
@@ -2943,7 +2787,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### (无名)  (way/627569702, Q5035030)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1849]，但 built 字段=1848 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1849]，但 built 字段=1848 — 不一致(已两值并存交给用户判断)
 
 ### Baños  (way/631317236, Q30202643)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El faro de la Punta de los Baños es un faro situado cerca de la locali'
@@ -3012,7 +2856,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare du cap Ferret est constitué d'une tour tronconique en maçonne"
 
 ### Poplar Point Light  (way/718133480, Q7229418)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1831]，但 built 字段=1765 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1831]，但 built 字段=1765 — 不一致(已两值并存交给用户判断)
 
 ### Blackistone Lighthouse  (way/718624721, Q4924664)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
@@ -3048,14 +2892,14 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Grave, sur la pointe de Grave, est situé sur le côté sud d'
 
 ### (无名)  (way/759786709, Q3378529)
-- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro del Puerto de Les Saintes\u200b (en francés: Phare du Port des Sain'
+- **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'El Faro del Puerto de Les Saintes (en francés: Phare du Port des Saint'
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### 球子山燈塔  (way/765770921, Q17060311)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK']) → 非英文
 
 ### 部埼灯台  (way/778930950, Q5745289)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1870]，但 built 字段=1871 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1870]，但 built 字段=1871 — 不一致(已两值并存交给用户判断)
 
 ### Tinicum Rear Range Lighthouse  (way/788057948, Q7808231)
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'country']
@@ -3099,7 +2943,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Pansion lentomajakka on Turussa Pansion kaupunginosassa sijaitseva len'
 
 ### Belyea's Point Light  (way/984690000, Q4884948)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1881]，但 built 字段=1882 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1881]，但 built 字段=1882 — 不一致(已两值并存交给用户判断)
 
 ### Farol do Forte da Barra  (way/995816102, Q10280188)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare du Fort de Barra de Aveiro est un phare situé dans la fregues'
@@ -3155,7 +2999,6 @@
 
 ### Östra Stendörren  (node/1029352189, Q10728413)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Östra Stendörren är en fyr som står 300 meter öster om ön Stendörren i'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[300.0m]，但 height_m 字段=4.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Stenkobbsgrund  (node/1030597815, Q10678552)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Stenkobbsgrund är en fyr i Stockholms mellersta skärgård, belägen stra'
@@ -3366,7 +3209,6 @@
 
 ### Gömnitzer Turm  (node/1260143321, Q1559358)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Der Gömnitzer Turm (auch als „Major“ bezeichnet) ist ein ehemaliges Se'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[80.0m]，但 height_m 字段=8.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Aber Ildut lighthouse  (node/1269226414, Q3070938)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le feu de l'Aber-Ildut est situé au nord de l'embouchure de l'Aber-Ild"
@@ -3525,7 +3367,6 @@
 
 ### Phare du Cap Cépet  (node/1420666203, Q3378552)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "L'actuel phare du cap Cépet a été reconstruit à 155 m du précédent, au"
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[155.0m, 14.0m]，但 height_m 字段=76.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### (无名)  (node/1431287548, Q18213899)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare Akra Monemvasia, également appelé phare Monemvasia, est situé'
@@ -3690,7 +3531,6 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare Polýaigos, également appelé Phare Nisis Poliaigos est situé a'
 
 ### Άκρα Φάσσα  (node/1576242247, Q17173369)
-- **高度异常值**: height_m=201.0 异常(可能错挂/单位错)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare Akra Fassa, également appelé phare Fasas, est situé au cap Fa'
 
 ### Φάρος Γαυρίου  (node/1576242365, Q112678475)
@@ -3734,7 +3574,6 @@
 
 ### (无名)  (node/1635842624, Q21029120)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare du Cap-Jourimain (anglais : Cape Jourimain Lighthouse) est un'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[5.0m]，但 height_m 字段=15.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### (无名)  (node/1635912801, Q47016759)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Port Borden (en anglais : Port Borden Pier Light) est un p'
@@ -3983,7 +3822,6 @@
 
 ### 余部埼灯台  (node/3081643501, Q11385295)
 - **摘要非英文**: 摘要是非拉丁文字(97%, ['CJK', 'HIRAGANA']) → 非英文
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[274.0m]，但 height_m 字段=13.9m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### 女島灯台  (node/3090584902, Q11446415)
 - **摘要非英文**: 摘要是非拉丁文字(97%, ['CJK', 'HIRAGANA']) → 非英文
@@ -4154,7 +3992,7 @@
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA']) → 非英文
 
 ### Sleat Point Lighthouse  (node/427669269, Q24515751)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1934]，但 built 字段=2003 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1934]，但 built 字段=2003 — 不一致(已两值并存交给用户判断)
 
 ### (无名)  (node/4291664940, Q46360604)
 - **缺摘要**: 无摘要
@@ -4184,7 +4022,6 @@
 
 ### (无名)  (node/459834258, Q10718430)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Vens västra fyr ligger på ön Vens nordvästra udde. Den är byggd av bet'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[5.0m]，但 height_m 字段=8.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Farol da Ponta Alegre  (node/4661708783, Q3378337)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Ponta Alegre est un ancien phare de signalisation maritime'
@@ -4243,7 +4080,6 @@
 
 ### (无名)  (node/513981440, Q10713981)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Vens södra udde är en fyr som ligger på ön Vens södra udde. Den är byg'
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[5.0m]，但 height_m 字段=8.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### ガンジャが鼻の赤灯台  (node/5181495821, Q28682677)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA', 'KATAKANA']) → 非英文
@@ -4403,7 +4239,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Chantry Island Lightstation Tower  (node/6549692791, Q27990784)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1855]，但 built 字段=1859 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1855]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)
 
 ### Pot à l'Eau-de-vie lighthouse  (node/6549796285, Q16634749)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare de l'Île-du-Pot-à-l'Eau-de-Vie est une station d'aide à la na"
@@ -4562,7 +4398,6 @@
 - **摘要疑似跑题**: 英文摘要但不含灯塔词/名字 → 可能讲的不是这座: 'Die Deal-vuurtoring is op 1 November 1973 in gebruik geneem en het die Donkin Hi'
 
 ### Tsurumisaki Lighthouse  (node/929170638, Q11676022)
-- **高度异常值**: height_m=197.0 异常(可能错挂/单位错)
 - **摘要非英文**: 摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA']) → 非英文
 
 ### Sadamisaki Lighthouse  (node/930008912, Q11383359)
@@ -4682,7 +4517,7 @@
 - **关键字段缺失(≥2)**: 关键字段缺失: ['built', 'height_m']
 
 ### Corran Point Lighthouse  (way/1174345840, Q28465867)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1860]，但 built 字段=1817 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1860]，但 built 字段=1817 — 不一致(已两值并存交给用户判断)
 
 ### Phare de La Croix  (way/118445466, Q3378465)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de la Croix est situé à Concarneau (Finistère) sur le port de'
@@ -4827,7 +4662,6 @@
 
 ### Machias Seal Island Light  (way/198756652, Q21030715)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare de l'Île-Machias-Seal (anglais : Machias Seal Island Lighthou"
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[8.0m]，但 height_m 字段=19.8m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Phare de la Roque  (way/205282378, Q3378296)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de la Roque (désaffecté) est situé sur la pointe de la Roque,'
@@ -4855,7 +4689,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Cervia (en italien : Faro di Cervia) est un phare situé à '
 
 ### Point Richie Lighthouse  (way/223699724, Q15267242)
-- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1892]，但 built 字段=1871 — 不一致，请你判断
+- **年份矛盾(摘要 vs 字段)**: 摘要提到建于[1892]，但 built 字段=1871 — 不一致(已两值并存交给用户判断)
 
 ### Inishgort Lighthouse  (way/224125857, Q28333654)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare d'Inishgort est un phare situé sur une petite île à l'entrée "
@@ -5021,7 +4855,6 @@
 
 ### Phare d'Hourtin  (way/513934973, Q2377829)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Les phares d'Hourtin sont des tours carrées de 27 m de haut, en maçonn"
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[27.0m]，但 height_m 字段=31.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
 
 ### Great Inagua Light  (way/522285680, Q59157350)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Le phare de Great Inagua est un phare actif situé sur la grande île (G'
@@ -5053,7 +4886,7 @@
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): "Le phare de Matane est une ancienne station d'aide à la navigation du "
 
 ### Currie Lighthouse  (way/563495554, Q14935611)
-- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[21.0m, 21.0m]，但 height_m 字段=46.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)
+- **高度矛盾(摘要 vs 字段)**: 摘要提到高度[21.0m]，但 height_m 字段=46.0m — 两者不一致(已两值并存交给用户判断)
 
 ### Сескар  (way/564088163, Q33231948)
 - **摘要非英文**: 摘要疑似非英文(无英文常用词标志): 'Maják Seskar (rusky: Сескар, švédsky: Seitskär, finsky: Seiskari majak'
@@ -5621,7 +5454,6 @@
 - **缺摘要**: 无摘要
 
 ### Pillar Point Lighthouse  (node/1052815257, Q89132535)
-- **高度异常值**: height_m=166.0 异常(可能错挂/单位错)
 - **缺摘要**: 无摘要
 
 ### Karori Rock Light  (node/1052816956, Q28873388)
@@ -5635,7 +5467,6 @@
 - **缺摘要**: 无摘要
 
 ### Dolphin's Nose Lighthouse  (node/1054461946, Q57499110)
-- **高度异常值**: height_m=173.0 异常(可能错挂/单位错)
 - **缺摘要**: 无摘要
 
 ### (无名)  (node/10607696018, Q127297681)

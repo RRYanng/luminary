@@ -1,15 +1,14 @@
 {
   "audited_lighthouses": 3834,
   "image_scope": "top200",
-  "flagged_count": 2369,
+  "flagged_count": 2332,
   "issue_counts": {
-    "height_conflict": 86,
-    "missing_fields": 440,
+    "height_conflict": 21,
     "year_conflict": 82,
-    "non_english": 1368,
     "missing_summary": 775,
-    "short_summary": 43,
-    "height_outlier": 8,
+    "non_english": 1365,
+    "missing_fields": 439,
+    "short_summary": 26,
     "off_topic": 7
   },
   "known_bad_link": 28,
@@ -22,19 +21,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[100.0m, 100.6m]，但 height_m 字段=137.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
-      "id": "way/265419490",
-      "name": "Jeddah Light",
-      "rank": 9,
-      "wikidata": "Q1151131",
-      "issues": [
-        {
-          "kind": "missing_fields",
-          "detail": "关键字段缺失: ['height_m', 'country']"
+          "detail": "摘要提到高度[100.0m, 100.6m]，但 height_m 字段=137.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -46,19 +33,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1908]，但 built 字段=1907 — 不一致，请你判断"
-        }
-      ]
-    },
-    {
-      "id": "way/1119816491",
-      "name": "Bengtskär Lighthouse",
-      "rank": 16,
-      "wikidata": "Q3737012",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[52.0m]，但 height_m 字段=45.8m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到建于[1908]，但 built 字段=1907 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -70,7 +45,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1807]，但 built 字段=1810 — 不一致，请你判断"
+          "detail": "摘要提到建于[1807]，但 built 字段=1810 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -82,7 +57,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1856]，但 built 字段=1857 — 不一致，请你判断"
+          "detail": "摘要提到建于[1856]，但 built 字段=1857 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -93,12 +68,8 @@
       "wikidata": "Q1976702",
       "issues": [
         {
-          "kind": "non_english",
-          "detail": "摘要是非拉丁文字(15%, ['CYRILLIC']) → 非英文"
-        },
-        {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[27.2m, 27.1m]，但 height_m 字段=11.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[27.1m]，但 height_m 字段=11.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -110,55 +81,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1802]，但 built 字段=1870 — 不一致，请你判断"
-        }
-      ]
-    },
-    {
-      "id": "way/350070453",
-      "name": "Klaipėdos švyturys",
-      "rank": 38,
-      "wikidata": "Q5764622",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[500.0m]，但 height_m 字段=40.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
-      "id": "node/117081598",
-      "name": "Lighthouse La Jument",
-      "rank": 50,
-      "wikidata": "Q1809044",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[300.0m]，但 height_m 字段=47.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
-      "id": "way/184073572",
-      "name": "Cabo da Roca Lighthouse",
-      "rank": 61,
-      "wikidata": "Q5015743",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[165.0m, 164.9m]，但 height_m 字段=22.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
-      "id": "way/350062613",
-      "name": "Juodkrantės švyturys",
-      "rank": 67,
-      "wikidata": "Q4534721",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[900.0m]，但 height_m 字段=20.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到建于[1802]，但 built 字段=1870 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -169,24 +92,8 @@
       "wikidata": "Q15221791",
       "issues": [
         {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[300.0m, 298.7m]，但 height_m 字段=26.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        },
-        {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1858]，但 built 字段=1859 — 不一致，请你判断"
-        }
-      ]
-    },
-    {
-      "id": "node/1279094700",
-      "name": "Yenikalsky Lighthouse",
-      "rank": 76,
-      "wikidata": "Q4175622",
-      "issues": [
-        {
-          "kind": "non_english",
-          "detail": "摘要是非拉丁文字(17%, ['CYRILLIC']) → 非英文"
+          "detail": "摘要提到建于[1858]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -197,24 +104,8 @@
       "wikidata": "Q28771409",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'lilla, un bien de interés cultural.\\u200b\\u200b\\u200b\\u200b\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro de Melilla es el faro de la ciudad española de Melilla, está s'"
-        }
-      ]
-    },
-    {
-      "id": "node/274070169",
-      "name": "Far de Formentor",
-      "rank": 81,
-      "wikidata": "Q5856409",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[210.0m, 210.3m]，但 height_m 字段=22.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -231,18 +122,6 @@
       ]
     },
     {
-      "id": "way/264623501",
-      "name": "Yenikalsky Lighthouse",
-      "rank": 95,
-      "wikidata": "Q4175622",
-      "issues": [
-        {
-          "kind": "non_english",
-          "detail": "摘要是非拉丁文字(17%, ['CYRILLIC']) → 非英文"
-        }
-      ]
-    },
-    {
       "id": "way/887686627",
       "name": "Longships",
       "rank": 117,
@@ -250,7 +129,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[12.0m, 11.9m]，但 height_m 字段=35.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[11.9m, 12.0m]，但 height_m 字段=35.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -262,7 +141,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1817]，但 built 字段=1816 — 不一致，请你判断"
+          "detail": "摘要提到建于[1817]，但 built 字段=1816 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -286,7 +165,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1766]，但 built 字段=1835 — 不一致，请你判断"
+          "detail": "摘要提到建于[1766]，但 built 字段=1835 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -298,7 +177,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[28.0m, 28.0m]，但 height_m 字段=36.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[28.0m]，但 height_m 字段=36.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -315,18 +194,6 @@
       ]
     },
     {
-      "id": "way/191653569",
-      "name": "Farol do Cabo Branco",
-      "rank": 151,
-      "wikidata": "Q5015722",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[800.0m, 182.9m]，但 height_m 字段=18.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "way/258896731",
       "name": "Grip fyr",
       "rank": 158,
@@ -334,7 +201,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[7.0m, 7.0m]，但 height_m 字段=44.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[7.0m]，但 height_m 字段=44.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -346,7 +213,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1960]，但 built 字段=1962 — 不一致，请你判断"
+          "detail": "摘要提到建于[1960]，但 built 字段=1962 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -442,7 +309,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1832]，但 built 字段=1874 — 不一致，请你判断"
+          "detail": "摘要提到建于[1832]，但 built 字段=1874 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -455,30 +322,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Maják Rukkirahu (estonsky: Rukkirahu tuletorn) stojí na ostrově Rukkir'"
-        }
-      ]
-    },
-    {
-      "id": "way/1049367506",
-      "name": "Beachy Head Lighthouse",
-      "rank": null,
-      "wikidata": "Q15197902",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[33.0m, 32.9m]，但 height_m 字段=43.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
-      "id": "way/177816445",
-      "name": "Užavas bāka",
-      "rank": null,
-      "wikidata": "Q16354987",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[28.0m]，但 height_m 字段=19.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -503,10 +346,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Horní maják Suurupi (estonsky: Suurupi ülemine tuletorn) je pobřežní m'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[2245.0m]，但 height_m 字段=17.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -630,19 +469,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1922]，但 built 字段=1858 — 不一致，请你判断"
-        }
-      ]
-    },
-    {
-      "id": "node/1413091427",
-      "name": "Farol da Ponta do Pargo",
-      "rank": null,
-      "wikidata": "Q10280133",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[312.0m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到建于[1922]，但 built 字段=1858 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -655,18 +482,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'p4 Westkapelle Laag (niederländisch; auch Noorderhoofd genannt) ist de'"
-        }
-      ]
-    },
-    {
-      "id": "node/1493432111",
-      "name": "Farol de São Jorge",
-      "rank": null,
-      "wikidata": "Q5436123",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[271.0m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -703,18 +518,6 @@
       ]
     },
     {
-      "id": "node/1577265016",
-      "name": null,
-      "rank": null,
-      "wikidata": "Q5436129",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[23.0m]，但 height_m 字段=2.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "node/2133325245",
       "name": "Faro de San Juan de Salvamento",
       "rank": null,
@@ -734,7 +537,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1883]，但 built 字段=1839 — 不一致，请你判断"
+          "detail": "摘要提到建于[1883]，但 built 字段=1839 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -794,7 +597,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1880]，但 built 字段=1881 — 不一致，请你判断"
+          "detail": "摘要提到建于[1880]，但 built 字段=1881 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -806,11 +609,11 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[20.0m, 20.1m]，但 height_m 字段=38.7m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[20.1m]，但 height_m 字段=38.7m — 两者不一致(已两值并存交给用户判断)"
         },
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1849]，但 built 字段=1896 — 不一致，请你判断"
+          "detail": "摘要提到建于[1849]，但 built 字段=1896 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -863,18 +666,6 @@
       ]
     },
     {
-      "id": "node/9215674440",
-      "name": "Ribeira Brava",
-      "rank": null,
-      "wikidata": "Q5436125",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[34.0m]，但 height_m 字段=6.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "way/110978195",
       "name": "Толбухин маяк",
       "rank": null,
@@ -899,18 +690,6 @@
       ]
     },
     {
-      "id": "way/127727836",
-      "name": null,
-      "rank": null,
-      "wikidata": "Q10280133",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[312.0m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "way/179991275",
       "name": "Lundy South Lighthouse",
       "rank": null,
@@ -930,7 +709,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1903]，但 built 字段=1882 — 不一致，请你判断"
+          "detail": "摘要提到建于[1903]，但 built 字段=1882 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -942,7 +721,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[36.0m]，但 height_m 字段=30.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[36.0m]，但 height_m 字段=30.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -966,7 +745,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1845]，但 built 字段=1764 — 不一致，请你判断"
+          "detail": "摘要提到建于[1845]，但 built 字段=1764 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -983,18 +762,6 @@
       ]
     },
     {
-      "id": "way/335159009",
-      "name": "St. Bees Lighthouse",
-      "rank": null,
-      "wikidata": "Q2753066",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[102.0m, 102.1m]，但 height_m 字段=17.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "way/405049972",
       "name": "Heceta Head Light",
       "rank": null,
@@ -1002,7 +769,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[62.0m]，但 height_m 字段=11.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[62.0m]，但 height_m 字段=11.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1026,7 +793,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1923]，但 built 字段=1838 — 不一致，请你判断"
+          "detail": "摘要提到建于[1923]，但 built 字段=1838 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1050,7 +817,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1961]，但 built 字段=1964 — 不一致，请你判断"
+          "detail": "摘要提到建于[1961]，但 built 字段=1964 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1067,6 +834,18 @@
       ]
     },
     {
+      "id": "way/554357736",
+      "name": "Svjetionik Rt Stražica",
+      "rank": null,
+      "wikidata": "Q15633187",
+      "issues": [
+        {
+          "kind": "height_conflict",
+          "detail": "摘要提到高度[4.9m]，但 height_m 字段=8.0m — 两者不一致(已两值并存交给用户判断)"
+        }
+      ]
+    },
+    {
       "id": "way/576710199",
       "name": "Phare de Pointe-au-Père",
       "rank": null,
@@ -1074,7 +853,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1909]，但 built 字段=1859 — 不一致，请你判断"
+          "detail": "摘要提到建于[1909]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1199,18 +978,6 @@
       ]
     },
     {
-      "id": "node/1052815291",
-      "name": "Castlepoint Lighthouse",
-      "rank": null,
-      "wikidata": "Q1049465",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[52.0m]，但 height_m 字段=23.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "node/1113653902",
       "name": "Crown Point Light House",
       "rank": null,
@@ -1302,7 +1069,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1895]，但 built 字段=1896 — 不一致，请你判断"
+          "detail": "摘要提到建于[1895]，但 built 字段=1896 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1351,10 +1118,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm (niederländisch vuurtoren) von Westkapelle auf der Halb'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[6.0m]，但 height_m 字段=52.3m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -1473,10 +1236,6 @@
       "wikidata": "Q10280138",
       "issues": [
         {
-          "kind": "height_outlier",
-          "detail": "height_m=1.0 异常(可能错挂/单位错)"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'O farol da Selvagem Pequena é um farol português que se localiza na Se'"
         }
@@ -1578,7 +1337,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1874]，但 built 字段=1875 — 不一致，请你判断"
+          "detail": "摘要提到建于[1874]，但 built 字段=1875 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1591,18 +1350,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Der Far des Cap de ses Salines ist ein Leuchtturm am südlichsten Punkt'"
-        }
-      ]
-    },
-    {
-      "id": "node/471044640",
-      "name": "Tarbat Ness Lighthouse",
-      "rank": null,
-      "wikidata": "Q2394002",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[53.0m, 53.0m]，但 height_m 字段=41.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -1631,18 +1378,6 @@
       ]
     },
     {
-      "id": "node/615075810",
-      "name": "Lighthouse of Ponta dos Rosais",
-      "rank": null,
-      "wikidata": "Q6546366",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[200.0m]，但 height_m 字段=27.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "node/6548305562",
       "name": "Phare de Point-Amour",
       "rank": null,
@@ -1650,7 +1385,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1857]，但 built 字段=1858 — 不一致，请你判断"
+          "detail": "摘要提到建于[1857]，但 built 字段=1858 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1790,7 +1525,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1859]，但 built 字段=1851 — 不一致，请你判断"
+          "detail": "摘要提到建于[1859]，但 built 字段=1851 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1803,10 +1538,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Der Leuchtturm Swakopmund ist ein Leuchtturm in der namibischen Küsten'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[5.0m]，但 height_m 字段=28.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -1842,7 +1573,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1864]，但 built 字段=1839 — 不一致，请你判断"
+          "detail": "摘要提到建于[1864]，但 built 字段=1839 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -1878,7 +1609,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1874]，但 built 字段=1875 — 不一致，请你判断"
+          "detail": "摘要提到建于[1874]，但 built 字段=1875 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2013,12 +1744,8 @@
       "wikidata": "Q973815",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …', en San Sebastián (Guipúzcoa, España).\\u200b'"
-        },
-        {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El faro del monte Igueldo es un faro\\u200b que está situado en el barrio de'"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El faro del monte Igueldo es un faro que está situado en el barrio de '"
         }
       ]
     },
@@ -2042,7 +1769,7 @@
       "issues": [
         {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Punta Frouxeira, a veces llamado faro de Meirás,\\u200b es un far'"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Punta Frouxeira, a veces llamado faro de Meirás, es un faro'"
         }
       ]
     },
@@ -2055,18 +1782,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Helnæs Fyr er et 28 meter højt, firkantet fyr opført i 1901 på Helnæs,'"
-        }
-      ]
-    },
-    {
-      "id": "way/183695632",
-      "name": "Mulantou Lighthouse",
-      "rank": null,
-      "wikidata": "Q3378320",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[88.0m, 88.1m]，但 height_m 字段=72.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -2162,7 +1877,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1844]，但 built 字段=1846 — 不一致，请你判断"
+          "detail": "摘要提到建于[1844]，但 built 字段=1846 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2174,7 +1889,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1929]，但 built 字段=1954 — 不一致，请你判断"
+          "detail": "摘要提到建于[1929]，但 built 字段=1954 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2186,7 +1901,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1871]，但 built 字段=1872 — 不一致，请你判断"
+          "detail": "摘要提到建于[1871]，但 built 字段=1872 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2222,7 +1937,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1548]，但 built 字段=1788 — 不一致，请你判断"
+          "detail": "摘要提到建于[1548]，但 built 字段=1788 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2258,7 +1973,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1817]，但 built 字段=1835 — 不一致，请你判断"
+          "detail": "摘要提到建于[1817]，但 built 字段=1835 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2268,10 +1983,6 @@
       "rank": null,
       "wikidata": "Q8960914",
       "issues": [
-        {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'otes rocosos y escollos que la rodean.\\u200b\\u200b'"
-        },
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Tabarca está situado en la isla de Tabarca (Alicante, Españ'"
@@ -2298,7 +2009,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1839]，但 built 字段=1892 — 不一致，请你判断"
+          "detail": "摘要提到建于[1839]，但 built 字段=1892 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2322,7 +2033,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1986]，但 built 字段=1899 — 不一致，请你判断"
+          "detail": "摘要提到建于[1986]，但 built 字段=1899 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2346,7 +2057,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1746]，但 built 字段=1901 — 不一致，请你判断"
+          "detail": "摘要提到建于[1746]，但 built 字段=1901 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2418,7 +2129,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1864]，但 built 字段=1923 — 不一致，请你判断"
+          "detail": "摘要提到建于[1864]，但 built 字段=1923 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2430,19 +2141,7 @@
       "issues": [
         {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Mayor o faro de Bellavista\\u200b está situado en el municip'"
-        }
-      ]
-    },
-    {
-      "id": "way/989227844",
-      "name": "Stephens Island Light",
-      "rank": null,
-      "wikidata": "Q2345214",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[183.0m, 182.9m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Mayor o faro de Bellavista está situado en el municipi'"
         }
       ]
     },
@@ -2646,19 +2345,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[14.0m]，但 height_m 字段=44.4m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
-      "id": "node/1052816802",
-      "name": null,
-      "rank": null,
-      "wikidata": "Q1034422",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[70.0m, 70.1m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[14.0m]，但 height_m 字段=44.4m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -2707,18 +2394,6 @@
         {
           "kind": "short_summary",
           "detail": "摘要结尾像被截断: …'the Baía de São Marcos, Maranhão, Brazil'"
-        }
-      ]
-    },
-    {
-      "id": "node/1191080441",
-      "name": "Tasman Island Lighthouse",
-      "rank": null,
-      "wikidata": "Q1798857",
-      "issues": [
-        {
-          "kind": "height_outlier",
-          "detail": "height_m=276.0 异常(可能错挂/单位错)"
         }
       ]
     },
@@ -2838,7 +2513,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1924]，但 built 字段=1980 — 不一致，请你判断"
+          "detail": "摘要提到建于[1924]，但 built 字段=1980 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -3041,10 +2716,6 @@
       "wikidata": "Q5856436",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'a, San Sebastián, (País Vasco), España.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de la Plata se encuentra en el Cabo de la Plata, San Sebastián'"
         }
@@ -3082,7 +2753,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1899]，但 built 字段=1897 — 不一致，请你判断"
+          "detail": "摘要提到建于[1899]，但 built 字段=1897 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -3166,7 +2837,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1635]，但 built 字段=1874 — 不一致，请你判断"
+          "detail": "摘要提到建于[1635]，但 built 字段=1874 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -3239,10 +2910,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faru de Ḷḷuarca ta allugáu na punta Focicón, que zarra pel oriente '"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[300.0m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -3259,18 +2926,6 @@
       ]
     },
     {
-      "id": "node/2201046881",
-      "name": "Pomham Rocks Light",
-      "rank": null,
-      "wikidata": "Q7227306",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[180.0m]，但 height_m 字段=12.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "node/2279145540",
       "name": "Malabrigo Lighthouse",
       "rank": null,
@@ -3278,7 +2933,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1896]，但 built 字段=1994-07-25 — 不一致，请你判断"
+          "detail": "摘要提到建于[1896]，但 built 字段=1994-07-25 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -3319,18 +2974,6 @@
       ]
     },
     {
-      "id": "node/259439071",
-      "name": null,
-      "rank": null,
-      "wikidata": "Q55086538",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[250.0m, 249.9m]，但 height_m 字段=22.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "node/268897689",
       "name": "Waipapa Point Lighthouse",
       "rank": null,
@@ -3338,7 +2981,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1884]，但 built 字段=1883 — 不一致，请你判断"
+          "detail": "摘要提到建于[1884]，但 built 字段=1883 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -3351,18 +2994,6 @@
         {
           "kind": "missing_fields",
           "detail": "关键字段缺失: ['built', 'height_m']"
-        }
-      ]
-    },
-    {
-      "id": "node/277060613",
-      "name": "Faro di Ancona",
-      "rank": null,
-      "wikidata": "Q3739748",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[119.5m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -3506,7 +3137,7 @@
       "issues": [
         {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Walde es un faro sobre pilotes de rosca\\u200b ubicado en Marck, '"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Walde es un faro sobre pilotes de rosca ubicado en Marck, c'"
         }
       ]
     },
@@ -3614,7 +3245,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1902]，但 built 字段=1888 — 不一致，请你判断"
+          "detail": "摘要提到建于[1902]，但 built 字段=1888 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -3770,7 +3401,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1940]，但 built 字段=1938 — 不一致，请你判断"
+          "detail": "摘要提到建于[1940]，但 built 字段=1938 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -3830,7 +3461,7 @@
       "issues": [
         {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro de Lobito\\u200b (en portugués: Farol do Lobito) es un faro situado '"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro de Lobito (en portugués: Farol do Lobito) es un faro situado e'"
         },
         {
           "kind": "missing_fields",
@@ -3869,10 +3500,6 @@
       "wikidata": "Q5856363",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'damente de la isla de Mallorca, España.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Llebeig (en catalán: Far de Cap Llebeig) es un faro qu'"
         }
@@ -3884,10 +3511,6 @@
       "rank": null,
       "wikidata": "Q5856392",
       "issues": [
-        {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …' metros de la isla de Mallorca, España.\\u200b'"
-        },
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Cap de Tramuntana es un faro que se encuentra en el norte d'"
@@ -3925,10 +3548,6 @@
       "wikidata": "Q5856488",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'la de Mallorca, Islas Baleares, España.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Punta de Sa Creu es un faro situado sobre un promontorio en'"
         }
@@ -3954,7 +3573,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1829]，但 built 字段=1868 — 不一致，请你判断"
+          "detail": "摘要提到建于[1829]，但 built 字段=1868 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -3994,7 +3613,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1885]，但 built 字段=1886 — 不一致，请你判断"
+          "detail": "摘要提到建于[1885]，但 built 字段=1886 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4027,18 +3646,6 @@
       ]
     },
     {
-      "id": "relation/10647908",
-      "name": "Farol do Cabo de Sines",
-      "rank": null,
-      "wikidata": "Q1024908",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[22.0m]，但 height_m 字段=28.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "relation/13488024",
       "name": "Cape Zanpa Lighthouse",
       "rank": null,
@@ -4047,10 +3654,6 @@
         {
           "kind": "non_english",
           "detail": "摘要是非拉丁文字(95%, ['CJK', 'HIRAGANA']) → 非英文"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[30.0m]，但 height_m 字段=40.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -4133,10 +3736,6 @@
       "wikidata": "Q5856361",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'la de Mallorca, Islas Baleares, España.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Cabo Gros (en catalán: Far de Cap Gros) es un faro situado '"
         }
@@ -4162,7 +3761,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[7.6m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[7.6m]，但 height_m 字段=14.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4174,7 +3773,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1842]，但 built 字段=1823 — 不一致，请你判断"
+          "detail": "摘要提到建于[1842]，但 built 字段=1823 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4198,7 +3797,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1817, 1823]，但 built 字段=1822 — 不一致，请你判断"
+          "detail": "摘要提到建于[1817, 1823]，但 built 字段=1822 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4210,7 +3809,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1885]，但 built 字段=1886 — 不一致，请你判断"
+          "detail": "摘要提到建于[1885]，但 built 字段=1886 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4246,7 +3845,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1830]，但 built 字段=1842 — 不一致，请你判断"
+          "detail": "摘要提到建于[1830]，但 built 字段=1842 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4259,10 +3858,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): \"El far de Barbaria és un far situat a l'illa de Formentera, construït \""
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[78.0m]，但 height_m 字段=19.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -4287,10 +3882,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): \"Le phare du cap Fréhel est un phare maritime des Côtes-d'Armor (France\""
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[70.0m]，但 height_m 字段=32.9m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -4303,10 +3894,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Tunø Fyr er et fyrtårn på øen Tunø mellem Jylland og Samsø, indrettet '"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[6.0m]，但 height_m 字段=18.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -4330,7 +3917,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1840]，但 built 字段=1868 — 不一致，请你判断"
+          "detail": "摘要提到建于[1840]，但 built 字段=1868 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4370,7 +3957,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1950]，但 built 字段=1862 — 不一致，请你判断"
+          "detail": "摘要提到建于[1950]，但 built 字段=1862 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4490,7 +4077,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1804]，但 built 字段=1964 — 不一致，请你判断"
+          "detail": "摘要提到建于[1804]，但 built 字段=1964 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4574,7 +4161,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1784]，但 built 字段=1769 — 不一致，请你判断"
+          "detail": "摘要提到建于[1784]，但 built 字段=1769 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4742,7 +4329,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[36.9m, 36.9m]，但 height_m 字段=31.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[36.9m]，但 height_m 字段=31.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4850,7 +4437,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1897]，但 built 字段=1944 — 不一致，请你判断"
+          "detail": "摘要提到建于[1897]，但 built 字段=1944 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -4970,7 +4557,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1902]，但 built 字段=1905 — 不一致，请你判断"
+          "detail": "摘要提到建于[1902]，但 built 字段=1905 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -5121,10 +4708,6 @@
       "wikidata": "Q3378557",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'en el extremo este de la isla Soledad.\\u200b\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro Cabo San Felipe (del inglés: Pembroke Lighthouse) se encuentra'"
         }
@@ -5150,7 +4733,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1891]，但 built 字段=1895 — 不一致，请你判断"
+          "detail": "摘要提到建于[1891]，但 built 字段=1895 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -5163,10 +4746,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): \"Le phare du cap Fréhel est un phare maritime des Côtes-d'Armor (France\""
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[70.0m]，但 height_m 字段=32.9m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -5215,10 +4794,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El far del municipi de Tossa de Mar a la comarca de la Selva es va aix'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[60.0m]，但 height_m 字段=11.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -5254,7 +4829,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1820]，但 built 字段=1862 — 不一致，请你判断"
+          "detail": "摘要提到建于[1820]，但 built 字段=1862 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -5326,7 +4901,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1840]，但 built 字段=1823 — 不一致，请你判断"
+          "detail": "摘要提到建于[1840]，但 built 字段=1823 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -5350,11 +4925,11 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[20.0m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[20.0m]，但 height_m 字段=14.0m — 两者不一致(已两值并存交给用户判断)"
         },
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1856]，但 built 字段=1749 — 不一致，请你判断"
+          "detail": "摘要提到建于[1856]，但 built 字段=1749 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -5510,7 +5085,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[4.3m, 4.3m]，但 height_m 字段=17.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[4.3m]，但 height_m 字段=17.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -5689,10 +5264,6 @@
       "wikidata": "Q5856390",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'a de Mallorca (Islas Baleares, España).\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Cala Figuera es un faro situado en la punta occidental de l'"
         }
@@ -5730,7 +5301,7 @@
       "issues": [
         {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro Holandés\\u200b es el nombre que recibe un antiguo faro ubicado en u'"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro Holandés es el nombre que recibe un antiguo faro ubicado en un'"
         }
       ]
     },
@@ -5771,18 +5342,6 @@
         {
           "kind": "non_english",
           "detail": "摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA']) → 非英文"
-        }
-      ]
-    },
-    {
-      "id": "node/1152562328",
-      "name": null,
-      "rank": null,
-      "wikidata": "Q55155449",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[302.0m, 206.0m, 302.1m, 206.0m]，但 height_m 字段=20.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -5979,18 +5538,6 @@
       ]
     },
     {
-      "id": "node/1191177652",
-      "name": "Cape Naturaliste Lighthouse",
-      "rank": null,
-      "wikidata": "Q15207402",
-      "issues": [
-        {
-          "kind": "height_outlier",
-          "detail": "height_m=1.0 异常(可能错挂/单位错)"
-        }
-      ]
-    },
-    {
       "id": "node/1195389121",
       "name": "Phare de Makemo",
       "rank": null,
@@ -6059,10 +5606,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro Isla Guafo es un faro chileno ubicado en un acantilado a 114 m'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[114.0m]，但 height_m 字段=14.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -6265,10 +5808,6 @@
       "wikidata": "Q61104965",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'ro situado en la isla caribeña de Cuba.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro Cayo Paredón Grande (también llamado Faro Diego Velázquez) es '"
         }
@@ -6327,30 +5866,6 @@
       ]
     },
     {
-      "id": "node/1327347118",
-      "name": "Faro dell'Isola delle Bisce",
-      "rank": null,
-      "wikidata": "Q55082742",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[590.0m, 286.5m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
-      "id": "node/1327347620",
-      "name": "Faro di Barrettinelli",
-      "rank": null,
-      "wikidata": "Q23823863",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[103.0m, 62.0m, 103.0m, 61.9m]，但 height_m 字段=12.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "node/1327347761",
       "name": "Phare de La Revellata",
       "rank": null,
@@ -6383,18 +5898,6 @@
         {
           "kind": "non_english",
           "detail": "摘要是非拉丁文字(100%, ['ARABIC']) → 非英文"
-        }
-      ]
-    },
-    {
-      "id": "node/1340857556",
-      "name": "Faro di Capo Cefalù",
-      "rank": null,
-      "wikidata": "Q32848801",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[280.0m, 280.4m]，但 height_m 字段=26.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -6647,10 +6150,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Das Leuchtfeuer Fischerbalje steht am Kopf des Borkumer Leitdamms auf '"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[20.0m]，但 height_m 字段=16.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -6934,7 +6433,7 @@
       "issues": [
         {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro Río Negro o faro de la Barra del río Negro,\\u200b es un faro ubicad'"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro Río Negro o faro de la Barra del río Negro, es un faro ubicado'"
         }
       ]
     },
@@ -6947,10 +6446,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Emden Westmole steht auf der 1899 angelegten Westmol'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[3.0m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -7201,10 +6696,6 @@
       "wikidata": "Q17174530",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'e Porvenir, en la Región de Magallanes.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro Bahía Porvenir pertenece a la red de faros de Chile y se encue'"
         }
@@ -7230,7 +6721,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[27.0m, 27.1m]，但 height_m 字段=11.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[27.0m, 27.1m]，但 height_m 字段=11.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -7294,7 +6785,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1856, 1899]，但 built 字段=1854 — 不一致，请你判断"
+          "detail": "摘要提到建于[1856, 1899]，但 built 字段=1854 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -7378,7 +6869,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1839]，但 built 字段=1881 — 不一致，请你判断"
+          "detail": "摘要提到建于[1839]，但 built 字段=1881 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -7546,7 +7037,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1855]，但 built 字段=1859 — 不一致，请你判断"
+          "detail": "摘要提到建于[1855]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -7571,10 +7062,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Akra Konchi (griechisch Φάρος Κόγχη Σαλαμίνας; auch '"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[50.0m]，但 height_m 字段=12.6m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -7638,7 +7125,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[16.0m, 16.2m]，但 height_m 字段=10.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[16.0m, 16.2m]，但 height_m 字段=10.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -7707,10 +7194,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): \"Il faro di Fano sorge circa a 350 m. a Sud dell'entrata del porto cana\""
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[350.0m]，但 height_m 字段=20.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -7987,10 +7470,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Il faro del Monte San Bartolo sorge circa a 175 m.s.l. sul monte omoni'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[175.0m]，但 height_m 字段=25.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -8024,10 +7503,6 @@
       "rank": null,
       "wikidata": "Q3378131",
       "issues": [
-        {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'gión de Magallanes y Antártica Chilena.\\u200b'"
-        },
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro Isla Magdalena es un faro perteneciente a la red de faros de C'"
@@ -8090,7 +7565,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1832]，但 built 字段=1855 — 不一致，请你判断"
+          "detail": "摘要提到建于[1832]，但 built 字段=1855 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -8390,7 +7865,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1856, 1929]，但 built 字段=1857 — 不一致，请你判断"
+          "detail": "摘要提到建于[1856, 1929]，但 built 字段=1857 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -8590,7 +8065,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1856]，但 built 字段=1828 — 不一致，请你判断"
+          "detail": "摘要提到建于[1856]，但 built 字段=1828 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -8642,7 +8117,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1893]，但 built 字段=1908 — 不一致，请你判断"
+          "detail": "摘要提到建于[1893]，但 built 字段=1908 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -8654,7 +8129,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1936]，但 built 字段=1905 — 不一致，请你判断"
+          "detail": "摘要提到建于[1936]，但 built 字段=1905 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -8701,12 +8176,8 @@
       "wikidata": "Q5876983",
       "issues": [
         {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[180.0m, 182.9m]，但 height_m 字段=18.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        },
-        {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1901]，但 built 字段=1886 — 不一致，请你判断"
+          "detail": "摘要提到建于[1901]，但 built 字段=1886 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -8755,18 +8226,6 @@
       ]
     },
     {
-      "id": "node/6405894238",
-      "name": "Faru de s'ìsula de is càvurus/Faro dell'Isola dei Cavoli",
-      "rank": null,
-      "wikidata": "Q55095796",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[690.0m, 79.2m]，但 height_m 字段=37.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "node/6474221864",
       "name": "Faro Península Páramo",
       "rank": null,
@@ -8810,7 +8269,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1853]，但 built 字段=1817 — 不一致，请你判断"
+          "detail": "摘要提到建于[1853]，但 built 字段=1817 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -8859,10 +8318,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro Cabo Guardián es un faro no habitado de la Marina Argentina qu'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[48.0m]，但 height_m 字段=36.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -9161,10 +8616,6 @@
       "wikidata": "Q5856246",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …' un puerto recreativo de 15 kilómetros.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro Punta Concón se ubica en la costa de Concón y forma parte de l'"
         }
@@ -9369,10 +8820,6 @@
       "wikidata": "Q5856347",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'la de Mallorca, Islas Baleares, España.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Alcanada es un faro situado en el islote de Alcanada, en el'"
         }
@@ -9471,10 +8918,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): \"Le phare d'Alistro est bâti sur la commune de San-Giuliano (Haute-Cors\""
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[50.0m]，但 height_m 字段=93.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -9508,10 +8951,6 @@
       "rank": null,
       "wikidata": "Q5856212",
       "issues": [
-        {
-          "kind": "height_outlier",
-          "detail": "height_m=1.4 异常(可能错挂/单位错)"
-        },
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro Miramar es un faro antiguamente ubicado en la intersección de '"
@@ -9615,18 +9054,6 @@
       ]
     },
     {
-      "id": "node/9080968009",
-      "name": "Faro Scoglio Palumbo",
-      "rank": null,
-      "wikidata": "Q28375941",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[102.0m, 67.0m, 102.1m, 67.1m]，但 height_m 字段=12.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "node/930188070",
       "name": "Gäveskär",
       "rank": null,
@@ -9706,7 +9133,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1806]，但 built 字段=1931 — 不一致，请你判断"
+          "detail": "摘要提到建于[1806]，但 built 字段=1931 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -9878,7 +9305,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[15.0m, 61.0m, 61.0m]，但 height_m 字段=36.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[15.0m, 61.0m]，但 height_m 字段=36.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -9971,18 +9398,6 @@
       ]
     },
     {
-      "id": "way/1307113354",
-      "name": "Faro della Maddalenetta",
-      "rank": null,
-      "wikidata": "Q55020983",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[84.0m, 800.0m, 84.1m, 182.9m]，但 height_m 字段=6.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
-        }
-      ]
-    },
-    {
       "id": "way/131017892",
       "name": "Svjetionik Otočić Grujica",
       "rank": null,
@@ -10066,7 +9481,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1856]，但 built 字段=1848 — 不一致，请你判断"
+          "detail": "摘要提到建于[1856]，但 built 字段=1848 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -10091,10 +9506,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'p4 Der Leuchtturm Akra Konchi (griechisch Φάρος Κόγχη Σαλαμίνας; auch '"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[50.0m]，但 height_m 字段=12.6m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -10385,10 +9796,6 @@
       "wikidata": "Q5856492",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …' extremo sur de la Isla de Las Palomas.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El faro de Punta de Tarifa es un faro de primer orden ubicado en Tarif'"
         }
@@ -10518,7 +9925,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1870]，但 built 字段=1825 — 不一致，请你判断"
+          "detail": "摘要提到建于[1870]，但 built 字段=1825 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -10590,7 +9997,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[110.0m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[110.0m]，但 height_m 字段=15.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -10865,10 +10272,6 @@
       "wikidata": "Q5575110",
       "issues": [
         {
-          "kind": "short_summary",
-          "detail": "摘要结尾像被截断: …'nte a la costa sur de Mallorca, España.\\u200b'"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'La baliza de Na Foradada es una baliza que se encuentra en la isla Na '"
         },
@@ -10910,7 +10313,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1867]，但 built 字段=1876 — 不一致，请你判断"
+          "detail": "摘要提到建于[1867]，但 built 字段=1876 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -10974,7 +10377,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1867]，但 built 字段=1861 — 不一致，请你判断"
+          "detail": "摘要提到建于[1867]，但 built 字段=1861 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -10986,7 +10389,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[4.0m]，但 height_m 字段=34.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[4.0m]，但 height_m 字段=34.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -11070,7 +10473,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[24.4m, 22.6m]，但 height_m 字段=19.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[22.6m, 24.4m]，但 height_m 字段=19.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -11155,10 +10558,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Spodsbjerg Fyr er et fyrtårn, som ligger på Spodsbjerg Klint to kilome'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[40.0m]，但 height_m 字段=9.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -11206,19 +10605,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1855]，但 built 字段=1859 — 不一致，请你判断"
-        }
-      ]
-    },
-    {
-      "id": "way/490750089",
-      "name": "Chacachacare Lighthouse",
-      "rank": null,
-      "wikidata": "Q55606893",
-      "issues": [
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[236.0m, 235.9m]，但 height_m 字段=15.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到建于[1855]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -11351,10 +10738,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro Punta Médanos es un faro habitado de la Armada Argentina que s'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[500.0m]，但 height_m 字段=59.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -11475,10 +10858,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Svjetionik Rt Marlera je svjetionik na jugoistočnom vrh poluotoka Istr'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[25.0m]，但 height_m 字段=9.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -11574,7 +10953,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1870]，但 built 字段=1869 — 不一致，请你判断"
+          "detail": "摘要提到建于[1870]，但 built 字段=1869 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -11622,7 +11001,7 @@
       "issues": [
         {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro de la Punta Doublé\\u200b (en francés: Phare de la Pointe Doublé) es'"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro de la Punta Doublé (en francés: Phare de la Pointe Doublé) est'"
         }
       ]
     },
@@ -11670,7 +11049,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1858]，但 built 字段=1848 — 不一致，请你判断"
+          "detail": "摘要提到建于[1858]，但 built 字段=1848 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -11722,7 +11101,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1849]，但 built 字段=1848 — 不一致，请你判断"
+          "detail": "摘要提到建于[1849]，但 built 字段=1848 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -11998,7 +11377,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1831]，但 built 字段=1765 — 不一致，请你判断"
+          "detail": "摘要提到建于[1831]，但 built 字段=1765 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -12142,7 +11521,7 @@
       "issues": [
         {
           "kind": "non_english",
-          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro del Puerto de Les Saintes\\u200b (en francés: Phare du Port des Sain'"
+          "detail": "摘要疑似非英文(无英文常用词标志): 'El Faro del Puerto de Les Saintes (en francés: Phare du Port des Saint'"
         },
         {
           "kind": "missing_fields",
@@ -12170,7 +11549,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1870]，但 built 字段=1871 — 不一致，请你判断"
+          "detail": "摘要提到建于[1870]，但 built 字段=1871 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -12346,7 +11725,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1881]，但 built 字段=1882 — 不一致，请你判断"
+          "detail": "摘要提到建于[1881]，但 built 字段=1882 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -12567,10 +11946,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Östra Stendörren är en fyr som står 300 meter öster om ön Stendörren i'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[300.0m]，但 height_m 字段=4.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -13411,10 +12786,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Der Gömnitzer Turm (auch als „Major“ bezeichnet) ist ein ehemaliges Se'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[80.0m]，但 height_m 字段=8.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -14047,10 +13418,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): \"L'actuel phare du cap Cépet a été reconstruit à 155 m du précédent, au\""
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[155.0m, 14.0m]，但 height_m 字段=76.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -14709,10 +14076,6 @@
       "wikidata": "Q17173369",
       "issues": [
         {
-          "kind": "height_outlier",
-          "detail": "height_m=201.0 异常(可能错挂/单位错)"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Le phare Akra Fassa, également appelé phare Fasas, est situé au cap Fa'"
         }
@@ -14883,10 +14246,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Le phare du Cap-Jourimain (anglais : Cape Jourimain Lighthouse) est un'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[5.0m]，但 height_m 字段=15.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -15879,10 +15238,6 @@
         {
           "kind": "non_english",
           "detail": "摘要是非拉丁文字(97%, ['CJK', 'HIRAGANA']) → 非英文"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[274.0m]，但 height_m 字段=13.9m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -16566,7 +15921,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1934]，但 built 字段=2003 — 不一致，请你判断"
+          "detail": "摘要提到建于[1934]，但 built 字段=2003 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -16683,10 +16038,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Vens västra fyr ligger på ön Vens nordvästra udde. Den är byggd av bet'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[5.0m]，但 height_m 字段=8.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -16919,10 +16270,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): 'Vens södra udde är en fyr som ligger på ön Vens södra udde. Den är byg'"
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[5.0m]，但 height_m 字段=8.5m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -17562,7 +16909,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1855]，但 built 字段=1859 — 不一致，请你判断"
+          "detail": "摘要提到建于[1855]，但 built 字段=1859 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -18197,10 +17544,6 @@
       "wikidata": "Q11676022",
       "issues": [
         {
-          "kind": "height_outlier",
-          "detail": "height_m=197.0 异常(可能错挂/单位错)"
-        },
-        {
           "kind": "non_english",
           "detail": "摘要是非拉丁文字(100%, ['CJK', 'HIRAGANA']) → 非英文"
         }
@@ -18678,7 +18021,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1860]，但 built 字段=1817 — 不一致，请你判断"
+          "detail": "摘要提到建于[1860]，但 built 字段=1817 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -19255,10 +18598,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): \"Le phare de l'Île-Machias-Seal (anglais : Machias Seal Island Lighthou\""
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[8.0m]，但 height_m 字段=19.8m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -19370,7 +18709,7 @@
       "issues": [
         {
           "kind": "year_conflict",
-          "detail": "摘要提到建于[1892]，但 built 字段=1871 — 不一致，请你判断"
+          "detail": "摘要提到建于[1892]，但 built 字段=1871 — 不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -20031,10 +19370,6 @@
         {
           "kind": "non_english",
           "detail": "摘要疑似非英文(无英文常用词标志): \"Les phares d'Hourtin sont des tours carrées de 27 m de haut, en maçonn\""
-        },
-        {
-          "kind": "height_conflict",
-          "detail": "摘要提到高度[27.0m]，但 height_m 字段=31.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
         }
       ]
     },
@@ -20162,7 +19497,7 @@
       "issues": [
         {
           "kind": "height_conflict",
-          "detail": "摘要提到高度[21.0m, 21.0m]，但 height_m 字段=46.0m — 两者不一致(可能焦距高 vs 结构高，请你判断)"
+          "detail": "摘要提到高度[21.0m]，但 height_m 字段=46.0m — 两者不一致(已两值并存交给用户判断)"
         }
       ]
     },
@@ -22433,10 +21768,6 @@
       "wikidata": "Q89132535",
       "issues": [
         {
-          "kind": "height_outlier",
-          "detail": "height_m=166.0 异常(可能错挂/单位错)"
-        },
-        {
           "kind": "missing_summary",
           "detail": "无摘要"
         }
@@ -22488,10 +21819,6 @@
       "rank": null,
       "wikidata": "Q57499110",
       "issues": [
-        {
-          "kind": "height_outlier",
-          "detail": "height_m=173.0 异常(可能错挂/单位错)"
-        },
         {
           "kind": "missing_summary",
           "detail": "无摘要"

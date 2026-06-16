@@ -10,10 +10,23 @@ const STATUS_META: Record<Status, { label: string; cls: string }> = {
 export function DetailCard({ model, onClose }: { model: CardModel; onClose: () => void }) {
   const [imgOk, setImgOk] = useState(true);
   const st = STATUS_META[model.status];
-  const facts: Array<[string, string]> = [];
-  if (model.built) facts.push(["Built", model.built]);
-  if (model.height != null) facts.push(["Height", `${model.height} m`]);
-  if (model.country) facts.push(["Country", model.country]);
+  // a number from the summary that disagrees with the field — surfaced, not adjudicated.
+  const facts: Array<{ k: string; v: string; note?: string }> = [];
+  if (model.built)
+    facts.push({
+      k: "Built", v: model.built,
+      note: model.yearConflict?.length
+        ? `Sources differ — also cited: ${model.yearConflict.join(", ")}`
+        : undefined,
+    });
+  if (model.height != null)
+    facts.push({
+      k: "Height", v: `${model.height} m`,
+      note: model.heightConflict?.length
+        ? `Sources differ — also cited: ${model.heightConflict.map((n) => `${n} m`).join(", ")}`
+        : undefined,
+    });
+  if (model.country) facts.push({ k: "Country", v: model.country });
 
   return (
     <div className="card">
@@ -35,10 +48,11 @@ export function DetailCard({ model, onClose }: { model: CardModel; onClose: () =
 
         {facts.length > 0 && (
           <dl className="card-fields">
-            {facts.map(([k, v]) => (
+            {facts.map(({ k, v, note }) => (
               <div key={k}>
                 <dt>{k}</dt>
                 <dd>{v}</dd>
+                {note && <span className="card-conflict" title="The summary and the data source give different figures; both are shown.">{note}</span>}
               </div>
             ))}
           </dl>

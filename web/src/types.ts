@@ -30,6 +30,11 @@ export interface LighthouseDetail {
   country: string | null;
   score: number;
   top200_rank?: number | null;
+  // height_m is implausible (source stored elevation/focal height, or a bad value) — don't show it as tower height.
+  height_suspect?: boolean;
+  // a number in the summary disagrees with the field — surface both, don't adjudicate.
+  height_conflict?: { field: number; summary: number[] };
+  year_conflict?: { field: string; summary: number[] };
 }
 
 // One searchable lighthouse (named only), pre-flattened for instant filtering.
@@ -55,4 +60,7 @@ export interface CardModel {
   height: number | null;
   country: string | null;
   learnMore: string | null;
+  // "sources disagree" — alternative values mentioned in the summary (field shown above).
+  heightConflict: number[] | null;
+  yearConflict: number[] | null;
 }

@@ -188,6 +188,15 @@
   font-size: 14px;
   font-variant-numeric: tabular-nums;
 }
+.card-conflict {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #e7b96e;
+  opacity: 0.85;
+  cursor: help;
+}
 
 .card-link {
   display: inline-block;
