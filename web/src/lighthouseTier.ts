@@ -64,7 +64,7 @@ export function createLighthouse3DLayer(opts: TierOptions) {
       this.camera = new THREE.Camera();
       this.scene = new THREE.Scene();
       this.scene.add(new THREE.AmbientLight(0xc2c8d4, 1.8));
-      const dir = new THREE.DirectionalLight(0xffffff, 2.2);
+      const dir = new THREE.DirectionalLight(0xffffff, 2.3);
       dir.position.set(30, 60, 40);
       this.scene.add(dir);
       const parts = createLighthouseParts(capacity);
@@ -171,6 +171,11 @@ export function createLighthouse3DLayer(opts: TierOptions) {
       const proj = input.defaultProjectionData?.mainMatrix ?? input.matrix!;
       this.camera.projectionMatrix = new THREE.Matrix4().fromArray(proj);
       this.renderer.resetState();
+      // Clear depth so the lighthouse draws over coincident MapLibre buildings
+      // (OSM often has a building footprint at the lighthouse, whose extrusion
+      // would otherwise hide the shaft). The model still self-occludes via its
+      // own fresh depth. Landmarks-on-top is the intended behavior here.
+      this.renderer.clearDepth();
       this.renderer.render(this.scene, this.camera);
       if (animating) m.triggerRepaint();
     },
