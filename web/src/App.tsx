@@ -19,6 +19,8 @@ function buildSearchIndex(lhs: Lighthouse[], details: Map<string, LighthouseDeta
   for (const l of lhs) {
     if (!l.name) continue;
     const d = details.get(l.id);
+    // skip mislinks whose Wikidata entity isn't a lighthouse (capes, towns…)
+    if (d?.category === "not_lighthouse") continue;
     out.push({
       id: l.id,
       name: l.name,
