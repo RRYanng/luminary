@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "sync-data": "cp ../data/lighthouses.json public/lighthouses.json && cp ../data/lighthouses.geojson public/lighthouses.geojson && cp ../data/lighthouse_details.json public/lighthouse_details.json",
+    "sync-data": "cp ../data/lighthouses.geojson public/lighthouses.geojson && cp ../data/lighthouse_details.json public/lighthouse_details.json",
     "predev": "npm run sync-data",
     "prebuild": "npm run sync-data",
     "dev": "vite",
