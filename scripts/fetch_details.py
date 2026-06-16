@@ -347,8 +347,13 @@ def main() -> int:
             "country": country_labels.get(w.get("country_q")) if w.get("country_q") else r.get("country"),
             "summary": p.get("summary") or None,
             "summary_source": p.get("source"),
+            # the Wikidata entity the summary's article is actually about — if it
+            # differs from `wikidata`, the linked article is the wrong subject
+            # (e.g. the town/cape, not the lighthouse). Used by the classifier.
+            "summary_wikidata": p.get("wikidata"),
             "image": image,
             "lang_count": lang_count,
+            "wd_lang_count": w.get("wd_lang_count", 0),
             "score": lang_count,
         }
         details.append(rec)
