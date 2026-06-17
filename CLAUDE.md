@@ -57,8 +57,13 @@ luminary/
       远 zoom 发光点、近 zoom 就近实例化发光 3D 灯塔（同屏上限 80 保 60fps）、
       点↔3D 无缝淡入淡出（去掉了"近变暗"）；点击灯塔（点或 3D）弹详情卡
       （名字/运营状态/坐标/Learn more）；按帧剔除背面防止快速移动时穿模。
-- [ ] Phase 3: 精选内容 — Wikidata 拉取 Top 200 灯塔详情，人工校对
-- [ ] Phase 4: 部署 + meetup 演示收集反馈
+- [x] Phase 3: 精选内容 — Wikidata 拉取详情（lighthouse_details.json）、P31/P576/P5817
+      分三层状态、自动核查清单（audit_details.py）、修可修项 + 把"来源不一"两值并存
+      交给用户判断（fix_details.py）、详情卡接入。人工逐座校对改成了自动核查。
+- [~] Phase 4: 部署 + meetup 演示收集反馈
+      已上线 Vercel：https://luminary-ruddy.vercel.app
+      （仓库 github.com/RRYanng/luminary，private；Vercel Root Directory=web，
+      Framework=Vite，push main 自动部署）。剩：meetup 演示 + 收集反馈。
 
 ## 工作守则
 1. 每次只做一个 Phase 内的一个明确任务，完成后停下来等验收。
