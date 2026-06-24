@@ -342,7 +342,7 @@ export default function App() {
         <h1>Luminary</h1>
         <p className="subtitle">Lighthouses of the world</p>
         <p className="stats">
-          zoom {zoom.toFixed(2)} · {mode} · {count}
+          <span className="stats-live">zoom {zoom.toFixed(2)} · {mode} · </span>{count}
         </p>
       </div>
 
