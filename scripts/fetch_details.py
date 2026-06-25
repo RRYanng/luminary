@@ -93,11 +93,26 @@ def chunks(seq, n):
 
 # ---------------------------------------------------------------- 解析
 def parse_year(claims: dict):
+    """Build year from P571, era-aware.
+
+    Keeps the +/- sign that earlier versions dropped, so ancient dates read
+    correctly: BC -> 'c. 280 BC'; century-precision or very early AD -> 'c. 100 AD';
+    ordinary modern years -> exact ('1856', unchanged)."""
     try:
-        t = claims["P571"][0]["mainsnak"]["datavalue"]["value"]["time"]
-        m = re.match(r"^[+\-](\d{1,4})", t)
-        return m.group(1).lstrip("0") or m.group(1) if m else None
-    except (KeyError, IndexError, TypeError):
+        v = claims["P571"][0]["mainsnak"]["datavalue"]["value"]
+        prec = v.get("precision", 11)  # 7 = century, 9 = year, 11 = day
+        m = re.match(r"^([+\-])(\d{1,4})", v["time"])
+        if not m:
+            return None
+        sign, year = m.group(1), int(m.group(2))
+        if year == 0:
+            return None
+        if sign == "-":  # BC — inherently ancient/approximate
+            return f"c. {round(year / 10) * 10} BC"
+        if prec <= 7 or year < 500:  # century precision or very early AD
+            return f"c. {round(year / 10) * 10} AD"
+        return str(year)  # modern: exact year (same as before)
+    except (KeyError, IndexError, TypeError, ValueError):
         return None
 
 
