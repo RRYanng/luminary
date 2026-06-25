@@ -159,6 +159,9 @@ export default function App() {
       attributionControl: { compact: true },
     });
     mapRef.current = map;
+    // ids of "No longer exists" lighthouses, shared (by reference) with the 3D
+    // layer so it can render them as phantoms; filled once details load below.
+    const goneIds = new Set<string>();
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-left");
     // Dev-only handle for verification in the preview browser (stripped from prod builds).
     if (import.meta.env.DEV) (window as unknown as { __map: MlMap }).__map = map;
@@ -257,6 +260,7 @@ export default function App() {
               maxModels: MAX_3D_MODELS,
               zoomMin: ZOOM_3D_MIN,
               fadeMs: FADE_MS,
+              goneIds,
             }),
           );
         });
@@ -292,8 +296,12 @@ export default function App() {
       .then((r) => r.json())
       .then((d: { details: LighthouseDetail[] }) => {
         const idx = new Map<string, LighthouseDetail>();
-        for (const rec of d.details) idx.set(rec.id, rec);
+        for (const rec of d.details) {
+          idx.set(rec.id, rec);
+          if (rec.status === "gone") goneIds.add(rec.id); // render as phantom in 3D
+        }
         detailsRef.current = idx;
+        map.triggerRepaint(); // re-route any on-screen gone lighthouse to the phantom set
         // re-enrich the search index with status/country/score now available
         if (lighthousesRef.current.length) setSearchIndex(buildSearchIndex(lighthousesRef.current, idx));
       })

@@ -22,12 +22,17 @@ export interface TierOptions {
   maxModels: number; // cap on simultaneous 3D models (60fps budget)
   zoomMin: number; // models only appear at/above this zoom
   fadeMs: number;
+  // ids of "No longer exists" lighthouses — rendered as translucent phantoms.
+  // A live Set: populated when details load, read each frame. (Usually empty:
+  // only ~21 gone lighthouses worldwide, rarely on screen.)
+  goneIds?: Set<string>;
 }
 
 // Builds a custom layer that crossfades the nearest in-view lighthouses from
 // glow points into 3D models (capped at maxModels) and back.
 export function createLighthouse3DLayer(opts: TierOptions) {
   const { data, sourceId, maxModels, zoomMin, fadeMs } = opts;
+  const goneIds = opts.goneIds ?? new Set<string>();
   const capacity = maxModels * 2; // headroom for fade-out + fade-in overlap
 
   const slots: Slot[] = [];
@@ -54,6 +59,7 @@ export function createLighthouse3DLayer(opts: TierOptions) {
     scene?: THREE.Scene;
     renderer?: THREE.WebGLRenderer;
     meshes?: THREE.InstancedMesh[];
+    ghostMeshes?: THREE.InstancedMesh[];
     recompute?: () => void;
   } = {
     id: "lighthouses-3d",
@@ -84,7 +90,9 @@ export function createLighthouse3DLayer(opts: TierOptions) {
 
       const parts = createLighthouseParts(capacity);
       this.meshes = parts.meshes;
+      this.ghostMeshes = parts.ghostMeshes;
       parts.meshes.forEach((mesh) => this.scene!.add(mesh));
+      parts.ghostMeshes.forEach((mesh) => this.scene!.add(mesh));
 
       // Pick the nearest in-view lighthouses (up to the cap) whenever the camera
       // moves; entering ones fade in, leaving ones fade out.
@@ -143,7 +151,8 @@ export function createLighthouse3DLayer(opts: TierOptions) {
     render(_gl, args) {
       const m = this.map;
       const meshes = this.meshes;
-      if (!m || !meshes || !this.renderer || !this.scene || !this.camera) return;
+      const ghostMeshes = this.ghostMeshes;
+      if (!m || !meshes || !ghostMeshes || !this.renderer || !this.scene || !this.camera) return;
 
       const now = performance.now();
       const dt = lastTime ? Math.min(now - lastTime, 64) : 16;
@@ -166,17 +175,27 @@ export function createLighthouse3DLayer(opts: TierOptions) {
         }
       }
 
-      // write instance matrices (base * uniform grow by t)
-      let count = 0;
+      // write instance matrices (base * uniform grow by t); route "gone"
+      // lighthouses to the phantom set, everything else to the normal set.
+      let count = 0, ghostCount = 0;
       for (const slot of slots) {
         if (slot.t <= 0) continue;
         growScale.makeScale(slot.t, slot.t, slot.t);
         instanceMat.multiplyMatrices(slot.base, growScale);
-        for (const mesh of meshes) mesh.setMatrixAt(count, instanceMat);
-        count++;
+        if (goneIds.has(slot.id)) {
+          for (const mesh of ghostMeshes) mesh.setMatrixAt(ghostCount, instanceMat);
+          ghostCount++;
+        } else {
+          for (const mesh of meshes) mesh.setMatrixAt(count, instanceMat);
+          count++;
+        }
       }
       for (const mesh of meshes) {
         mesh.count = count;
+        mesh.instanceMatrix.needsUpdate = true;
+      }
+      for (const mesh of ghostMeshes) {
+        mesh.count = ghostCount;
         mesh.instanceMatrix.needsUpdate = true;
       }
 

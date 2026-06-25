@@ -8,6 +8,9 @@ import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js
 // reflections; corner/base shadows are baked into the tower's vertex colors.
 export interface InstancedLighthouses {
   meshes: THREE.InstancedMesh[];
+  // parallel set for "No longer exists" lighthouses: same geometry, phantom
+  // materials (translucent violet, dark lantern, faint aura) — a ghost of what stood.
+  ghostMeshes: THREE.InstancedMesh[];
   capacity: number;
 }
 
@@ -60,6 +63,19 @@ export function createLighthouseParts(capacity: number): InstancedLighthouses {
   const glowOuter = additive(0xffb86a, 0.15);
   const halo = additive(0xffb347, 0.2);
   halo.side = THREE.DoubleSide;
+
+  // ---- phantom materials for "gone" lighthouses: see-through violet, no warm
+  // light. Translucent (depthWrite off) so it reads as a ghost, not a solid tower.
+  const ghostBody = new THREE.MeshStandardMaterial({
+    color: 0x9a82d8, roughness: 0.7, metalness: 0.0, envMapIntensity: 0.4,
+    transparent: true, opacity: 0.3, depthWrite: false,
+  });
+  const ghostLantern = new THREE.MeshStandardMaterial({
+    color: 0x4a3d63, roughness: 0.5, metalness: 0.1, envMapIntensity: 0.3,
+    transparent: true, opacity: 0.35, depthWrite: false,
+  });
+  const ghostHalo = additive(0xb388ff, 0.13);
+  ghostHalo.side = THREE.DoubleSide;
 
   const deckY = SHAFT_TOP;          // 18.2
   const lanternH = 3.0;
@@ -130,6 +146,14 @@ export function createLighthouseParts(capacity: number): InstancedLighthouses {
       make(haloGeo, halo, 1),
       make(glowOuterGeo, glowOuter, 1),
       make(glowCoreGeo, glowCore, 1),
+    ],
+    // same geometry reused; lantern dark, no warm glow layers, faint violet aura
+    ghostMeshes: [
+      make(towerGeo, ghostBody),
+      make(metalGeo, ghostBody),
+      make(roofGeo, ghostBody),
+      make(glassGeo, ghostLantern),
+      make(haloGeo, ghostHalo, 1),
     ],
   };
 }
